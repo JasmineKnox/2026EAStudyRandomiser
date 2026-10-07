@@ -4,12 +4,12 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EA Study Randomiser · Mrs Knox Teaches</title>
 <meta name="description" content="Choose your QCAA subjects once. Get a specific external exam study task with instructions and a checking step.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='black'/%3E%3Ctext x='5' y='23' fill='white' font-size='20' font-family='Arial'%3EEA%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4841'/%3E%3Ctext x='5' y='23' fill='white' font-size='20' font-family='Arial'%3EEA%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<header><h1>EA Study Randomiser</h1><p>Choose up to three subjects. Press the button. Start studying.</p><p class="small">QCAA 2026 · Plain working prototype</p></header>
+<header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Choose your subjects. We’ll give you a place to start.</p></header>
 <p id="storage-note" class="notice" hidden>Your browser cannot save this setup. It will work for this visit; keep the page open.</p>
 <section id="setup" aria-labelledby="setup-title" hidden>
 <h2 id="setup-title">Your subjects</h2>
@@ -19,14 +19,14 @@
 <p class="small">Applied subjects and the separate Senior External Examination (SEE) pathway are outside this 2026 EA prototype.</p>
 </section>
 <section id="study" hidden>
-<p id="selected-summary"></p>
+<p id="selected-summary" class="small"></p>
 <fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset>
-<div id="ready"><button id="generate" class="primary">Give me a study task</button><p id="completion" role="status"></p></div>
+<div id="ready"><p class="ready-note">Your next task is ready to pick.</p><button id="generate" class="primary">Give me a study task</button><p id="completion" role="status"></p></div>
 <article id="task" hidden aria-labelledby="task-title">
-<p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p>
-<p><strong>Have ready:</strong> <span id="task-materials"></span></p>
-<h3>Do this</h3><ol id="task-steps"></ol><p id="practice-text" hidden></p>
-<h3>Check</h3><p id="task-check"></p><p id="task-finish"></p>
+<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p></div>
+<p class="materials"><strong>Have ready</strong><span id="task-materials"></span></p>
+<section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><ol id="task-steps"></ol><p id="practice-text" hidden></p></section>
+<section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><p id="task-check"></p><p id="task-finish"></p></section>
 <details id="help"><summary>I'm stuck</summary><p id="task-help"></p><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
 <div class="actions"><button id="done" class="primary">Done — I've checked it</button><button id="timer-toggle">Start timer</button><output id="timer" aria-label="Time remaining"></output></div>
 <details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this 5 minutes</button><button id="skip">Give me another task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
@@ -38,7 +38,7 @@
 <label for="review-subject">Inspect a subject</label><select id="review-subject"></select><div id="review-content"></div>
 <p id="attribution" class="small"></p><p><a id="timetable" target="_blank" rel="noopener">Official 2026 EA text/topic options and timetable</a></p>
 </details>
-<footer>Created by Mrs Knox</footer>
+<footer><span>Created by Mrs Knox</span><span>EA Study Randomiser</span></footer>
 </main>
 <script src="bank.js"></script><script src="engine.js"></script><script src="app.js"></script>
 </body></html>

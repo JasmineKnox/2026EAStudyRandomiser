@@ -2,7 +2,7 @@
 
 Created by Mrs Knox.
 
-Plain working prototype for the 2026 QCAA General and General Extension external assessments. Includes 48 selectable subjects/specialisations and 426 specific content items. The three Music Extension specialisations are listed separately; this is not 48 distinct examination papers.
+Working prototype for the 2026 QCAA General and General Extension external assessments. Includes 48 selectable subjects/specialisations and 426 specific content items. The three Music Extension specialisations are listed separately; this is not 48 distinct examination papers.
 
 ## Try it
 
@@ -34,7 +34,7 @@ Specific topic + matched strategy + concrete instructions + checking guidance. M
 
 Full practice exam sessions select a subject and show its current per-paper timings. They direct students first to a teacher-approved current-format paper, then to the QCAA archive. They do not yet choose individual QCAA question numbers or embed the papers, marking guides, recordings or textbooks. Earlier-cohort papers may differ in topic coverage, selected texts and format. Current-format simulation should use a teacher-approved paper. This limitation is visible in the app.
 
-The next content pass can add verified question-level links, more granular topics, prepared source packs and answer checks without changing the student interface. Styling is deliberately plain black and white.
+The next content pass can add verified question-level links, more granular topics, prepared source packs and answer checks without changing the student interface. The interface uses the Mrs Knox Teaches deep green and sage palette, a visible subject picker, large action buttons and separate task/checking sections. It includes responsive layouts, keyboard focus indicators, reduced-motion support and a print layout. Work Sans and Roboto Slab are used when available on the device; Arial is the built-in fallback. No external fonts or images need to load.
 
 ## Files
 
@@ -52,4 +52,8 @@ Topic and assessment summaries adapted from QCAA syllabuses. © State of Queensl
 
 ## Validation
 
-Run `node tests/engine.test.cjs` for task generation, subject rotation, strategy repetition, selected text/topic filtering, EA boundary checks and five-minute tasks. These checks passed, as did JavaScript syntax and static HTML control checks. A live browser check was unavailable in the build environment, so mobile rendering and browser interaction still need a user review.
+Run `node tests/engine.test.cjs` for task generation, one- to three-subject session filtering and rotation, strategy repetition, selected text/topic filtering, EA boundary checks and five-minute tasks. These checks passed, as did JavaScript syntax and static HTML control checks. A live browser check was unavailable in the build environment, so mobile rendering and browser interaction still need a user review.
+
+## Updating an existing GitHub copy
+
+For the visual update, replace `index.html`, `style.css` and `app.js` in the existing repository with the files in this package. Keep the companion data and engine files alongside them. The self-contained `EA_Study_Randomiser.html` has also been rebuilt. Subject selections and progress retain the same browser storage key when the website address stays the same.
