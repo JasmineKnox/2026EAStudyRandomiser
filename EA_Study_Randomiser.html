@@ -44,34 +44,50 @@ footer{display:flex;justify-content:space-between;gap:20px;margin-top:32px;paddi
 #resource-links{list-style:none;padding:0;margin:0}#resource-links li{margin:14px 0;padding:0}#resource-links a{font-weight:bold}#resource-links span{display:block;font-size:16px;color:var(--muted)}
 @media print{.task-resources{display:none}#task-subject{font-size:18pt;color:black;border:0;padding:0}}
 
+.resource-list{list-style:none;padding:0;margin:0}.resource-list li{margin:18px 0;padding:0}.resource-list a{font-weight:bold}.resource-list span{display:block;font-size:16px;color:var(--muted)}.resource-list .resource-access{font-size:14px;margin-top:4px;color:var(--muted)}
+
+#setup-progress{font-weight:bold;color:var(--green);margin-bottom:20px}
+#session-config,#session-run{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:24px}
+.session-controls{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;margin:20px 0}.session-controls label{font-weight:bold}
+input[type=number]{width:100%;font:inherit;min-height:48px;background:white;color:var(--ink);border:1px solid var(--sage);border-radius:10px;padding:12px 14px;margin-top:8px}
+#session-picker{margin-top:20px}#session-error{font-weight:bold;color:#8b3028}#session-summary{font-size:18px;font-weight:bold;color:var(--green)}#session-progress{font-size:16px;color:var(--muted)}
+.instruction-list{padding-left:24px;margin:16px 0}.instruction-list li{padding-left:4px;margin-bottom:12px}.instruction-list li::marker{color:var(--green)}
+@media(max-width:600px){.session-controls{grid-template-columns:1fr;gap:10px}#session-config,#session-run{padding:20px}#session-config h2{font-size:26px}}
+@media print{#session-config,#session-run,#subject-websites{display:none!important}.instruction-list li::marker{color:black}}
+
 </style>
 </head>
 <body>
 <main>
-<header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Choose your subjects. We’ll give you a place to start.</p></header>
+<header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Set up a study session. Get one clear task at a time.</p></header>
 <p id="storage-note" class="notice" hidden>Your browser cannot save this setup. It will work for this visit; keep the page open.</p>
 <section id="setup" aria-labelledby="setup-title" hidden>
-<h2 id="setup-title">Choose your subjects</h2>
-<p>Start with English, then maths, then your electives. Tick all the subjects you study; you’ll choose up to three for each study session. Your choices stay in this browser. Add the school-selected text or topic where requested.</p>
+<h2 id="setup-title">Save your courses</h2><p id="setup-progress" role="status" tabindex="-1"></p>
+<p>Move through English, maths and electives one page at a time. You can leave a page unticked if it does not apply. Add the text or topic your school selected where requested.</p>
 <label for="subject-search">Find a subject</label><input id="subject-search" type="search" placeholder="e.g. Legal Studies" autocomplete="off">
-<form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button class="primary" type="submit">Save and give me a task</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
+<form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button id="setup-back" type="button">Back</button><button id="setup-next" class="primary" type="button">Next</button><button id="setup-save" class="primary" type="submit" hidden>Save courses and set up a session</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
 <p class="small">Applied subjects and the separate Senior External Examination (SEE) pathway are outside this 2026 EA prototype.</p>
 </section>
 <section id="study" hidden>
 <p id="selected-summary" class="small"></p>
-<fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset>
-<div id="ready"><p class="ready-note">Your next task is ready to pick.</p><button id="generate" class="primary">Give me a study task</button><p id="completion" role="status"></p></div>
+<section id="session-config" aria-labelledby="session-config-title"><h2 id="session-config-title" tabindex="-1">Set up your study session</h2>
+<div class="session-controls"><div><label for="session-duration">How many minutes?</label><input id="session-duration" type="number" min="5" max="180" step="1" value="30" list="duration-options"><datalist id="duration-options"><option value="15"><option value="30"><option value="45"><option value="60"><option value="90"></datalist><p class="small">5–180 minutes, including checking. Allow at least five minutes per subject.</p></div>
+<div><label for="session-mode">Choose your mode</label><select id="session-mode"><option value="easy">Easy — more guidance, smaller response</option><option value="medium" selected>Medium — standard revision task</option><option value="hard">Hard — independent work and justification</option></select></div></div>
+<fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset><p id="session-error" role="alert"></p><button id="generate" class="primary">Start my study session</button></section>
+<section id="session-run" aria-labelledby="session-run-title" hidden><h2 id="session-run-title">Your study session</h2><p id="session-summary"></p><p id="session-progress" role="status"></p><details><summary>See the task blocks</summary><ol id="session-plan"></ol></details><button id="change-session">Change session</button></section><p id="completion" role="status"></p>
+<details id="subject-websites" class="extras"><summary>Study websites for your subjects</summary><label for="website-subject">Choose a subject</label><select id="website-subject"></select><ul id="website-links" class="resource-list"></ul><p class="small">Use the relevant lesson, article or activity alongside your class materials. These sites support selected concepts and skills; they do not replace your QCAA syllabus. Links open in a new tab.</p></details>
+<div id="ready" hidden><p id="ready-message" tabindex="-1" role="status"></p><button id="new-session" class="primary">Set up another session</button></div>
 <article id="task" hidden aria-labelledby="task-title">
-<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-subject"></p><p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p></div>
+<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-subject"></p><p id="task-meta"></p><h2 id="task-title" tabindex="-1"></h2><p id="task-method"></p></div>
 <p class="materials"><strong>Have ready</strong><span id="task-materials"></span></p>
-<section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><ol id="task-steps"></ol><p id="practice-text" hidden></p></section>
-<section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><p id="task-check"></p><p id="task-finish"></p></section>
-<details id="help"><summary>I'm stuck</summary><p id="task-help"></p><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
-<section class="task-resources" aria-labelledby="resources-title"><h3 id="resources-title">Helpful websites</h3><ul id="resource-links"></ul><p class="small">Look up the concept named in your task. Supplementary websites may use a different syllabus; use your class notes and QCAA materials to check exam requirements. Links open in a new tab and need internet access.</p></section>
+<section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><p id="task-pacing" class="small"></p><ul id="task-steps" class="instruction-list"></ul><p id="practice-text" hidden></p></section>
+<section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><ul id="task-check" class="instruction-list"></ul><p id="task-finish"></p></section>
+<details id="help"><summary>I'm stuck</summary><ul id="task-help" class="instruction-list"></ul><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
+<section class="task-resources" aria-labelledby="resources-title"><h3 id="resources-title">Helpful websites</h3><ul id="resource-links" class="resource-list"></ul><p class="small">Look up the concept named in your task. Supplementary websites may use a different syllabus; use your class notes and QCAA materials to check exam requirements. Links open in a new tab and need internet access.</p></section>
 <div class="actions"><button id="done" class="primary">Done — I've checked it</button><button id="timer-toggle">Start timer</button><output id="timer" aria-label="Time remaining"></output></div>
-<details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this 5 minutes</button><button id="skip">Give me another task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
+<details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this task easier</button><button id="skip">Swap this task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
 </article>
-<details class="extras"><summary>Settings and practice exams</summary><div class="actions"><button id="edit-setup">Change my subjects</button><button id="practice-exam">Give me a practice exam session</button></div><p class="small">Normal tasks take about 20 minutes. A practice exam session uses the full working time for one paper.</p><div id="exam" hidden></div><details><summary>Clear my progress</summary><p>This clears task history and completed counts in this browser. Your subjects stay selected.</p><button id="reset-progress">Clear progress</button><p id="reset-status" role="status"></p></details></details>
+<details class="extras"><summary>Settings and practice exams</summary><div class="actions"><button id="edit-setup">Change my subjects</button><button id="practice-exam">Give me a practice exam session</button></div><p class="small">Your session divides the time you choose into task blocks. Practice exams use the full working time for one paper and are separate from these blocks.</p><div id="exam" hidden></div><details><summary>Clear my progress</summary><p>This clears task history and completed counts in this browser. Your subjects stay selected.</p><button id="reset-progress">Clear progress</button><p id="reset-status" role="status"></p></details></details>
 </section>
 <details id="review"><summary>Content bank and sources — for review</summary>
 <p id="bank-count"></p><p>Original study challenges, matched to verified 2026 EA boundaries. Topic coverage is a revision scaffold, not every syllabus dot point. Most tasks use the student's own course materials for checking.</p>
@@ -197,6 +213,16 @@ window.STUDY_BANK = {
           ],
           "kind": "history",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "AIATSIS: explore",
+          "url": "https://aiatsis.gov.au/explore",
+          "note": "Explore First Nations histories and recognition, including the 1967 Referendum and Freedom Ride. Use evidence from the relevant community and historical context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://aiatsis.gov.au/explore"
         }
       ]
     },
@@ -324,6 +350,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "AccountingCoach: explanations",
+          "url": "https://www.accountingcoach.com/explanations",
+          "note": "Revise double-entry accounting, adjustments, statements and financial ratios. US examples use some different terms and formats; follow the conventions in your class materials.",
+          "access": "Free explanations; some additional tools are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.accountingcoach.com/explanations"
+        }
       ]
     },
     {
@@ -449,6 +485,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "NASA: Beginner’s Guide to Aeronautics",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+          "note": "Use explanations and simulations of lift, drag, thrust and aircraft motion to revisit flight-performance concepts.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/"
         }
       ]
     },
@@ -588,6 +634,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Queensland DPI: agriculture",
+          "url": "https://www.dpi.qld.gov.au/business-priorities/agriculture",
+          "note": "Browse plant production, livestock and agricultural business resources. Use a relevant Queensland example when revising production and sustainability.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.dpi.qld.gov.au/business-priorities/agriculture"
+        }
       ]
     },
     {
@@ -695,6 +751,24 @@ window.STUDY_BANK = {
           ],
           "kind": "history",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        },
+        {
+          "name": "World History Encyclopedia: education",
+          "url": "https://www.worldhistory.org/edu/",
+          "note": "Search for your selected ancient personality or civilisation to review context, chronology and historical interpretations.",
+          "access": "Free articles and teaching resources; optional membership is paid",
+          "checked": "2026-10-08",
+          "source": "https://www.worldhistory.org/edu/"
         }
       ]
     },
@@ -894,6 +968,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: AP Biology",
+          "url": "https://www.khanacademy.org/science/ap-biology",
+          "note": "Use heredity, gene expression, evolution and ecology lessons to revisit the concept in your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-biology"
+        }
       ]
     },
     {
@@ -1031,6 +1115,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "business.gov.au: managing change",
+          "url": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business",
+          "note": "Use a practical Australian change-management example to connect planning, stakeholder involvement and communication with business transformation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business"
         }
       ]
     },
@@ -1242,6 +1336,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: AP Chemistry",
+          "url": "https://www.khanacademy.org/science/ap-chemistry-beta",
+          "note": "Revisit equilibrium, acids and bases, chemical reactions and thermodynamics. Choose the lesson that matches your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-chemistry-beta"
+        },
+        {
+          "name": "Khan Academy: organic chemistry",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/",
+          "note": "Review structures, functional groups and organic reactions. Follow your class conventions for naming, mechanisms and required reaction conditions.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/organic-chemistry/"
+        }
       ]
     },
     {
@@ -1331,6 +1443,24 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
         }
       ]
     },
@@ -1425,6 +1555,24 @@ window.STUDY_BANK = {
           "kind": "language-ext",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
       ]
     },
     {
@@ -1503,6 +1651,16 @@ window.STUDY_BANK = {
           "kind": "dance",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "The Australian Ballet: education resources",
+          "url": "https://australianballet.com.au/education-resource-hub",
+          "note": "Use choreography, music and design resources to practise explaining how movement and production choices communicate meaning. Apply your course terminology.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://australianballet.com.au/education-resource-hub"
+        }
       ]
     },
     {
@@ -1580,6 +1738,16 @@ window.STUDY_BANK = {
           ],
           "kind": "design",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: sustainable design techniques",
+          "url": "https://www.open.edu/openlearn/course/view.php?id=12588",
+          "note": "Read a designer’s clothing case study to connect materials, adaptability, durability and end-of-life decisions with a sustainable design solution.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/course/view.php?id=12588"
         }
       ]
     },
@@ -1743,6 +1911,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Computer Science Principles",
+          "url": "https://www.khanacademy.org/computing/ap-computer-science-principles",
+          "note": "Use Internet, online data security and computing-innovation lessons to revise data exchange, cybersecurity and digital impacts.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/computing/ap-computer-science-principles"
+        },
+        {
+          "name": "MDN: HTTP guides",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides",
+          "note": "Revisit client–server communication, requests, responses and authentication. Use the overview first; technical detail may go beyond your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides"
+        }
       ]
     },
     {
@@ -1820,6 +2006,16 @@ window.STUDY_BANK = {
           ],
           "kind": "drama",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Approaching plays",
+          "url": "https://www.open.edu/openlearn/history-the-arts/literature/approaching-plays/content-section-0",
+          "note": "Review play structure, dialogue, performance and staging, then explain how dramatic choices shape meaning in the stimulus.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/literature/approaching-plays/content-section-0"
         }
       ]
     },
@@ -1983,6 +2179,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Geoscience Australia: classroom resources",
+          "url": "https://www.ga.gov.au/education/classroom-resources",
+          "note": "Use Australian resources on natural hazards, minerals and energy to revisit Earth resources and hazards. Select material at the right level for your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.ga.gov.au/education/classroom-resources"
+        }
       ]
     },
     {
@@ -2145,6 +2351,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: macroeconomics",
+          "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics",
+          "note": "Practise economic indicators, aggregate demand and supply, and monetary or fiscal policy. International examples supplement your Australian course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/economics-finance-domain/macroeconomics"
+        }
       ]
     },
     {
@@ -2258,6 +2474,24 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Find relevant force, work, energy, torque and motion explanations to support calculations about machines and mechanisms.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        },
+        {
+          "name": "OpenLearn: Introducing engineering",
+          "url": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering",
+          "note": "Review engineering design, materials and manufacturing decisions. Use relevant sections as background for explaining an engineering solution.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering"
         }
       ]
     },
@@ -2385,6 +2619,16 @@ window.STUDY_BANK = {
           "kind": "english",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
       ]
     },
     {
@@ -2486,6 +2730,24 @@ window.STUDY_BANK = {
           ],
           "kind": "theory",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Open Yale Courses: Theory of Literature",
+          "url": "https://oyc.yale.edu/english/engl-300",
+          "note": "Use selected lecture videos or transcripts to revisit the critical approach you have studied. These are university lectures: choose a short relevant section.",
+          "access": "Free lecture videos and transcripts",
+          "checked": "2026-10-08",
+          "source": "https://oyc.yale.edu/english/engl-300"
+        },
+        {
+          "name": "Purdue OWL: reading criticism",
+          "url": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/reading_criticism.html",
+          "note": "Review how to read critical interpretations and connect them with your own close reading. Apply the theoretical approaches taught in your class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/reading_criticism.html"
         }
       ]
     },
@@ -2613,6 +2875,16 @@ window.STUDY_BANK = {
           "kind": "english",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
       ]
     },
     {
@@ -2702,6 +2974,16 @@ window.STUDY_BANK = {
           ],
           "kind": "film",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "ACMI: screen-learning resources",
+          "url": "https://www.acmi.net.au/education/",
+          "note": "Use free film study guides and screen-literacy activities to practise analysing visual language, sound, representation and meaning.",
+          "access": "Free online learning resources; some events and programs are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.acmi.net.au/education/"
         }
       ]
     },
@@ -2829,6 +3111,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "FSANZ: Australian Food Composition Database",
+          "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd",
+          "note": "Compare nutrient information for foods used in a proposed product or solution. Explain how your choices address the specified consumer’s nutrition needs.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd"
+        }
       ]
     },
     {
@@ -2918,6 +3210,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
         }
       ]
     },
@@ -3011,6 +3313,24 @@ window.STUDY_BANK = {
           ],
           "kind": "language-ext",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        },
+        {
+          "name": "TV5MONDE: B2 reports and exercises",
+          "url": "https://apprendre.tv5monde.com/fr/exercices/b2-avance",
+          "note": "Use an advanced report to analyse viewpoint, language and evidence, then connect it to your investigation. B2 is a language level, not a QCAA equivalence.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/fr/exercices/b2-avance"
         }
       ]
     },
@@ -3186,6 +3506,24 @@ window.STUDY_BANK = {
           "kind": "math",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revise data displays, bivariate data and regression. Choose relevant sections; this site does not cover every General Mathematics topic.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        },
+        {
+          "name": "Khan Academy: maths courses",
+          "url": "https://www.khanacademy.org/math",
+          "note": "Search for the specific skill in your task to revisit supporting algebra, sequences, finance or matrices. Check your class method and calculator conventions.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math"
+        }
       ]
     },
     {
@@ -3300,6 +3638,16 @@ window.STUDY_BANK = {
           "kind": "diagram",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "UN: World Population Prospects",
+          "url": "https://population.un.org/wpp",
+          "note": "Explore population estimates and projections. Compare countries or age structures, identify a pattern, then explain a consequence of population change.",
+          "access": "Free data and reports",
+          "checked": "2026-10-08",
+          "source": "https://population.un.org/wpp"
+        }
       ]
     },
     {
@@ -3389,6 +3737,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
         }
       ]
     },
@@ -3482,6 +3840,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language-ext",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
         }
       ]
     },
@@ -3609,6 +3977,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "eSafety: respectful relationships",
+          "url": "https://www.esafety.gov.au/young-people/being-in-a-respectful-relationship",
+          "note": "Use young people’s perspectives on respect, boundaries and communication to analyse a relationship scenario. Connect the examples with your class health frameworks.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.esafety.gov.au/young-people/being-in-a-respectful-relationship"
+        }
       ]
     },
     {
@@ -3699,6 +4077,16 @@ window.STUDY_BANK = {
           "kind": "language",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Rai Scuola: Italian B1",
+          "url": "https://www.raiscuola.rai.it/percorsi/livellob1",
+          "note": "Use video units to practise comprehension and vocabulary, including everyday life, education and work. Choose the unit that supports your current task.",
+          "access": "Public video resources; availability can vary by location",
+          "checked": "2026-10-08",
+          "source": "https://www.raiscuola.rai.it/percorsi/livellob1"
+        }
       ]
     },
     {
@@ -3788,6 +4176,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Japan Foundation: Irodori",
+          "url": "https://www.irodori.jpf.go.jp/en/",
+          "note": "Use downloadable lessons and audio for everyday life, work and future choices. Select the level and topic that match your course.",
+          "access": "Free learning materials and audio",
+          "checked": "2026-10-08",
+          "source": "https://www.irodori.jpf.go.jp/en/"
         }
       ]
     },
@@ -4083,6 +4481,24 @@ window.STUDY_BANK = {
           "kind": "legal-analysis",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Australian Human Rights Commission: student resources",
+          "url": "https://humanrights.gov.au/human-rights-education/student-resources",
+          "note": "Review human rights concepts and Australian examples. Connect evidence with the legal issue, protection or limitation named in your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://humanrights.gov.au/human-rights-education/student-resources"
+        },
+        {
+          "name": "Legal Aid Queensland: legal information",
+          "url": "https://www.legalaid.qld.gov.au/Find-legal-information",
+          "note": "Find a relevant Queensland example of rights, discrimination or legal processes. Check the jurisdiction and currency when using a legal example.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.legalaid.qld.gov.au/Find-legal-information"
+        }
       ]
     },
     {
@@ -4208,6 +4624,16 @@ window.STUDY_BANK = {
           ],
           "kind": "english",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
         }
       ]
     },
@@ -4358,6 +4784,24 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "AIMS: corals",
+          "url": "https://www.aims.gov.au/research-topics/marine-life/corals",
+          "note": "Revisit coral biology and reef relationships, then explain how a change in conditions could affect a reef system.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.aims.gov.au/research-topics/marine-life/corals"
+        },
+        {
+          "name": "AIMS: reef-monitoring dashboard",
+          "url": "https://apps.aims.gov.au/reef-monitoring/",
+          "note": "Explore reef survey data to practise identifying trends, interpreting evidence and explaining the limits of a monitoring result.",
+          "access": "Free dashboard; JavaScript required",
+          "checked": "2026-10-08",
+          "source": "https://apps.aims.gov.au/reef-monitoring/"
         }
       ]
     },
@@ -4520,6 +4964,24 @@ window.STUDY_BANK = {
           ],
           "kind": "math",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revisit probability distributions, sampling and inference where relevant to your course. Use your class definitions and required notation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
         }
       ]
     },
@@ -4689,6 +5151,16 @@ window.STUDY_BANK = {
           "kind": "history",
           "option": "Mass migrations since 1848"
         }
+      ],
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        }
       ]
     },
     {
@@ -4778,6 +5250,24 @@ window.STUDY_BANK = {
           ],
           "kind": "music",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
         }
       ]
     },
@@ -4869,6 +5359,24 @@ window.STUDY_BANK = {
           "kind": "music",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
+        }
       ]
     },
     {
@@ -4959,6 +5467,24 @@ window.STUDY_BANK = {
           "kind": "music",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
+        }
       ]
     },
     {
@@ -5048,6 +5574,24 @@ window.STUDY_BANK = {
           ],
           "kind": "music",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
         }
       ]
     },
@@ -5175,6 +5719,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Stanford Encyclopedia: justice",
+          "url": "https://plato.stanford.edu/entries/justice/",
+          "note": "Compare accounts of justice and test their assumptions against an example. This is advanced reference material: focus on the philosophers studied in class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://plato.stanford.edu/entries/justice/"
+        }
       ]
     },
     {
@@ -5288,6 +5842,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: training for speed and power",
+          "url": "https://www.open.edu/openlearn/health-sports-psychology/training-speed-and-power-sport-and-fitness",
+          "note": "Review physiology and training principles, then explain how a training choice addresses a sport’s performance demands. Use it for theory revision.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/health-sports-psychology/training-speed-and-power-sport-and-fitness"
         }
       ]
     },
@@ -5463,6 +6027,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Revisit gravity, electromagnetism and other relevant physics concepts through explanations and examples. Use class materials for the full modern-physics requirements.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        }
       ]
     },
     {
@@ -5637,6 +6211,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenStax: Psychology 2e",
+          "url": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+          "note": "Use the chapter contents to revisit learning, memory, cognition and social psychology. Read the relevant section and test recall with its review questions.",
+          "access": "Free online textbook",
+          "checked": "2026-10-08",
+          "source": "https://openstax.org/books/psychology-2e/pages/1-introduction"
+        }
       ]
     },
     {
@@ -5726,6 +6310,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "VideoEle: Spanish video course",
+          "url": "https://videoele.com/Curso.html",
+          "note": "Choose an appropriate A1–B2 video to practise listening and vocabulary, then use its activities to check comprehension.",
+          "access": "Free video course; videos use YouTube",
+          "checked": "2026-10-08",
+          "source": "https://videoele.com/Curso.html"
         }
       ]
     },
@@ -5889,6 +6483,32 @@ window.STUDY_BANK = {
           "kind": "math",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revisit probability distributions, sampling and inference where relevant to your course. Use your class definitions and required notation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        },
+        {
+          "name": "Khan Academy: linear algebra",
+          "url": "https://www.khanacademy.org/math/linear-algebra",
+          "note": "Revisit vectors and matrix transformations. Use the sections matching your task; this course also contains material beyond senior secondary study.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/linear-algebra"
+        }
       ]
     },
     {
@@ -6027,6 +6647,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Harvard Pluralism Project: religions",
+          "url": "https://pluralism.org/religions",
+          "note": "Review the beliefs and practices of the traditions studied in class, then connect a relevant belief with human dignity or rights. Examples often use a US context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://pluralism.org/religions"
+        },
+        {
+          "name": "Australian Human Rights Commission: learn about human rights",
+          "url": "https://humanrights.gov.au/resource-hub/by-resource-type/learn-about-human-rights",
+          "note": "Use Australian human-rights background to support discussion of human existence and rights. Pair this with the religious teachings and examples studied in class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://humanrights.gov.au/resource-hub/by-resource-type/learn-about-human-rights"
+        }
       ]
     },
     {
@@ -6117,11 +6755,22 @@ window.STUDY_BANK = {
           "kind": "art",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Smarthistory: visual analysis",
+          "url": "https://smarthistory.org/visual-analysis/",
+          "note": "Practise describing visual features and explaining their effects, then connect those observations with the contexts required in your task.",
+          "access": "Free video and transcript",
+          "checked": "2026-10-08",
+          "source": "https://smarthistory.org/visual-analysis/"
+        }
       ]
     }
   ],
   "attribution": "Topic and assessment summaries adapted from QCAA syllabuses. © State of Queensland (QCAA) 2026. https://www.qcaa.qld.edu.au/copyright. Study activities created by Mrs Knox with AI assistance. This is an independent resource, not a QCAA publication.",
-  "timetable": "https://www.qcaa.qld.edu.au/downloads/senior/snr_ext_assess_timetable_2026.pdf"
+  "timetable": "https://www.qcaa.qld.edu.au/downloads/senior/snr_ext_assess_timetable_2026.pdf",
+  "resourcesChecked": "2026-10-08"
 };
 
 </script><script>
@@ -6226,7 +6875,63 @@ const prior=(state.history||[]).at(-1);let choices=methods.filter(x=>!prior||x!=
 const task=makeTask(s,t,pick(choices,rng),options,quick);
 task.created=Date.now();state.history=[...(state.history||[]),{subject:id,topic:t.id,method:task.method}].slice(-300);return task;
 }
-root.StudyEngine={METHODS,LABELS,makeTask,next,eligible,displayTitle,shuffle,activeSubjects};
+const MODES={easy:'Easy',medium:'Medium',hard:'Hard'};
+function sessionPlan(minutes,subjects){
+ const ids=[...new Set(subjects)];
+ if(!Number.isInteger(minutes)||minutes<5||minutes>180)throw new Error('Choose a whole number of minutes from 5 to 180.');
+ if(!ids.length||ids.length>3)throw new Error('Choose one to three subjects.');
+ if(minutes<ids.length*5)throw new Error('Allow at least five minutes for each selected subject.');
+ const count=Math.max(ids.length,Math.ceil(minutes/20)),base=Math.floor(minutes/count),extra=minutes%count;
+ return Array.from({length:count},(_,i)=>({subject:ids[i%ids.length],minutes:base+(i<extra?1:0)}));
+}
+function splitInstructions(text){
+ return String(text).replace(/(?:^|\s)\d+\.\s+(?=[A-Z])/g,'\n').split(/\n|(?<=[.!?])\s+(?=[A-Z“"0-9])|;\s+|, then\s+/).map(x=>x.trim()).filter(Boolean).map(x=>x[0].toUpperCase()+x.slice(1));
+}
+function sessionTask(s,t,method,options,minutes=20,mode='medium'){
+ if(!MODES[mode])mode='medium';
+ const task=makeTask(s,t,method,options,false);
+ task.minutes=minutes;task.mode=mode;
+ const checkMinutes=Math.max(1,Math.round(minutes*.25)),workMinutes=minutes-checkMinutes;
+ const timed=text=>text
+ .replace(/Spend 10 minutes building/g,'Build')
+ .replace(/Spend five minutes checking/g,'Check')
+ .replace(/Give yourself 8 minutes to write/g,'Write')
+ .replace(/Spend the remaining time checking and rebuilding/g,'Check and rebuild')
+ .replace(/Spend 12 minutes answering/g,'Answer the prompts')
+ .replace(/Spend 10 minutes sketching/g,'Sketch')
+ .replace(/Write for 12 minutes without a dictionary/g,'Write without a dictionary')
+ .replace(/for 12 minutes/g,'during your working time')
+ .replace(/for two minutes/g,'briefly');
+ // A short block keeps the subject-specific strategy, with a smaller response.
+ const smaller=text=>text.replace(/three (specific pieces|linked claims|different solutions|precise choices|specific visible details|precise features)/g,'one $1').replace(/first three unanswered questions/g,'first unanswered question').replace(/with six relevant events/g,'with three relevant events').replace(/Write 12 /g,'Write six ').replace(/Use six items/g,'Use three items').replace(/one specific pieces/g,'one specific piece').replace(/one linked claims/g,'one linked claim').replace(/one different solutions/g,'one solution').replace(/one precise choices/g,'one precise choice').replace(/one specific visible details/g,'one specific visible detail').replace(/one precise features/g,'one precise feature');
+ let steps=task.steps.flatMap(text=>splitInstructions(timed(text)));
+ if(mode==='easy'||minutes<=10)steps=steps.map(smaller);
+ if(minutes<=10)steps.unshift('Keep the response brief: complete one example, a short plan or a few sentences.');
+ if(mode==='easy'){
+  steps.unshift('Use your notes to find a definition or model for the named topic.','Write three key words to guide your response.','Keep the source or question available; cover its answer while you try the task.');
+  task.help='Use the first focus point as your starting heading. Add one accurate point or example, then build on it.';
+ }
+ if(mode==='hard'){
+  steps.unshift('Keep solutions and explanatory notes closed until the checking stage. Keep the task’s text, question or stimulus available.');
+  const challenge=t.kind==='math'||t.kind==='algorithm'?'Apply the method to a different input or question, and justify why your approach works.':t.kind==='legal-analysis'?'Test your recommendation against a competing viewpoint or changed fact. Justify whether it should still stand.':t.kind==='design'?'Test your solution against one additional user constraint and justify the refinement.':t.kind.startsWith('language')?'Add a counterargument or alternative viewpoint in the target language, supported by a detail from the stimulus. Justify your own position.':t.kind==='english'||t.kind==='theory'?'Consider a different interpretation of the same evidence and justify which reading is stronger.':t.kind==='history'||t.kind==='timeline'?'Test your claim against a conflicting source or alternative explanation. Explain a limit of your evidence and justify your judgement.':'Apply the concept to a different example, or consider another interpretation. Justify your conclusion with specific evidence.';
+  const checkingIndex=steps.findIndex(x=>/^(?:Check|Compare|Uncover|Verify|Revisit|Replay|Listen again|Use the provided answers)/.test(x));
+  steps.splice(checkingIndex>=0?checkingIndex:steps.length,0,challenge);
+ }
+ task.steps=steps;
+ task.checkSteps=splitInstructions(task.check);
+ task.helpSteps=splitInstructions(task.help);
+ task.pacing=`Use about ${workMinutes} minutes for the task and ${checkMinutes} minute${checkMinutes===1?'':'s'} to check and retry a gap.`;
+ task.label=MODES[mode]+' · '+LABELS[method];
+ return task;
+}
+function nextSessionTask(bank,state,block,mode='medium'){
+ const s=bank.subjects.find(s=>s.id===block.subject);if(!s)throw new Error('Unknown session subject.');
+ const original=next(bank,state,{subjectId:block.subject});
+ const t=s.topics.find(t=>t.id===original.topic);
+ const task=sessionTask(s,t,original.method,state.options||{},block.minutes,mode);task.created=original.created;return task;
+}
+
+root.StudyEngine={MODES,sessionPlan,splitInstructions,sessionTask,nextSessionTask,METHODS,LABELS,makeTask,next,eligible,displayTitle,shuffle,activeSubjects};
 if(typeof module!=='undefined')module.exports=root.StudyEngine;
 })(typeof window!=='undefined'?window:globalThis);
 
@@ -6234,63 +6939,91 @@ if(typeof module!=='undefined')module.exports=root.StudyEngine;
 (function(){
 'use strict';
 const bank=window.STUDY_BANK,E=window.StudyEngine,by=id=>document.getElementById(id),KEY='mrs-knox-ea-study-2026-v1';
-let state={selected:[],options:{},queue:[],history:[],completed:0,current:null},tick=null,endAt=null,remaining=0;
+let state={selected:[],options:{},active:[],queue:[],history:[],completed:0,current:null,session:null,duration:30,mode:'medium'},tick=null,endAt=null,remaining=0,setupStep=0;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{by('storage-note').hidden=false;}}
 try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&Array.isArray(saved.selected)){state={...state,...saved};state.selected=[...new Set(state.selected.filter(id=>bank.subjects.some(s=>s.id===id)))];state.options=state.options&&typeof state.options==='object'?state.options:{};state.queue=Array.isArray(state.queue)?state.queue:[];state.history=Array.isArray(state.history)?state.history.filter(x=>x&&typeof x.subject==='string'):[];state.completed=Number.isFinite(state.completed)?state.completed:0;}}
 catch{by('storage-note').hidden=false;}
+state.active=Array.isArray(state.active)?E.activeSubjects(state):state.selected.slice(0,3);
+state.duration=Number.isInteger(state.duration)&&state.duration>=5&&state.duration<=180?state.duration:30;
+state.mode=E.MODES[state.mode]?state.mode:'medium';
 function validSetup(){return state.selected.length&&state.selected.every(id=>{const s=bank.subjects.find(s=>s.id===id);if(!s.option)return true;if(s.option.text)return Boolean(String(state.options[id]||'').trim());return s.option.values.includes(state.options[id]);});}
-state.active=Array.isArray(state.active)?E.activeSubjects(state):[...new Set([state.current?.subject,...state.selected].filter(id=>state.selected.includes(id)))].slice(0,3);
-if(state.current){const s=bank.subjects.find(s=>s.id===state.current.subject&&state.active.includes(s.id)),t=s&&E.eligible(s,state.options).find(t=>t.id===state.current.topic);state.current=t&&E.METHODS[t.kind].includes(state.current.method)?E.makeTask(s,t,state.current.method,state.options,state.current.minutes===5):null;}
+if(state.session){
+ const x=state.session;
+ try{const plan=E.sessionPlan(x.duration,state.active);if(!E.MODES[x.mode]||JSON.stringify(plan)!==JSON.stringify(x.blocks)||!Number.isInteger(x.index)||x.index<0||x.index>plan.length)throw Error();
+ if(x.index<plan.length){const c=state.current,s=c&&bank.subjects.find(s=>s.id===c.subject),t=s&&E.eligible(s,state.options).find(t=>t.id===c.topic);if(!t||c.subject!==plan[x.index].subject||!E.METHODS[t.kind].includes(c.method))throw Error();state.current=E.sessionTask(s,t,c.method,state.options,plan[x.index].minutes,c.mode||x.mode);}
+ else state.current=null;
+ }catch{state.session=null;state.current=null;}
+}else state.current=null;
 const groupOf=s=>s.area==='English'?'English':s.area==='Mathematics'?'Maths':'Electives';
 const groups=['English','Maths','Electives'];
 function setup(){
-by('setup').hidden=false;by('study').hidden=true;by('cancel-setup').hidden=!validSetup();by('subject-search').value='';by('setup-error').textContent='';
-by('subject-list').replaceChildren();
-const areas=groups;
-areas.forEach(area=>{const field=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent=(groups.indexOf(area)+1)+'. Select your '+(area==='Electives'?'electives':area);field.append(legend);const hint=document.createElement('p');hint.className='selection-hint';hint.textContent=area==='English'?'Choose your English course and any extension you study.':area==='Maths'?'Choose your maths course. You can select Specialist as well as Methods.':'Choose your remaining subjects. You can skip any section that does not apply.';field.append(hint);
- bank.subjects.filter(s=>groupOf(s)===area).forEach(s=>{const wrap=document.createElement('div');wrap.dataset.subject=s.name.toLowerCase();const label=document.createElement('label');label.className='subject-label';const box=document.createElement('input');box.type='checkbox';box.name='subject';box.value=s.id;box.checked=state.selected.includes(s.id);const title=document.createElement('span');title.textContent=s.name;label.append(box,title);wrap.append(label);if(area==='Electives'){const category=document.createElement('small');category.className='subject-area';category.textContent=s.area;title.append(category);}
+ by('setup').hidden=false;by('study').hidden=true;by('cancel-setup').hidden=!validSetup();by('subject-search').value='';by('setup-error').textContent='';setupStep=0;
+ by('subject-list').replaceChildren();
+ groups.forEach((area,index)=>{const field=document.createElement('fieldset'),legend=document.createElement('legend');field.dataset.step=index;legend.textContent='Select your '+(area==='Electives'?'electives':area);field.append(legend);
+ const hint=document.createElement('p');hint.className='selection-hint';hint.textContent=area==='English'?'Choose your English course and any extension you study.':area==='Maths'?'Choose your maths course. You can select Specialist as well as Methods.':'Choose your remaining subjects. You can save all your courses and select up to three for a session.';field.append(hint);
+ bank.subjects.filter(s=>groupOf(s)===area).forEach(s=>{const wrap=document.createElement('div');wrap.dataset.subject=s.name.toLowerCase();const label=document.createElement('label');label.className='subject-label';const box=document.createElement('input');box.type='checkbox';box.name='subject';box.value=s.id;box.checked=state.selected.includes(s.id);const title=document.createElement('span');title.textContent=s.name;label.append(box,title);wrap.append(label);
+ if(area==='Electives'){const category=document.createElement('small');category.className='subject-area';category.textContent=s.area;title.append(category);}
  if(s.option){const opt=document.createElement('div');opt.className='subject-options';opt.hidden=!box.checked;const l=document.createElement('label');l.htmlFor='option-'+s.id;l.textContent=s.option.label;const input=document.createElement(s.option.text?'input':'select');input.id=l.htmlFor;input.dataset.option=s.id;
-  if(s.option.text){input.type='text';input.maxLength=150;input.placeholder='e.g. renewable energy in Germany';input.value=state.options[s.id]||'';}
-  else{input.append(new Option('Select the option your school chose',''));s.option.values.forEach(v=>input.append(new Option(v,v)));input.value=state.options[s.id]||'';}
-  opt.append(l,input);wrap.append(opt);box.addEventListener('change',()=>opt.hidden=!box.checked);
- }
+ if(s.option.text){input.type='text';input.maxLength=150;input.placeholder='e.g. renewable energy in Germany';input.value=state.options[s.id]||'';}
+ else{input.append(new Option('Select the option your school chose',''));s.option.values.forEach(v=>input.append(new Option(v,v)));input.value=state.options[s.id]||'';}
+ opt.append(l,input);wrap.append(opt);box.addEventListener('change',()=>opt.hidden=!box.checked);}
  field.append(wrap);});by('subject-list').append(field);});
+ showSetupStep();
 }
-by('subject-search').addEventListener('input',event=>{const q=event.target.value.toLowerCase();by('subject-list').querySelectorAll('[data-subject]').forEach(el=>el.hidden=!el.dataset.subject.includes(q));by('subject-list').querySelectorAll('fieldset').forEach(el=>el.hidden=![...el.querySelectorAll('[data-subject]')].some(x=>!x.hidden));});
-by('setup-form').addEventListener('submit',event=>{event.preventDefault();const ids=[...by('subject-list').querySelectorAll('input[name=subject]:checked')].map(x=>x.value),options={};if(!ids.length){by('setup-error').textContent='Tick at least one subject.';return;}
-for(const id of ids){const s=bank.subjects.find(s=>s.id===id);if(s.option){const value=by('option-'+id).value.trim();if(!value||(!s.option.text&&!s.option.values.includes(value))){by('setup-error').textContent='Add '+s.option.label.toLowerCase()+' for '+s.name+'.';by('subject-search').value='';by('subject-search').dispatchEvent(new Event('input'));by('option-'+id).focus();return;}options[id]=value;}}
-const changed=JSON.stringify(ids)!==JSON.stringify(state.selected)||JSON.stringify(options)!==JSON.stringify(state.options);state.selected=ids;state.options=options;state.active=state.active.filter(id=>ids.includes(id));if(changed){state.queue=[];state.current=null;if(!state.active.length)state.active=ids.slice(0,3);}save();showStudy();if(!state.current&&state.active.length)generate();});
+function filterSetup(){const q=by('subject-search').value.toLowerCase();by('subject-list').querySelectorAll('[data-subject]').forEach(el=>el.hidden=!el.dataset.subject.includes(q));}
+function showSetupStep(){by('subject-list').querySelectorAll('fieldset').forEach((el,i)=>el.hidden=i!==setupStep);by('setup-progress').textContent='Step '+(setupStep+1)+' of 3 · '+groups[setupStep];by('setup-back').hidden=setupStep===0;by('setup-next').hidden=setupStep===2;by('setup-save').hidden=setupStep!==2;by('subject-search').value='';filterSetup();by('setup-error').textContent='';}
+function validateStep(index){const field=by('subject-list').querySelector('[data-step="'+index+'"]');for(const box of field.querySelectorAll('input[name=subject]:checked')){const s=bank.subjects.find(s=>s.id===box.value);if(s.option){const input=by('option-'+s.id),v=input.value.trim();if(!v||(!s.option.text&&!s.option.values.includes(v))){setupStep=index;showSetupStep();by('setup-error').textContent='Add '+s.option.label.toLowerCase()+' for '+s.name+'.';input.focus();return false;}}}return true;}
+by('subject-search').addEventListener('input',filterSetup);
+by('setup-next').addEventListener('click',()=>{if(validateStep(setupStep)){setupStep++;showSetupStep();by('setup-progress').focus();}});
+by('setup-back').addEventListener('click',()=>{setupStep--;showSetupStep();by('setup-progress').focus();});
+by('setup-form').addEventListener('submit',event=>{event.preventDefault();if(setupStep<2){by('setup-next').click();return;}for(let i=0;i<3;i++)if(!validateStep(i))return;
+ const ids=[...by('subject-list').querySelectorAll('input[name=subject]:checked')].map(x=>x.value),options={};if(!ids.length){by('setup-error').textContent='Choose at least one subject across the three pages.';return;}
+ for(const id of ids){const s=bank.subjects.find(s=>s.id===id);if(s.option)options[id]=by('option-'+id).value.trim();}
+ state.selected=ids;state.options=options;state.active=state.active.filter(id=>ids.includes(id));if(!state.active.length)state.active=ids.slice(0,3);state.queue=[];state.current=null;state.session=null;save();showStudy();});
 function sessionPicker(){
-by('session-subjects').replaceChildren(...state.selected.map(id=>{const s=bank.subjects.find(s=>s.id===id),label=document.createElement('label'),box=document.createElement('input');label.className='subject-label session-choice';box.type='checkbox';box.name='session-subject';box.value=id;box.checked=state.active.includes(id);const name=document.createElement('span');name.textContent=s.name;label.append(box,name);box.addEventListener('change',()=>{const chosen=[...by('session-subjects').querySelectorAll('input:checked')].map(x=>x.value);if(chosen.length>3){box.checked=false;return;}state.active=chosen;state.queue=[];if(state.current&&!chosen.includes(state.current.subject)){stopTimer();state.current=null;}save();sessionPicker();if(!state.current){by('task').hidden=true;by('ready').hidden=false;}by('exam').hidden=true;[...by('session-subjects').querySelectorAll('input')].find(input=>input.value===id).focus();});return label;}));
-groups.forEach(group=>{const choices=[...by('session-subjects').children].filter(label=>groupOf(bank.subjects.find(s=>s.id===label.querySelector('input').value))===group);if(!choices.length)return;const section=document.createElement('div');section.className='session-group';const heading=document.createElement('h3');heading.textContent=group;section.append(heading,...choices);by('session-subjects').append(section);});
-const count=state.active.length;by('session-subjects').querySelectorAll('input').forEach(box=>box.disabled=count===3&&!box.checked);
-by('session-status').textContent=count?count+' of 3 selected'+(count===3?' — untick a subject to choose another.':'.'):'Choose at least one subject to get a task.';
-by('generate').disabled=!count;by('practice-exam').disabled=!count;
+ by('session-subjects').replaceChildren(...state.selected.map(id=>{const s=bank.subjects.find(s=>s.id===id),label=document.createElement('label'),box=document.createElement('input');label.className='subject-label session-choice';box.type='checkbox';box.name='session-subject';box.value=id;box.checked=state.active.includes(id);const name=document.createElement('span');name.textContent=s.name;label.append(box,name);
+ box.addEventListener('change',()=>{const chosen=[...by('session-subjects').querySelectorAll('input:checked')].map(x=>x.value);if(chosen.length>3){box.checked=false;return;}state.active=chosen;state.queue=[];save();sessionPicker();});return label;}));
+ groups.forEach(group=>{const choices=[...by('session-subjects').children].filter(label=>groupOf(bank.subjects.find(s=>s.id===label.querySelector('input').value))===group);if(!choices.length)return;const section=document.createElement('div');section.className='session-group';const heading=document.createElement('h3');heading.textContent=group;section.append(heading,...choices);by('session-subjects').append(section);});
+ const count=state.active.length;by('session-subjects').querySelectorAll('input').forEach(box=>box.disabled=count===3&&!box.checked);by('session-status').textContent=count?count+' of 3 subjects selected'+(count===3?' — untick one to swap.':'.'):'Choose at least one subject.';by('generate').disabled=!count;by('practice-exam').disabled=!count;
 }
-function showStudy(){by('setup').hidden=true;by('study').hidden=false;by('selected-summary').textContent='Your saved subjects: '+state.selected.map(id=>bank.subjects.find(s=>s.id===id).name).join(', ');sessionPicker();by('completion').textContent=state.completed?state.completed+' checked task'+(state.completed===1?'':'s')+' completed.':'';if(state.current&&state.active.includes(state.current.subject))renderTask();else{state.current=null;by('task').hidden=true;by('ready').hidden=false;}}
-function generate(quick=false){stopTimer();state.current=E.next(bank,state,{quick});save();renderTask();}
-function renderTask(){const t=state.current,s=bank.subjects.find(s=>s.id===t.subject);by('ready').hidden=true;by('task').hidden=false;by('task-subject').textContent=s.name;by('task-meta').textContent=t.minutes+' minutes';renderResources(s);by('task-title').textContent=t.title;by('task-method').textContent=t.label;by('task-materials').textContent=t.materials;by('task-steps').replaceChildren(...t.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));by('task-check').textContent=t.check;by('task-finish').textContent=t.finish;by('task-help').textContent=t.help;by('practice-text').hidden=!t.practiceText;by('practice-text').textContent=t.practiceText||'';by('task-source').href=t.source;by('help').open=false;by('shorten').disabled=t.minutes===5;by('timer').textContent='';by('timer-toggle').textContent='Start timer';by('exam').hidden=true;}
-function renderResources(s){
-const links=[{name:'QCAA '+s.name+' resources',url:s.page,note:'Official syllabus, past papers and marking guides.'}];
-if(s.area==='English')links.push({name:'LitCharts literature guides',url:'https://www.litcharts.com/lit',note:'Search for your selected text. Some content and downloads require a paid subscription.'});
-if(s.area==='Mathematics')links.push({name:'Khan Academy maths',url:'https://www.khanacademy.org/math',note:'Search for the concept in this task to find explanations and practice.'});
-if(['biology','chemistry','physics','economics','digital_solutions'].includes(s.id))links.push({name:'Khan Academy',url:'https://www.khanacademy.org/',note:'Browse the relevant science, economics or computing course for this concept.'});
-if(s.id==='legal')links.push({name:'Legal Aid Queensland',url:'https://www.legalaid.qld.gov.au/Find-legal-information',note:'Queensland legal information and examples. Check the jurisdiction and date when using a legal example.'});
-by('resources-title').textContent='Help with '+s.name;
-by('resource-links').replaceChildren(...links.map(link=>{const li=document.createElement('li'),a=document.createElement('a'),note=document.createElement('span');a.href=link.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=link.name+' ↗';note.textContent=link.note;li.append(a,note);return li;}));
+function showStudy(){
+ by('setup').hidden=true;by('study').hidden=false;by('selected-summary').textContent='Saved subjects: '+state.selected.map(id=>bank.subjects.find(s=>s.id===id).name).join(', ');sessionPicker();websitePicker();
+ by('session-duration').value=state.duration;by('session-mode').value=state.mode;by('completion').textContent=state.completed?state.completed+' checked tasks completed.':'';
+ by('session-config').hidden=Boolean(state.session);by('session-run').hidden=!state.session;by('ready').hidden=!state.session||Boolean(state.current);by('task').hidden=!state.current;
+ if(state.session){renderSession();if(state.current)renderTask();else{by('ready-message').textContent='Session complete. You checked '+state.session.blocks.length+' task blocks.';}}
 }
+function renderSession(){const x=state.session;by('session-summary').textContent=x.duration+' minutes planned · '+E.MODES[x.mode]+' mode · '+state.active.map(id=>bank.subjects.find(s=>s.id===id).name).join(' + ');by('session-progress').textContent=x.index+' of '+x.blocks.length+' blocks checked';by('session-plan').replaceChildren(...x.blocks.map((b,i)=>{const li=document.createElement('li');li.textContent=bank.subjects.find(s=>s.id===b.subject).name+' · '+b.minutes+' min'+(i<x.index?' · checked':i===x.index?' · current':'');return li;}));}
+function startSession(){stopTimer();by('session-error').textContent='';try{const duration=Number(by('session-duration').value),mode=by('session-mode').value,blocks=E.sessionPlan(duration,state.active);state.duration=duration;state.mode=mode;state.session={duration,mode,blocks,index:0};generate();showStudy();}catch(e){state.session=null;state.current=null;by('session-error').textContent=e.message;}}
+function generate(){stopTimer();const x=state.session;if(!x||x.index>=x.blocks.length)return;state.current=E.nextSessionTask(bank,state,x.blocks[x.index],x.mode);save();renderTask();renderSession();}
+function instructionList(target,items){target.replaceChildren(...items.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));}
+function renderTask(){const t=state.current,s=bank.subjects.find(s=>s.id===t.subject);by('ready').hidden=true;by('task').hidden=false;by('task-subject').textContent=s.name;by('task-meta').textContent=t.minutes+' minutes · '+E.MODES[t.mode]+' mode';renderResources(s);by('task-title').textContent=t.title;by('task-method').textContent=E.LABELS[t.method];by('task-materials').textContent=t.materials;by('task-pacing').textContent=t.pacing;instructionList(by('task-steps'),t.steps);instructionList(by('task-check'),t.checkSteps);by('task-finish').textContent=t.finish;instructionList(by('task-help'),t.helpSteps);by('practice-text').hidden=!t.practiceText;by('practice-text').textContent=t.practiceText||'';by('task-source').href=t.source;by('help').open=false;by('shorten').disabled=t.mode==='easy';by('timer').textContent='';by('timer-toggle').textContent='Start task timer';by('exam').hidden=true;}
+function renderResourceList(s,target){
+const links=[...(s.resources||[]),{name:'QCAA '+s.name+' resources',url:s.page,note:'Official syllabus, past papers and marking guides.',access:'Official exam resources'}];
+target.replaceChildren(...links.map(link=>{const li=document.createElement('li'),a=document.createElement('a'),note=document.createElement('span'),access=document.createElement('span');a.href=link.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=link.name+' ↗';note.textContent=link.note;access.className='resource-access';access.textContent=link.access;li.append(a,note,access);return li;}));
+}
+function renderResources(s){by('resources-title').textContent='Help with '+s.name;renderResourceList(s,by('resource-links'));}
+function websitePicker(){
+ const previous=by('website-subject').value;
+ by('website-subject').replaceChildren(...state.selected.map(id=>{const s=bank.subjects.find(s=>s.id===id);return new Option(s.name,id);}));
+ by('website-subject').value=state.selected.includes(previous)?previous:state.current?.subject||state.active[0]||state.selected[0];
+ browseWebsites();
+}
+function browseWebsites(){const s=bank.subjects.find(s=>s.id===by('website-subject').value);if(s)renderResourceList(s,by('website-links'));}
+by('website-subject').addEventListener('change',browseWebsites);
 function stopTimer(){if(tick)clearInterval(tick);tick=null;endAt=null;remaining=0;by('timer').textContent='';by('timer-toggle').textContent='Start timer';}
 function updateTimer(){const seconds=Math.max(0,Math.ceil((endAt-Date.now())/1000));by('timer').textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');if(seconds===0){clearInterval(tick);tick=null;endAt=null;remaining=0;by('timer').textContent='Time finished — check your work.';by('timer-toggle').textContent='Restart timer';}}
 by('timer-toggle').addEventListener('click',()=>{if(tick){remaining=Math.max(0,endAt-Date.now());clearInterval(tick);tick=null;endAt=null;by('timer-toggle').textContent='Resume timer';}else{endAt=Date.now()+(remaining||state.current.minutes*60000);remaining=0;updateTimer();tick=setInterval(updateTimer,1000);by('timer-toggle').textContent='Pause timer';}});
-by('generate').addEventListener('click',()=>generate());
+by('generate').addEventListener('click',startSession);
 by('skip').addEventListener('click',()=>generate());
-by('done').addEventListener('click',()=>{stopTimer();state.completed++;state.current=null;save();showStudy();by('generate').focus();});
-by('shorten').addEventListener('click',()=>{const old=state.current,s=bank.subjects.find(s=>s.id===old.subject),t=s.topics.find(t=>t.id===old.topic);stopTimer();state.current=E.makeTask(s,t,old.method,state.options,true);save();renderTask();});
+by('done').addEventListener('click',()=>{if(!state.current)return;stopTimer();state.completed++;state.session.index++;state.current=null;if(state.session.index<state.session.blocks.length)generate();save();showStudy();by(state.current?'task-title':'ready-message').focus();});
+by('shorten').addEventListener('click',()=>{const old=state.current,s=bank.subjects.find(s=>s.id===old.subject),t=s.topics.find(t=>t.id===old.topic);stopTimer();state.current=E.sessionTask(s,t,old.method,state.options,old.minutes,'easy');save();renderTask();});
+function newSession(){stopTimer();state.current=null;state.session=null;save();showStudy();by('session-config-title').focus();}
+by('change-session').addEventListener('click',newSession);by('new-session').addEventListener('click',newSession);
 by('edit-setup').addEventListener('click',()=>{stopTimer();setup();by('setup-title').scrollIntoView();});
 by('cancel-setup').addEventListener('click',showStudy);
 by('print').addEventListener('click',()=>window.print());
-by('reset-progress').addEventListener('click',()=>{stopTimer();state.queue=[];state.history=[];state.completed=0;state.current=null;state.lastSubject=null;save();showStudy();by('reset-status').textContent='Progress cleared. Your subjects are still saved.';});
+by('reset-progress').addEventListener('click',()=>{stopTimer();state.queue=[];state.history=[];state.completed=0;state.current=null;state.lastSubject=null;state.session=null;save();showStudy();by('reset-status').textContent='Progress cleared. Your subjects are still saved.';});
 by('practice-exam').addEventListener('click',()=>{
  const s=bank.subjects.find(s=>s.id===E.shuffle(state.active)[0]);const exam=by('exam');exam.hidden=false;
  exam.innerHTML='<h3>'+esc(s.name)+' · Practice exam session</h3><p>'+esc(s.coverage)+'</p><p><strong>Use:</strong> the first teacher-approved EA practice paper in your class revision folder. If you do not have one, open the official QCAA archive below.</p><ol><li>Set aside '+s.planning+' minutes for '+(s.planning===5?'perusal':'planning')+' and '+s.working+' minutes of working time'+(s.papers===2?' for one paper. Complete the second paper in another session':'')+'.</li><li>Follow the instructions and equipment requirements for that paper.</li><li>Mark using its matching guide. Record three errors, correct them, and reattempt one without the solution.</li></ol><p><a href="'+esc(s.page)+'" target="_blank" rel="noopener">Official QCAA papers and marking guides</a></p><p class="small">The archive currently contains earlier-cohort papers. Content, selected texts and formats may differ in 2026. Use a teacher-approved paper for a current-format simulation; older papers are supplementary practice.</p><p>'+esc(s.note)+'</p><button id="close-exam">Close practice exam session</button>';
@@ -6301,7 +7034,7 @@ by('bank-count').textContent=bank.subjects.length+' subjects/specialisations · 
 by('attribution').textContent=bank.attribution;by('timetable').href=bank.timetable;
 function review(){const s=bank.subjects.find(s=>s.id===by('review-subject').value),option=state.options[s.id]||(s.option?.values?.[0])||(s.option?.text?'your investigation topic':'');
 by('review-content').innerHTML='<h3>'+esc(s.name)+'</h3><p>'+esc(s.coverage)+'</p><p class="small">'+esc(s.version)+' · Checked '+esc(bank.checked)+'</p>'+(s.note?'<p>'+esc(s.note)+'</p>':'')+'<p><a href="'+esc(s.syllabus)+'" target="_blank" rel="noopener">Official syllabus</a> · <a href="'+esc(s.page)+'" target="_blank" rel="noopener">QCAA subject resources</a></p><p>Preview examples below do not change student selections or progress. Text/topic placeholders use an illustrative selection if you have not saved one.</p><div>'+s.topics.map(t=>'<div class="review-topic"><strong>'+esc(t.title.replaceAll('{option}',t.option||option))+'</strong><p class="small">'+esc(t.unit==='EA'?'EA analysis skills':'Unit '+t.unit)+' · Focus: '+esc(t.focus.join(', '))+'</p><button class="sample-button" data-preview="'+esc(t.id)+'">See a sample task</button><div id="preview-'+esc(t.id)+'" hidden></div></div>').join('')+'</div>';
-by('review-content').querySelectorAll('[data-preview]').forEach(button=>button.addEventListener('click',()=>{const t=s.topics.find(t=>t.id===button.dataset.preview),options={...state.options,[s.id]:t.option||option},task=E.makeTask(s,t,E.METHODS[t.kind][0],options),el=by('preview-'+t.id);el.hidden=!el.hidden;el.innerHTML='<p><strong>'+esc(task.label)+' · '+task.minutes+' minutes</strong></p><ol>'+task.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol><p><strong>Check:</strong> '+esc(task.check)+'</p>'+(task.practiceText?'<p>'+esc(task.practiceText)+'</p>':'');}));}
+by('review-content').querySelectorAll('[data-preview]').forEach(button=>button.addEventListener('click',()=>{const t=s.topics.find(t=>t.id===button.dataset.preview),options={...state.options,[s.id]:t.option||option},task=E.sessionTask(s,t,E.METHODS[t.kind][0],options,20,'medium'),el=by('preview-'+t.id);el.hidden=!el.hidden;el.innerHTML='<p><strong>'+esc(task.label)+' · '+task.minutes+' minutes</strong></p><ol>'+task.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><p><strong>Check:</strong> '+esc(task.check)+'</p>'+(task.practiceText?'<p>'+esc(task.practiceText)+'</p>':'');}));}
 by('review-subject').addEventListener('change',review);review();
 if(validSetup())showStudy();else setup();
 })();

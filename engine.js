@@ -99,6 +99,62 @@ const prior=(state.history||[]).at(-1);let choices=methods.filter(x=>!prior||x!=
 const task=makeTask(s,t,pick(choices,rng),options,quick);
 task.created=Date.now();state.history=[...(state.history||[]),{subject:id,topic:t.id,method:task.method}].slice(-300);return task;
 }
-root.StudyEngine={METHODS,LABELS,makeTask,next,eligible,displayTitle,shuffle,activeSubjects};
+const MODES={easy:'Easy',medium:'Medium',hard:'Hard'};
+function sessionPlan(minutes,subjects){
+ const ids=[...new Set(subjects)];
+ if(!Number.isInteger(minutes)||minutes<5||minutes>180)throw new Error('Choose a whole number of minutes from 5 to 180.');
+ if(!ids.length||ids.length>3)throw new Error('Choose one to three subjects.');
+ if(minutes<ids.length*5)throw new Error('Allow at least five minutes for each selected subject.');
+ const count=Math.max(ids.length,Math.ceil(minutes/20)),base=Math.floor(minutes/count),extra=minutes%count;
+ return Array.from({length:count},(_,i)=>({subject:ids[i%ids.length],minutes:base+(i<extra?1:0)}));
+}
+function splitInstructions(text){
+ return String(text).replace(/(?:^|\s)\d+\.\s+(?=[A-Z])/g,'\n').split(/\n|(?<=[.!?])\s+(?=[A-Z“"0-9])|;\s+|, then\s+/).map(x=>x.trim()).filter(Boolean).map(x=>x[0].toUpperCase()+x.slice(1));
+}
+function sessionTask(s,t,method,options,minutes=20,mode='medium'){
+ if(!MODES[mode])mode='medium';
+ const task=makeTask(s,t,method,options,false);
+ task.minutes=minutes;task.mode=mode;
+ const checkMinutes=Math.max(1,Math.round(minutes*.25)),workMinutes=minutes-checkMinutes;
+ const timed=text=>text
+ .replace(/Spend 10 minutes building/g,'Build')
+ .replace(/Spend five minutes checking/g,'Check')
+ .replace(/Give yourself 8 minutes to write/g,'Write')
+ .replace(/Spend the remaining time checking and rebuilding/g,'Check and rebuild')
+ .replace(/Spend 12 minutes answering/g,'Answer the prompts')
+ .replace(/Spend 10 minutes sketching/g,'Sketch')
+ .replace(/Write for 12 minutes without a dictionary/g,'Write without a dictionary')
+ .replace(/for 12 minutes/g,'during your working time')
+ .replace(/for two minutes/g,'briefly');
+ // A short block keeps the subject-specific strategy, with a smaller response.
+ const smaller=text=>text.replace(/three (specific pieces|linked claims|different solutions|precise choices|specific visible details|precise features)/g,'one $1').replace(/first three unanswered questions/g,'first unanswered question').replace(/with six relevant events/g,'with three relevant events').replace(/Write 12 /g,'Write six ').replace(/Use six items/g,'Use three items').replace(/one specific pieces/g,'one specific piece').replace(/one linked claims/g,'one linked claim').replace(/one different solutions/g,'one solution').replace(/one precise choices/g,'one precise choice').replace(/one specific visible details/g,'one specific visible detail').replace(/one precise features/g,'one precise feature');
+ let steps=task.steps.flatMap(text=>splitInstructions(timed(text)));
+ if(mode==='easy'||minutes<=10)steps=steps.map(smaller);
+ if(minutes<=10)steps.unshift('Keep the response brief: complete one example, a short plan or a few sentences.');
+ if(mode==='easy'){
+  steps.unshift('Use your notes to find a definition or model for the named topic.','Write three key words to guide your response.','Keep the source or question available; cover its answer while you try the task.');
+  task.help='Use the first focus point as your starting heading. Add one accurate point or example, then build on it.';
+ }
+ if(mode==='hard'){
+  steps.unshift('Keep solutions and explanatory notes closed until the checking stage. Keep the task’s text, question or stimulus available.');
+  const challenge=t.kind==='math'||t.kind==='algorithm'?'Apply the method to a different input or question, and justify why your approach works.':t.kind==='legal-analysis'?'Test your recommendation against a competing viewpoint or changed fact. Justify whether it should still stand.':t.kind==='design'?'Test your solution against one additional user constraint and justify the refinement.':t.kind.startsWith('language')?'Add a counterargument or alternative viewpoint in the target language, supported by a detail from the stimulus. Justify your own position.':t.kind==='english'||t.kind==='theory'?'Consider a different interpretation of the same evidence and justify which reading is stronger.':t.kind==='history'||t.kind==='timeline'?'Test your claim against a conflicting source or alternative explanation. Explain a limit of your evidence and justify your judgement.':'Apply the concept to a different example, or consider another interpretation. Justify your conclusion with specific evidence.';
+  const checkingIndex=steps.findIndex(x=>/^(?:Check|Compare|Uncover|Verify|Revisit|Replay|Listen again|Use the provided answers)/.test(x));
+  steps.splice(checkingIndex>=0?checkingIndex:steps.length,0,challenge);
+ }
+ task.steps=steps;
+ task.checkSteps=splitInstructions(task.check);
+ task.helpSteps=splitInstructions(task.help);
+ task.pacing=`Use about ${workMinutes} minutes for the task and ${checkMinutes} minute${checkMinutes===1?'':'s'} to check and retry a gap.`;
+ task.label=MODES[mode]+' · '+LABELS[method];
+ return task;
+}
+function nextSessionTask(bank,state,block,mode='medium'){
+ const s=bank.subjects.find(s=>s.id===block.subject);if(!s)throw new Error('Unknown session subject.');
+ const original=next(bank,state,{subjectId:block.subject});
+ const t=s.topics.find(t=>t.id===original.topic);
+ const task=sessionTask(s,t,original.method,state.options||{},block.minutes,mode);task.created=original.created;return task;
+}
+
+root.StudyEngine={MODES,sessionPlan,splitInstructions,sessionTask,nextSessionTask,METHODS,LABELS,makeTask,next,eligible,displayTitle,shuffle,activeSubjects};
 if(typeof module!=='undefined')module.exports=root.StudyEngine;
 })(typeof window!=='undefined'?window:globalThis);

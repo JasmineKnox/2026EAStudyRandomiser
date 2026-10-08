@@ -5,34 +5,39 @@
 <title>EA Study Randomiser · Mrs Knox Teaches</title>
 <meta name="description" content="Choose your QCAA subjects once. Get a specific external exam study task with instructions and a checking step.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4841'/%3E%3Ctext x='5' y='23' fill='white' font-size='20' font-family='Arial'%3EEA%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261008-sessions">
 </head>
 <body>
 <main>
-<header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Choose your subjects. We’ll give you a place to start.</p></header>
+<header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Set up a study session. Get one clear task at a time.</p></header>
 <p id="storage-note" class="notice" hidden>Your browser cannot save this setup. It will work for this visit; keep the page open.</p>
 <section id="setup" aria-labelledby="setup-title" hidden>
-<h2 id="setup-title">Choose your subjects</h2>
-<p>Start with English, then maths, then your electives. Tick all the subjects you study; you’ll choose up to three for each study session. Your choices stay in this browser. Add the school-selected text or topic where requested.</p>
+<h2 id="setup-title">Save your courses</h2><p id="setup-progress" role="status" tabindex="-1"></p>
+<p>Move through English, maths and electives one page at a time. You can leave a page unticked if it does not apply. Add the text or topic your school selected where requested.</p>
 <label for="subject-search">Find a subject</label><input id="subject-search" type="search" placeholder="e.g. Legal Studies" autocomplete="off">
-<form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button class="primary" type="submit">Save and give me a task</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
+<form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button id="setup-back" type="button">Back</button><button id="setup-next" class="primary" type="button">Next</button><button id="setup-save" class="primary" type="submit" hidden>Save courses and set up a session</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
 <p class="small">Applied subjects and the separate Senior External Examination (SEE) pathway are outside this 2026 EA prototype.</p>
 </section>
 <section id="study" hidden>
 <p id="selected-summary" class="small"></p>
-<fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset>
-<div id="ready"><p class="ready-note">Your next task is ready to pick.</p><button id="generate" class="primary">Give me a study task</button><p id="completion" role="status"></p></div>
+<section id="session-config" aria-labelledby="session-config-title"><h2 id="session-config-title" tabindex="-1">Set up your study session</h2>
+<div class="session-controls"><div><label for="session-duration">How many minutes?</label><input id="session-duration" type="number" min="5" max="180" step="1" value="30" list="duration-options"><datalist id="duration-options"><option value="15"><option value="30"><option value="45"><option value="60"><option value="90"></datalist><p class="small">5–180 minutes, including checking. Allow at least five minutes per subject.</p></div>
+<div><label for="session-mode">Choose your mode</label><select id="session-mode"><option value="easy">Easy — more guidance, smaller response</option><option value="medium" selected>Medium — standard revision task</option><option value="hard">Hard — independent work and justification</option></select></div></div>
+<fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset><p id="session-error" role="alert"></p><button id="generate" class="primary">Start my study session</button></section>
+<section id="session-run" aria-labelledby="session-run-title" hidden><h2 id="session-run-title">Your study session</h2><p id="session-summary"></p><p id="session-progress" role="status"></p><details><summary>See the task blocks</summary><ol id="session-plan"></ol></details><button id="change-session">Change session</button></section><p id="completion" role="status"></p>
+<details id="subject-websites" class="extras"><summary>Study websites for your subjects</summary><label for="website-subject">Choose a subject</label><select id="website-subject"></select><ul id="website-links" class="resource-list"></ul><p class="small">Use the relevant lesson, article or activity alongside your class materials. These sites support selected concepts and skills; they do not replace your QCAA syllabus. Links open in a new tab.</p></details>
+<div id="ready" hidden><p id="ready-message" tabindex="-1" role="status"></p><button id="new-session" class="primary">Set up another session</button></div>
 <article id="task" hidden aria-labelledby="task-title">
-<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-subject"></p><p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p></div>
+<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-subject"></p><p id="task-meta"></p><h2 id="task-title" tabindex="-1"></h2><p id="task-method"></p></div>
 <p class="materials"><strong>Have ready</strong><span id="task-materials"></span></p>
-<section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><ol id="task-steps"></ol><p id="practice-text" hidden></p></section>
-<section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><p id="task-check"></p><p id="task-finish"></p></section>
-<details id="help"><summary>I'm stuck</summary><p id="task-help"></p><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
-<section class="task-resources" aria-labelledby="resources-title"><h3 id="resources-title">Helpful websites</h3><ul id="resource-links"></ul><p class="small">Look up the concept named in your task. Supplementary websites may use a different syllabus; use your class notes and QCAA materials to check exam requirements. Links open in a new tab and need internet access.</p></section>
+<section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><p id="task-pacing" class="small"></p><ul id="task-steps" class="instruction-list"></ul><p id="practice-text" hidden></p></section>
+<section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><ul id="task-check" class="instruction-list"></ul><p id="task-finish"></p></section>
+<details id="help"><summary>I'm stuck</summary><ul id="task-help" class="instruction-list"></ul><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
+<section class="task-resources" aria-labelledby="resources-title"><h3 id="resources-title">Helpful websites</h3><ul id="resource-links" class="resource-list"></ul><p class="small">Look up the concept named in your task. Supplementary websites may use a different syllabus; use your class notes and QCAA materials to check exam requirements. Links open in a new tab and need internet access.</p></section>
 <div class="actions"><button id="done" class="primary">Done — I've checked it</button><button id="timer-toggle">Start timer</button><output id="timer" aria-label="Time remaining"></output></div>
-<details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this 5 minutes</button><button id="skip">Give me another task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
+<details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this task easier</button><button id="skip">Swap this task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
 </article>
-<details class="extras"><summary>Settings and practice exams</summary><div class="actions"><button id="edit-setup">Change my subjects</button><button id="practice-exam">Give me a practice exam session</button></div><p class="small">Normal tasks take about 20 minutes. A practice exam session uses the full working time for one paper.</p><div id="exam" hidden></div><details><summary>Clear my progress</summary><p>This clears task history and completed counts in this browser. Your subjects stay selected.</p><button id="reset-progress">Clear progress</button><p id="reset-status" role="status"></p></details></details>
+<details class="extras"><summary>Settings and practice exams</summary><div class="actions"><button id="edit-setup">Change my subjects</button><button id="practice-exam">Give me a practice exam session</button></div><p class="small">Your session divides the time you choose into task blocks. Practice exams use the full working time for one paper and are separate from these blocks.</p><div id="exam" hidden></div><details><summary>Clear my progress</summary><p>This clears task history and completed counts in this browser. Your subjects stay selected.</p><button id="reset-progress">Clear progress</button><p id="reset-status" role="status"></p></details></details>
 </section>
 <details id="review"><summary>Content bank and sources — for review</summary>
 <p id="bank-count"></p><p>Original study challenges, matched to verified 2026 EA boundaries. Topic coverage is a revision scaffold, not every syllabus dot point. Most tasks use the student's own course materials for checking.</p>
@@ -41,5 +46,5 @@
 </details>
 <footer><span>Created by Mrs Knox</span><span>EA Study Randomiser</span></footer>
 </main>
-<script src="bank.js"></script><script src="engine.js"></script><script src="app.js"></script>
+<script src="bank.js?v=20261008-sessions"></script><script src="engine.js?v=20261008-sessions"></script><script src="app.js?v=20261008-sessions"></script>
 </body></html>

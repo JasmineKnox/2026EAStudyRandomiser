@@ -115,6 +115,16 @@ window.STUDY_BANK = {
           "kind": "history",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "AIATSIS: explore",
+          "url": "https://aiatsis.gov.au/explore",
+          "note": "Explore First Nations histories and recognition, including the 1967 Referendum and Freedom Ride. Use evidence from the relevant community and historical context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://aiatsis.gov.au/explore"
+        }
       ]
     },
     {
@@ -241,6 +251,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "AccountingCoach: explanations",
+          "url": "https://www.accountingcoach.com/explanations",
+          "note": "Revise double-entry accounting, adjustments, statements and financial ratios. US examples use some different terms and formats; follow the conventions in your class materials.",
+          "access": "Free explanations; some additional tools are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.accountingcoach.com/explanations"
+        }
       ]
     },
     {
@@ -366,6 +386,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "NASA: Beginner’s Guide to Aeronautics",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+          "note": "Use explanations and simulations of lift, drag, thrust and aircraft motion to revisit flight-performance concepts.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/"
         }
       ]
     },
@@ -505,6 +535,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Queensland DPI: agriculture",
+          "url": "https://www.dpi.qld.gov.au/business-priorities/agriculture",
+          "note": "Browse plant production, livestock and agricultural business resources. Use a relevant Queensland example when revising production and sustainability.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.dpi.qld.gov.au/business-priorities/agriculture"
+        }
       ]
     },
     {
@@ -612,6 +652,24 @@ window.STUDY_BANK = {
           ],
           "kind": "history",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        },
+        {
+          "name": "World History Encyclopedia: education",
+          "url": "https://www.worldhistory.org/edu/",
+          "note": "Search for your selected ancient personality or civilisation to review context, chronology and historical interpretations.",
+          "access": "Free articles and teaching resources; optional membership is paid",
+          "checked": "2026-10-08",
+          "source": "https://www.worldhistory.org/edu/"
         }
       ]
     },
@@ -811,6 +869,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: AP Biology",
+          "url": "https://www.khanacademy.org/science/ap-biology",
+          "note": "Use heredity, gene expression, evolution and ecology lessons to revisit the concept in your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-biology"
+        }
       ]
     },
     {
@@ -948,6 +1016,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "business.gov.au: managing change",
+          "url": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business",
+          "note": "Use a practical Australian change-management example to connect planning, stakeholder involvement and communication with business transformation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business"
         }
       ]
     },
@@ -1159,6 +1237,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: AP Chemistry",
+          "url": "https://www.khanacademy.org/science/ap-chemistry-beta",
+          "note": "Revisit equilibrium, acids and bases, chemical reactions and thermodynamics. Choose the lesson that matches your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-chemistry-beta"
+        },
+        {
+          "name": "Khan Academy: organic chemistry",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/",
+          "note": "Review structures, functional groups and organic reactions. Follow your class conventions for naming, mechanisms and required reaction conditions.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/organic-chemistry/"
+        }
       ]
     },
     {
@@ -1248,6 +1344,24 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
         }
       ]
     },
@@ -1342,6 +1456,24 @@ window.STUDY_BANK = {
           "kind": "language-ext",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
       ]
     },
     {
@@ -1420,6 +1552,16 @@ window.STUDY_BANK = {
           "kind": "dance",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "The Australian Ballet: education resources",
+          "url": "https://australianballet.com.au/education-resource-hub",
+          "note": "Use choreography, music and design resources to practise explaining how movement and production choices communicate meaning. Apply your course terminology.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://australianballet.com.au/education-resource-hub"
+        }
       ]
     },
     {
@@ -1497,6 +1639,16 @@ window.STUDY_BANK = {
           ],
           "kind": "design",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: sustainable design techniques",
+          "url": "https://www.open.edu/openlearn/course/view.php?id=12588",
+          "note": "Read a designer’s clothing case study to connect materials, adaptability, durability and end-of-life decisions with a sustainable design solution.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/course/view.php?id=12588"
         }
       ]
     },
@@ -1660,6 +1812,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Computer Science Principles",
+          "url": "https://www.khanacademy.org/computing/ap-computer-science-principles",
+          "note": "Use Internet, online data security and computing-innovation lessons to revise data exchange, cybersecurity and digital impacts.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/computing/ap-computer-science-principles"
+        },
+        {
+          "name": "MDN: HTTP guides",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides",
+          "note": "Revisit client–server communication, requests, responses and authentication. Use the overview first; technical detail may go beyond your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides"
+        }
       ]
     },
     {
@@ -1737,6 +1907,16 @@ window.STUDY_BANK = {
           ],
           "kind": "drama",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Approaching plays",
+          "url": "https://www.open.edu/openlearn/history-the-arts/literature/approaching-plays/content-section-0",
+          "note": "Review play structure, dialogue, performance and staging, then explain how dramatic choices shape meaning in the stimulus.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/literature/approaching-plays/content-section-0"
         }
       ]
     },
@@ -1900,6 +2080,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Geoscience Australia: classroom resources",
+          "url": "https://www.ga.gov.au/education/classroom-resources",
+          "note": "Use Australian resources on natural hazards, minerals and energy to revisit Earth resources and hazards. Select material at the right level for your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.ga.gov.au/education/classroom-resources"
+        }
       ]
     },
     {
@@ -2062,6 +2252,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: macroeconomics",
+          "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics",
+          "note": "Practise economic indicators, aggregate demand and supply, and monetary or fiscal policy. International examples supplement your Australian course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/economics-finance-domain/macroeconomics"
+        }
       ]
     },
     {
@@ -2175,6 +2375,24 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Find relevant force, work, energy, torque and motion explanations to support calculations about machines and mechanisms.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        },
+        {
+          "name": "OpenLearn: Introducing engineering",
+          "url": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering",
+          "note": "Review engineering design, materials and manufacturing decisions. Use relevant sections as background for explaining an engineering solution.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering"
         }
       ]
     },
@@ -2302,6 +2520,16 @@ window.STUDY_BANK = {
           "kind": "english",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
       ]
     },
     {
@@ -2403,6 +2631,24 @@ window.STUDY_BANK = {
           ],
           "kind": "theory",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Open Yale Courses: Theory of Literature",
+          "url": "https://oyc.yale.edu/english/engl-300",
+          "note": "Use selected lecture videos or transcripts to revisit the critical approach you have studied. These are university lectures: choose a short relevant section.",
+          "access": "Free lecture videos and transcripts",
+          "checked": "2026-10-08",
+          "source": "https://oyc.yale.edu/english/engl-300"
+        },
+        {
+          "name": "Purdue OWL: reading criticism",
+          "url": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/reading_criticism.html",
+          "note": "Review how to read critical interpretations and connect them with your own close reading. Apply the theoretical approaches taught in your class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/reading_criticism.html"
         }
       ]
     },
@@ -2530,6 +2776,16 @@ window.STUDY_BANK = {
           "kind": "english",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
       ]
     },
     {
@@ -2619,6 +2875,16 @@ window.STUDY_BANK = {
           ],
           "kind": "film",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "ACMI: screen-learning resources",
+          "url": "https://www.acmi.net.au/education/",
+          "note": "Use free film study guides and screen-literacy activities to practise analysing visual language, sound, representation and meaning.",
+          "access": "Free online learning resources; some events and programs are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.acmi.net.au/education/"
         }
       ]
     },
@@ -2746,6 +3012,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "FSANZ: Australian Food Composition Database",
+          "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd",
+          "note": "Compare nutrient information for foods used in a proposed product or solution. Explain how your choices address the specified consumer’s nutrition needs.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd"
+        }
       ]
     },
     {
@@ -2835,6 +3111,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
         }
       ]
     },
@@ -2928,6 +3214,24 @@ window.STUDY_BANK = {
           ],
           "kind": "language-ext",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        },
+        {
+          "name": "TV5MONDE: B2 reports and exercises",
+          "url": "https://apprendre.tv5monde.com/fr/exercices/b2-avance",
+          "note": "Use an advanced report to analyse viewpoint, language and evidence, then connect it to your investigation. B2 is a language level, not a QCAA equivalence.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/fr/exercices/b2-avance"
         }
       ]
     },
@@ -3103,6 +3407,24 @@ window.STUDY_BANK = {
           "kind": "math",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revise data displays, bivariate data and regression. Choose relevant sections; this site does not cover every General Mathematics topic.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        },
+        {
+          "name": "Khan Academy: maths courses",
+          "url": "https://www.khanacademy.org/math",
+          "note": "Search for the specific skill in your task to revisit supporting algebra, sequences, finance or matrices. Check your class method and calculator conventions.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math"
+        }
       ]
     },
     {
@@ -3217,6 +3539,16 @@ window.STUDY_BANK = {
           "kind": "diagram",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "UN: World Population Prospects",
+          "url": "https://population.un.org/wpp",
+          "note": "Explore population estimates and projections. Compare countries or age structures, identify a pattern, then explain a consequence of population change.",
+          "access": "Free data and reports",
+          "checked": "2026-10-08",
+          "source": "https://population.un.org/wpp"
+        }
       ]
     },
     {
@@ -3306,6 +3638,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
         }
       ]
     },
@@ -3399,6 +3741,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language-ext",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
         }
       ]
     },
@@ -3526,6 +3878,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "eSafety: respectful relationships",
+          "url": "https://www.esafety.gov.au/young-people/being-in-a-respectful-relationship",
+          "note": "Use young people’s perspectives on respect, boundaries and communication to analyse a relationship scenario. Connect the examples with your class health frameworks.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.esafety.gov.au/young-people/being-in-a-respectful-relationship"
+        }
       ]
     },
     {
@@ -3616,6 +3978,16 @@ window.STUDY_BANK = {
           "kind": "language",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Rai Scuola: Italian B1",
+          "url": "https://www.raiscuola.rai.it/percorsi/livellob1",
+          "note": "Use video units to practise comprehension and vocabulary, including everyday life, education and work. Choose the unit that supports your current task.",
+          "access": "Public video resources; availability can vary by location",
+          "checked": "2026-10-08",
+          "source": "https://www.raiscuola.rai.it/percorsi/livellob1"
+        }
       ]
     },
     {
@@ -3705,6 +4077,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Japan Foundation: Irodori",
+          "url": "https://www.irodori.jpf.go.jp/en/",
+          "note": "Use downloadable lessons and audio for everyday life, work and future choices. Select the level and topic that match your course.",
+          "access": "Free learning materials and audio",
+          "checked": "2026-10-08",
+          "source": "https://www.irodori.jpf.go.jp/en/"
         }
       ]
     },
@@ -4000,6 +4382,24 @@ window.STUDY_BANK = {
           "kind": "legal-analysis",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Australian Human Rights Commission: student resources",
+          "url": "https://humanrights.gov.au/human-rights-education/student-resources",
+          "note": "Review human rights concepts and Australian examples. Connect evidence with the legal issue, protection or limitation named in your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://humanrights.gov.au/human-rights-education/student-resources"
+        },
+        {
+          "name": "Legal Aid Queensland: legal information",
+          "url": "https://www.legalaid.qld.gov.au/Find-legal-information",
+          "note": "Find a relevant Queensland example of rights, discrimination or legal processes. Check the jurisdiction and currency when using a legal example.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.legalaid.qld.gov.au/Find-legal-information"
+        }
       ]
     },
     {
@@ -4125,6 +4525,16 @@ window.STUDY_BANK = {
           ],
           "kind": "english",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
         }
       ]
     },
@@ -4275,6 +4685,24 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "AIMS: corals",
+          "url": "https://www.aims.gov.au/research-topics/marine-life/corals",
+          "note": "Revisit coral biology and reef relationships, then explain how a change in conditions could affect a reef system.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.aims.gov.au/research-topics/marine-life/corals"
+        },
+        {
+          "name": "AIMS: reef-monitoring dashboard",
+          "url": "https://apps.aims.gov.au/reef-monitoring/",
+          "note": "Explore reef survey data to practise identifying trends, interpreting evidence and explaining the limits of a monitoring result.",
+          "access": "Free dashboard; JavaScript required",
+          "checked": "2026-10-08",
+          "source": "https://apps.aims.gov.au/reef-monitoring/"
         }
       ]
     },
@@ -4437,6 +4865,24 @@ window.STUDY_BANK = {
           ],
           "kind": "math",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revisit probability distributions, sampling and inference where relevant to your course. Use your class definitions and required notation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
         }
       ]
     },
@@ -4606,6 +5052,16 @@ window.STUDY_BANK = {
           "kind": "history",
           "option": "Mass migrations since 1848"
         }
+      ],
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        }
       ]
     },
     {
@@ -4695,6 +5151,24 @@ window.STUDY_BANK = {
           ],
           "kind": "music",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
         }
       ]
     },
@@ -4786,6 +5260,24 @@ window.STUDY_BANK = {
           "kind": "music",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
+        }
       ]
     },
     {
@@ -4876,6 +5368,24 @@ window.STUDY_BANK = {
           "kind": "music",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
+        }
       ]
     },
     {
@@ -4965,6 +5475,24 @@ window.STUDY_BANK = {
           ],
           "kind": "music",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: Discovering music through listening",
+          "url": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening",
+          "note": "Practise close listening for rhythm, metre, melody and timbre, then explain how musical elements work together in an excerpt.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/history-the-arts/discovering-music-through-listening"
+        },
+        {
+          "name": "musictheory.net: lessons",
+          "url": "https://www.musictheory.net/lessons/",
+          "note": "Refresh notation, intervals, scales and chords so you can name musical features accurately in an analytical response.",
+          "access": "Free web lessons; optional mobile apps are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.musictheory.net/lessons/"
         }
       ]
     },
@@ -5092,6 +5620,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Stanford Encyclopedia: justice",
+          "url": "https://plato.stanford.edu/entries/justice/",
+          "note": "Compare accounts of justice and test their assumptions against an example. This is advanced reference material: focus on the philosophers studied in class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://plato.stanford.edu/entries/justice/"
+        }
       ]
     },
     {
@@ -5205,6 +5743,16 @@ window.STUDY_BANK = {
           ],
           "kind": "concept",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "OpenLearn: training for speed and power",
+          "url": "https://www.open.edu/openlearn/health-sports-psychology/training-speed-and-power-sport-and-fitness",
+          "note": "Review physiology and training principles, then explain how a training choice addresses a sport’s performance demands. Use it for theory revision.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/health-sports-psychology/training-speed-and-power-sport-and-fitness"
         }
       ]
     },
@@ -5380,6 +5928,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Revisit gravity, electromagnetism and other relevant physics concepts through explanations and examples. Use class materials for the full modern-physics requirements.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        }
       ]
     },
     {
@@ -5554,6 +6112,16 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "OpenStax: Psychology 2e",
+          "url": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+          "note": "Use the chapter contents to revisit learning, memory, cognition and social psychology. Read the relevant section and test recall with its review questions.",
+          "access": "Free online textbook",
+          "checked": "2026-10-08",
+          "source": "https://openstax.org/books/psychology-2e/pages/1-introduction"
+        }
       ]
     },
     {
@@ -5643,6 +6211,16 @@ window.STUDY_BANK = {
           ],
           "kind": "language",
           "option": null
+        }
+      ],
+      "resources": [
+        {
+          "name": "VideoEle: Spanish video course",
+          "url": "https://videoele.com/Curso.html",
+          "note": "Choose an appropriate A1–B2 video to practise listening and vocabulary, then use its activities to check comprehension.",
+          "access": "Free video course; videos use YouTube",
+          "checked": "2026-10-08",
+          "source": "https://videoele.com/Curso.html"
         }
       ]
     },
@@ -5806,6 +6384,32 @@ window.STUDY_BANK = {
           "kind": "math",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revisit probability distributions, sampling and inference where relevant to your course. Use your class definitions and required notation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        },
+        {
+          "name": "Khan Academy: linear algebra",
+          "url": "https://www.khanacademy.org/math/linear-algebra",
+          "note": "Revisit vectors and matrix transformations. Use the sections matching your task; this course also contains material beyond senior secondary study.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/linear-algebra"
+        }
       ]
     },
     {
@@ -5944,6 +6548,24 @@ window.STUDY_BANK = {
           "kind": "concept",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Harvard Pluralism Project: religions",
+          "url": "https://pluralism.org/religions",
+          "note": "Review the beliefs and practices of the traditions studied in class, then connect a relevant belief with human dignity or rights. Examples often use a US context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://pluralism.org/religions"
+        },
+        {
+          "name": "Australian Human Rights Commission: learn about human rights",
+          "url": "https://humanrights.gov.au/resource-hub/by-resource-type/learn-about-human-rights",
+          "note": "Use Australian human-rights background to support discussion of human existence and rights. Pair this with the religious teachings and examples studied in class.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://humanrights.gov.au/resource-hub/by-resource-type/learn-about-human-rights"
+        }
       ]
     },
     {
@@ -6034,9 +6656,20 @@ window.STUDY_BANK = {
           "kind": "art",
           "option": null
         }
+      ],
+      "resources": [
+        {
+          "name": "Smarthistory: visual analysis",
+          "url": "https://smarthistory.org/visual-analysis/",
+          "note": "Practise describing visual features and explaining their effects, then connect those observations with the contexts required in your task.",
+          "access": "Free video and transcript",
+          "checked": "2026-10-08",
+          "source": "https://smarthistory.org/visual-analysis/"
+        }
       ]
     }
   ],
   "attribution": "Topic and assessment summaries adapted from QCAA syllabuses. © State of Queensland (QCAA) 2026. https://www.qcaa.qld.edu.au/copyright. Study activities created by Mrs Knox with AI assistance. This is an independent resource, not a QCAA publication.",
-  "timetable": "https://www.qcaa.qld.edu.au/downloads/senior/snr_ext_assess_timetable_2026.pdf"
+  "timetable": "https://www.qcaa.qld.edu.au/downloads/senior/snr_ext_assess_timetable_2026.pdf",
+  "resourcesChecked": "2026-10-08"
 };

@@ -1,13 +1,13 @@
 """Rebuild browser data, standalone HTML and audit after editing content-bank.json."""
 from pathlib import Path
-import json,csv
+import json,csv,re
 root=Path(__file__).resolve().parent
 bank=json.loads((root/'content-bank.json').read_text())
 (root/'bank.js').write_text('window.STUDY_BANK = '+json.dumps(bank,ensure_ascii=False,indent=2)+';\n')
 html=(root/'index.html').read_text()
-html=html.replace('<link rel="stylesheet" href="style.css">','<style>\n'+(root/'style.css').read_text()+'\n</style>')
+html=re.sub(r'<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">',lambda _: '<style>\n'+(root/'style.css').read_text()+'\n</style>',html)
 for name in ['bank.js','engine.js','app.js']:
-    html=html.replace('<script src="'+name+'"></script>','<script>\n'+(root/name).read_text().replace('</script','<\\/script')+'\n</script>')
+    html=re.sub(r'<script src="'+re.escape(name)+r'(?:\?[^"]*)?"></script>',lambda _: '<script>\n'+(root/name).read_text().replace('</script','<\\/script')+'\n</script>',html)
 (root/'EA_Study_Randomiser.html').write_text(html)
 with (root/'Content_Audit.csv').open('w',newline='',encoding='utf-8-sig') as f:
     writer=csv.writer(f)
