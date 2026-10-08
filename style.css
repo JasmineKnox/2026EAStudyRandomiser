@@ -46,3 +46,6 @@ input[type=number]{width:100%;font:inherit;min-height:48px;background:white;colo
 .instruction-list{padding-left:24px;margin:16px 0}.instruction-list li{padding-left:4px;margin-bottom:12px}.instruction-list li::marker{color:var(--green)}
 @media(max-width:600px){.session-controls{grid-template-columns:1fr;gap:10px}#session-config,#session-run{padding:20px}#session-config h2{font-size:26px}}
 @media print{#session-config,#session-run,#subject-websites{display:none!important}.instruction-list li::marker{color:black}}
+
+.task-intro{font-size:1.2rem;line-height:1.6;font-weight:600;color:var(--green,#2F4841);background:#edf2ee;border-left:4px solid #A6B5A9;padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0 0;}
+@media print{.task-intro{font-size:13pt;background:none;color:black;border-left:2px solid #555;padding:8px 12px;}}

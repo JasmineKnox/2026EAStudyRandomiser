@@ -9,7 +9,7 @@ $('#option-english').value='The Dry';$('#setup-next').click();assert.deepEqual(v
 assert.equal($$('#session-subjects input:checked').length,3);assert.equal($$('#session-subjects input:disabled').length,1);
 check('#session-subjects input[value=chemistry]',false);check('#session-subjects input[value=legal]');
 $('#session-duration').value='10';$('#generate').click();assert($('#session-error').textContent.includes('five minutes'));assert.equal($('#task').hidden,true);
-$('#session-duration').value='30';$('#session-mode').value='hard';$('#generate').click();assert.equal($('#session-config').hidden,true);assert.equal($('#task-meta').textContent,'10 minutes · Hard mode');assert.equal($('#task-steps').tagName,'UL');assert.equal($('#task-check').tagName,'UL');assert.deepEqual(saved().session.blocks.map(b=>b.minutes),[10,10,10]);
+$('#session-duration').value='30';$('#session-mode').value='hard';$('#generate').click();assert.equal($('#session-config').hidden,true);assert.equal($('#task-meta').textContent,'10 minutes · Hard mode');assert.equal($('#task-steps').tagName,'UL');assert.equal($('#task-check').tagName,'UL');assert($('#task-intro').textContent.includes($('#task-title').textContent));assert.deepEqual(saved().session.blocks.map(b=>b.minutes),[10,10,10]);
 const first=saved().current.topic;$('#skip').click();assert.equal(saved().session.index,0);assert.equal(saved().completed,0);assert.notEqual(saved().current.topic,first);
 $('#shorten').click();assert.equal($('#task-meta').textContent,'10 minutes · Easy mode');assert($('#task-steps').textContent.includes('three key words'));
 $('#done').click();assert.equal(saved().session.index,1);assert.equal($('#task-subject').textContent,'Mathematical Methods');assert.equal(saved().completed,1);

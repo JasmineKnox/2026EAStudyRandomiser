@@ -31,11 +31,11 @@ function makeTask(s,t,method,options,quick=false){
 const title=displayTitle(t,s,options),focus=t.focus.join(', '),lang=s.name.replace(' Extension','');
 const check=`Open your ${s.name} class notes or textbook for “${title}”. Check ${focus}. Correct errors and add missing points in a second colour. Circle one gap, close the resource, and write that point again from memory.`;
 let task={subject:s.id,topic:t.id,method,title,minutes:quick?5:20,label:quick?'Five-minute recall':LABELS[method],materials:`Notebook and your ${s.name} class notes or textbook for “${title}”`,focus:t.focus,steps:[],check,finish:'Keep your corrected work. You are finished when you have checked it and retried one gap.',help:`Start with “${t.focus[0]}”. Read your ${s.name} notes on “${title}” for one minute, close them, and write one sentence explaining it. Then add the next point.`,source:s.syllabus+(s.eaPage?'#page='+s.eaPage:''),coverage:s.coverage};
-if(quick){task.steps=[`Without notes, write three things you remember about ${title}.`,`Include ${t.focus[0]} and one example, step or piece of evidence.`,`Use the final two minutes to check and correct your work.`];return task;}
+if(quick){task.intro=`Give your memory a quick workout: close your notes and recall what you know about “${title}”, then check the gaps.`;task.steps=[`Without notes, write three things you remember about ${title}.`,`Include ${t.focus[0]} and one example, step or piece of evidence.`,`Use the final two minutes to check and correct your work.`];return task;}
 const patterns={
 map:[`Put “${title}” in the centre of a page. Close your notes.`,`Spend 10 minutes building branches for ${focus}. Add examples and label connections between ideas.`,`Spend five minutes checking your map, then redraw your weakest branch from memory.`],
 recall:[`Close your notes. Give yourself 8 minutes to write everything you remember about ${title}.`,`Organise it under these headings: ${focus}. Add a specific example or application.`,`Spend the remaining time checking and rebuilding your weakest section.`],
-explain:[`Explain ${title} aloud for two minutes without reading. Cover ${focus}.`,`Check your notes. Write down the terminology or steps you missed.`,`Explain it again, with one clear example and the missing points included. Repeat until you can finish without reading.`],
+explain:[`Without reading, explain ${title} aloud for two minutes. Cover ${focus}.`,`Check your notes. Write down the terminology or steps you missed.`,`Explain it again, with one clear example and the missing points included. Repeat until you can finish without reading.`],
 'short-response':[`Answer these original revision prompts without notes, in full sentences:`,`1. Explain ${t.focus[0]} in relation to ${title}. 2. Explain how ${t.focus[1]} connects to it. 3. Use one studied example to explain ${t.focus[2]}.`,`Spend 12 minutes answering, then check and improve your weakest response.`],
 paragraph:[`Write a paragraph explaining ${title} and why it matters in a studied context.`,`Use the relevant terminology and address ${focus}. Support the explanation with one specific example.`,`Check your notes, then improve the explanation that was least clear.`],
 compare:[`Make a table comparing “${title}”.`,`Use these comparison headings: ${focus}. Fill it from memory and include an example for each item.`,`Check the table. Explain one significant similarity and one significant difference in two developed sentences.`],
@@ -66,6 +66,41 @@ vocabulary:[`Write 12 ${lang} words or phrases for ${title} from memory.`,`Inclu
 'music-analysis':[`Use the first recording and/or score in your class revision materials relevant to ${title}.`,`Identify three precise features related to ${focus}. Explain relationships between them and the musical effect.`,`Listen again or reread the score to verify details. Write a judgment supported by musical evidence.`],
 'arts-paragraph':[`Use the first class ${t.kind==='art'?'artwork':t.kind==='music'?'recording or score':t.kind==='film'?'moving-image clip':t.kind==='dance'?'dance extract':'drama extract'} about “${title}”.`,`Write an analytical paragraph explaining how ${focus} work together to create meaning. Use precise arts terminology and evidence.`,`Revisit the example to check details, then justify an evaluation of those choices.`]
 };
+const openings={
+map:`Make a memory mind map of “${title}”. Start with what you know, connect the ideas, then check what needs fixing.`,
+recall:`Time for a brain dump: close your notes and get everything you remember about “${title}” onto the page. Then check the gaps.`,
+explain:`Teach “${title}” aloud to a partner, friend or an inanimate object — a rubber duck makes a patient audience. Start without reading; check your notes, then teach it again more clearly.`,
+'short-response':`Take on three short questions about “${title}”. Answer from memory in full sentences, then improve the response that needs the most work.`,
+paragraph:`Turn what you know about “${title}” into one clear explanation paragraph. Use the key terms and a specific example to make your point.`,
+compare:`Put “${title}” side by side in a comparison table. Show what is similar, what is different and why the difference matters.`,
+draw:`Draw “${title}” from memory. Use labels and arrows to make the process or relationships visible, then check your diagram.`,
+'worked-example':`Be the solver, not the spectator: find a worked example of “${title}”, cover the answer and solve it yourself. Then compare and repair your working.`,
+'problem-sprint':`Grab your textbook or revision sheet and tackle questions on “${title}”. Show your working, check your answers and have another go at an error.`,
+'legal-plan':`Build a legal response plan about “${title}”. Use a case or scenario from your notes to compare alternatives and justify a recommendation.`,
+'legal-paragraph':`Make a reasoned legal recommendation about “${title}” in one evaluation paragraph. Compare alternatives and show why your choice stands up to the legal criteria.`,
+evidence:`Build an evidence bank for “${title}”. Retrieve specific details from memory, explain what each supports, then check their accuracy.`,
+'essay-plan':`Plan your argument about “${title}” before writing an essay. Make your interpretation clear and connect each claim to evidence.`,
+'english-paragraph':`Write one analytical paragraph about “${title}”. Show how the text’s choices shape meaning and position readers, using precise evidence.`,
+'close-reading':`Read like a detective: use the practice text below to explore “${title}”. Try two theoretical approaches and support your interpretation with its actual words.`,
+ 'theory-map':`Make a theory map for “${title}”. Connect the ideas to details in the practice text below, then turn those connections into a short reading.`,
+'source-analysis':`Put a historical source under the microscope for “${title}”. Work out who made it, what it supports and how useful and reliable it is.`,
+'history-paragraph':`Make a historical argument about “${title}” using two sources. Explain how their evidence supports your claim, rather than just describing them.`,
+timeline:`Put “${title}” on a timeline. Add the dates, show why the events matter and connect causes with consequences.`,
+vocabulary:`Give your ${lang} vocabulary a memory workout on “${title}”. Recall words and phrases, use them in sentences, then check and retry the tricky ones.`,
+'language-write':`Write in ${lang} about “${title}”. State a view, give reasons and an example, then polish your language.`,
+'language-read':`Read a ${lang} class text about “${title}” without a dictionary first. Find its main message and supporting details, then check your interpretation.`,
+'language-listen':`Listen to a ${lang} class recording about “${title}”. Catch the main message and details before checking with the transcript.`,
+'language-argument':`Build an argument in ${lang} about “${title}”. Connect a class stimulus to your investigation and support your view with evidence.`,
+'design-sprint':`Take the lunch-carrier design brief below and sketch possible solutions. Use “${title}” to choose, refine and justify your strongest idea.`,
+'design-evaluate':`Give your latest design sketch a proper test using “${title}”. Judge its strengths and limitations, then sketch a refinement you can justify.`,
+'algorithm-trace':`Be the computer: trace an algorithm for “${title}” by hand. Track the changing variables and output, then check where your trace differs.`,
+'algorithm-write':`Write pseudocode for a class problem about “${title}”. Make the input, processing and output clear, then test it with the example input.`,
+'performance-analysis':`Watch a ${t.kind==='film'?'moving-image clip':t.kind==='dance'?'dance extract':'drama extract'} to explore “${title}”. Spot precise choices and explain how they work together to create meaning.`,
+'art-analysis':`Look closely at an artwork to explore “${title}”. Use visible details to explain its meaning, then check the context behind your interpretation.`,
+'music-analysis':`Listen closely or read a score to explore “${title}”. Identify musical features and explain the effect they create together.`,
+'arts-paragraph':`Turn your observations about “${title}” into an analytical paragraph. Connect precise artistic choices to their effects and justify your judgement.`
+};
+task.intro=openings[method];
 task.steps=patterns[method];
 if(['english','history','timeline','theory','art','dance','drama','film','music','language','language-ext'].includes(t.kind))task.materials=t.kind==='english'?`${options[s.id]||title}; your class notes on “${title}”; notebook`:`Your ${s.name} class source, extract, score or recording for “${title}”; notebook`;
 if(['history','timeline','language','language-ext','art','dance','drama','film','music'].includes(t.kind)){const source={history:'historical source pack',timeline:'history notes',language:'reading or audio recording', 'language-ext':'investigation stimulus',art:'artwork image',dance:'dance extract',drama:'drama extract',film:'moving-image clip',music:'recording or score'}[t.kind];task.materials=`Your ${s.name} ${source} for “${title}”; class notes; notebook`;}
@@ -130,7 +165,8 @@ function sessionTask(s,t,method,options,minutes=20,mode='medium'){
  // A short block keeps the subject-specific strategy, with a smaller response.
  const smaller=text=>text.replace(/three (specific pieces|linked claims|different solutions|precise choices|specific visible details|precise features)/g,'one $1').replace(/first three unanswered questions/g,'first unanswered question').replace(/with six relevant events/g,'with three relevant events').replace(/Write 12 /g,'Write six ').replace(/Use six items/g,'Use three items').replace(/one specific pieces/g,'one specific piece').replace(/one linked claims/g,'one linked claim').replace(/one different solutions/g,'one solution').replace(/one precise choices/g,'one precise choice').replace(/one specific visible details/g,'one specific visible detail').replace(/one precise features/g,'one precise feature');
  let steps=task.steps.flatMap(text=>splitInstructions(timed(text)));
- if(mode==='easy'||minutes<=10)steps=steps.map(smaller);
+ if(method==='explain')steps.splice(0,2,`Explain “${title}” aloud without reading.`,...t.focus.map(point=>`Explain ${point}, using an example connected to “${title}”.`));
+ if(mode==='easy'||minutes<=10){steps=steps.map(smaller);if(method==='short-response')task.intro=task.intro.replace('three short questions','the short questions');}
  if(minutes<=10)steps.unshift('Keep the response brief: complete one example, a short plan or a few sentences.');
  if(mode==='easy'){
   steps.unshift(`Use your ${s.name} notes to find a definition or model for “${title}”.`,`Write three key words about ${focus} to guide your response.`,`Keep your source or question for “${title}” available; cover its answer while you try the task.`);

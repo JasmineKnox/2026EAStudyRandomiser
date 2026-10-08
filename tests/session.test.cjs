@@ -27,3 +27,9 @@ const english=bank.subjects.find(s=>s.id==='english'),structure=english.topics.f
 assert(structure);const othello=E.sessionTask(english,structure,'evidence',{english:'Othello'},20,'easy');
 assert(othello.steps[0].includes('“Structure and development in Othello”'));assert(othello.materials.includes('Othello'));
 console.log('PASS: specific topic names, focus points, selected text and Othello scaffolding across the entire bank.');
+
+for(const s of bank.subjects)for(const t of s.topics)for(const method of E.METHODS[t.kind]){
+ const options={[s.id]:t.option||(s.option?.text?'Environmental policy':s.option?.values?.[0])};
+ for(const mode of ['easy','medium','hard']){const task=E.sessionTask(s,t,method,options,20,mode);assert(task.intro.includes(task.title));assert(!/undefined|\{option\}/.test(task.intro));if(method==='explain'){assert(task.intro.includes('aloud'));assert(task.intro.includes('rubber duck'));assert(task.steps.some(x=>x.startsWith('Explain “')&&x.includes('aloud')));}}
+}
+console.log('PASS: clear activity openings for every topic, method and mode, including teach-aloud directions.');
