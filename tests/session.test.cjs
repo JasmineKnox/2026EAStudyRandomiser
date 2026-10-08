@@ -15,3 +15,15 @@ for(const s of bank.subjects)for(const mode of ['easy','medium','hard']){
 }
 const prompts=E.splitInstructions('1. Explain the law. 2. Apply it. 3. Evaluate the result.');assert.deepEqual(prompts,['Explain the law.','Apply it.','Evaluate the result.']);
 console.log('PASS: exact session durations, complete subject coverage, block sizes, invalid sessions, all subject/mode strategies, timing directions and dot-point prompts.');
+
+// Every topic uses its actual title in easy scaffolding and checking, including selected texts.
+for(const s of bank.subjects)for(const t of s.topics){
+ const options={[s.id]:t.option||(s.option?.text?'Environmental policy':s.option?.values?.[0])};
+ const task=E.sessionTask(s,t,E.METHODS[t.kind][0],options,20,'easy');
+ assert(task.steps[0].includes(task.title));assert(task.help.includes(t.focus[0]));assert(task.check.includes(task.title));
+ assert(!/named topic|first focus point|this exact topic|your selected text|in the target language/.test([...task.steps,task.help,task.check,task.materials].join(' ')));
+}
+const english=bank.subjects.find(s=>s.id==='english'),structure=english.topics.find(t=>t.title==='Structure and development in {option}');
+assert(structure);const othello=E.sessionTask(english,structure,'evidence',{english:'Othello'},20,'easy');
+assert(othello.steps[0].includes('“Structure and development in Othello”'));assert(othello.materials.includes('Othello'));
+console.log('PASS: specific topic names, focus points, selected text and Othello scaffolding across the entire bank.');
