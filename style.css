@@ -22,3 +22,16 @@ footer{display:flex;justify-content:space-between;gap:20px;margin-top:32px;paddi
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media(max-width:600px){main{padding:16px 14px}.page-header{padding:24px 22px;border-radius:18px;margin-bottom:24px}h1{letter-spacing:-1px}.page-header>p{font-size:17px}.brand-line{font-size:13px;gap:8px}.cohort{padding:4px 9px}#setup,article{padding:22px}#session-picker{padding:10px 16px 18px}#session-picker legend{font-size:20px}#ready{padding:24px 18px}.task-check-panel{padding:18px}#review,#study>.extras{padding-left:18px;padding-right:18px}.actions button.primary{width:100%}#timer-toggle{flex:1}.subject-options{margin-left:0}footer{font-size:12px;gap:10px}}
 @media print{body{background:white;color:black;font:12pt/1.45 Arial,sans-serif}header,#setup,#ready,#selected-summary,#session-picker,#review,.extras,.actions,details,#completion,#storage-note,.eyebrow{display:none!important}main{max-width:none;padding:0}article{border:0;padding:0;margin:0;box-shadow:none;animation:none}.task-heading{border:0;padding:0;margin-bottom:18px}#task-meta{padding:0;background:none;border-radius:0;color:black}#task-title{font-size:20pt;color:black}#task-method{font-size:13pt;color:black}.task-check-panel{background:none;border:1px solid #aaa;border-radius:0;padding:14px}.task-work{padding-bottom:18px}.section-number{display:none}footer{font-size:9pt;color:black}h3{font-size:14pt}li,.task-check-panel{break-inside:avoid}a{color:black}.materials{color:black;font-size:11pt}#task-finish{color:black;font-size:11pt}}
+
+/* Clear subject selection and task identity */
+#subject-list legend{font-size:24px;line-height:1.3;padding-right:12px}
+.selection-hint{font-size:16px;color:var(--muted);margin:0 0 10px}
+#subject-list .subject-label{border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0;background:var(--paper)}
+#subject-list .subject-label:has(input:checked){background:var(--pale);border-color:var(--green);font-weight:bold}
+.subject-area{display:block;font-size:13px;font-weight:normal;color:var(--muted)}
+#session-subjects{display:block}.session-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin-top:16px}.session-group h3{grid-column:1/-1;font-size:18px;margin:0}
+#task-subject{font-size:clamp(25px,4vw,34px);font-weight:bold;line-height:1.25;color:var(--green);margin:0 0 12px;border-left:5px solid var(--sage);padding-left:14px}
+#task-meta{border-radius:6px;font-size:16px}
+.task-resources{border-top:1px solid var(--line);padding-top:22px;margin-top:22px}
+#resource-links{list-style:none;padding:0;margin:0}#resource-links li{margin:14px 0;padding:0}#resource-links a{font-weight:bold}#resource-links span{display:block;font-size:16px;color:var(--muted)}
+@media print{.task-resources{display:none}#task-subject{font-size:18pt;color:black;border:0;padding:0}}

@@ -6,9 +6,9 @@ Working prototype for the 2026 QCAA General and General Extension external asses
 
 ## Try it
 
-Open `EA_Study_Randomiser.html` in a browser. It is self-contained and does not need an internet connection for normal revision tasks. Internet access is needed for official QCAA links. Alternatively, open `index.html` with its companion files in the same folder.
+Open `EA_Study_Randomiser.html` in a browser. It is self-contained and does not need an internet connection for normal revision tasks. Internet access is needed for official QCAA links and the supplementary help websites shown on tasks. English tasks link to LitCharts (some content is paid); maths tasks link to Khan Academy; selected science, economics and computing tasks link to Khan Academy; Legal Studies tasks link to Legal Aid Queensland. Every subject includes its official QCAA resources. Supplementary sites are not presented as QCAA-aligned courses. Alternatively, open `index.html` with its companion files in the same folder.
 
-Select subjects once. English, EAL, Literature and History require the school's selected EA text/topic. Language Extension requires the student's own independent-investigation topic. Choose one, two or three saved subjects in the visible “What are you studying?” picker. Tasks and practice exams use only that selection. Untick a subject to swap it when three are selected. The session selection is remembered; initial setup defaults to the first three saved subjects (or all, if fewer). Normal use is one task button. Each task identifies specific content, instructions, suggested time, checking and a starting scaffold.
+Select subjects once, using the ordered English → maths → electives sections. Tick all the courses you study, including additional English or maths courses. English, EAL, Literature and History require the school's selected EA text/topic. Language Extension requires the student's own independent-investigation topic. Choose one, two or three saved subjects in the visible “What are you studying?” picker. Tasks and practice exams use only that selection. Untick a subject to swap it when three are selected. The session selection is remembered; initial setup defaults to the first three saved subjects (or all, if fewer). Normal use is one task button. Each task identifies specific content, instructions, suggested time, checking and a starting scaffold.
 
 Setup, completed-task count, recent assignments and the current task are saved locally in this browser. They do not synchronise across browsers or devices. Private browsing or clearing browser data may remove them. If storage is unavailable, the app continues for the current visit.
 
@@ -57,3 +57,11 @@ Run `node tests/engine.test.cjs` for task generation, one- to three-subject sess
 ## Updating an existing GitHub copy
 
 For the visual update, replace `index.html`, `style.css` and `app.js` in the existing repository with the files in this package. Keep the companion data and engine files alongside them. The self-contained `EA_Study_Randomiser.html` has also been rebuilt. Subject selections and progress retain the same browser storage key when the website address stays the same.
+
+## Updating an existing GitHub repository
+
+Replace the files with the matching names from this package. Keep your existing repository and Pages configuration. Upload the extracted contents, not the ZIP itself. `EA_Study_Randomiser.html` is the updated standalone option; GitHub Pages uses `index.html` with its companion files. Existing browser selections and progress use the same storage key.
+
+## Checks
+
+Run `node tests/engine.test.cjs` for the study engine checks. Run `node tests/ui.test.cjs` where Playwright and Chromium are installed for selection, persistence, session limits, resource links and mobile layout checks. Run `python rebuild.py` after editing the HTML, CSS, JavaScript or content bank to regenerate the standalone file.

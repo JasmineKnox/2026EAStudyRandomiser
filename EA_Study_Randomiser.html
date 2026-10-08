@@ -31,6 +31,19 @@ footer{display:flex;justify-content:space-between;gap:20px;margin-top:32px;paddi
 @media(max-width:600px){main{padding:16px 14px}.page-header{padding:24px 22px;border-radius:18px;margin-bottom:24px}h1{letter-spacing:-1px}.page-header>p{font-size:17px}.brand-line{font-size:13px;gap:8px}.cohort{padding:4px 9px}#setup,article{padding:22px}#session-picker{padding:10px 16px 18px}#session-picker legend{font-size:20px}#ready{padding:24px 18px}.task-check-panel{padding:18px}#review,#study>.extras{padding-left:18px;padding-right:18px}.actions button.primary{width:100%}#timer-toggle{flex:1}.subject-options{margin-left:0}footer{font-size:12px;gap:10px}}
 @media print{body{background:white;color:black;font:12pt/1.45 Arial,sans-serif}header,#setup,#ready,#selected-summary,#session-picker,#review,.extras,.actions,details,#completion,#storage-note,.eyebrow{display:none!important}main{max-width:none;padding:0}article{border:0;padding:0;margin:0;box-shadow:none;animation:none}.task-heading{border:0;padding:0;margin-bottom:18px}#task-meta{padding:0;background:none;border-radius:0;color:black}#task-title{font-size:20pt;color:black}#task-method{font-size:13pt;color:black}.task-check-panel{background:none;border:1px solid #aaa;border-radius:0;padding:14px}.task-work{padding-bottom:18px}.section-number{display:none}footer{font-size:9pt;color:black}h3{font-size:14pt}li,.task-check-panel{break-inside:avoid}a{color:black}.materials{color:black;font-size:11pt}#task-finish{color:black;font-size:11pt}}
 
+/* Clear subject selection and task identity */
+#subject-list legend{font-size:24px;line-height:1.3;padding-right:12px}
+.selection-hint{font-size:16px;color:var(--muted);margin:0 0 10px}
+#subject-list .subject-label{border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0;background:var(--paper)}
+#subject-list .subject-label:has(input:checked){background:var(--pale);border-color:var(--green);font-weight:bold}
+.subject-area{display:block;font-size:13px;font-weight:normal;color:var(--muted)}
+#session-subjects{display:block}.session-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin-top:16px}.session-group h3{grid-column:1/-1;font-size:18px;margin:0}
+#task-subject{font-size:clamp(25px,4vw,34px);font-weight:bold;line-height:1.25;color:var(--green);margin:0 0 12px;border-left:5px solid var(--sage);padding-left:14px}
+#task-meta{border-radius:6px;font-size:16px}
+.task-resources{border-top:1px solid var(--line);padding-top:22px;margin-top:22px}
+#resource-links{list-style:none;padding:0;margin:0}#resource-links li{margin:14px 0;padding:0}#resource-links a{font-weight:bold}#resource-links span{display:block;font-size:16px;color:var(--muted)}
+@media print{.task-resources{display:none}#task-subject{font-size:18pt;color:black;border:0;padding:0}}
+
 </style>
 </head>
 <body>
@@ -38,8 +51,8 @@ footer{display:flex;justify-content:space-between;gap:20px;margin-top:32px;paddi
 <header class="page-header"><div class="brand-line"><span>Mrs Knox Teaches</span><span class="cohort">QCAA 2026</span></div><h1>EA Study Randomiser</h1><p>Choose your subjects. We’ll give you a place to start.</p></header>
 <p id="storage-note" class="notice" hidden>Your browser cannot save this setup. It will work for this visit; keep the page open.</p>
 <section id="setup" aria-labelledby="setup-title" hidden>
-<h2 id="setup-title">Your subjects</h2>
-<p>Tick the General or Extension subjects you study. Your choices stay in this browser. Add the school-selected text or topic where requested.</p>
+<h2 id="setup-title">Choose your subjects</h2>
+<p>Start with English, then maths, then your electives. Tick all the subjects you study; you’ll choose up to three for each study session. Your choices stay in this browser. Add the school-selected text or topic where requested.</p>
 <label for="subject-search">Find a subject</label><input id="subject-search" type="search" placeholder="e.g. Legal Studies" autocomplete="off">
 <form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button class="primary" type="submit">Save and give me a task</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
 <p class="small">Applied subjects and the separate Senior External Examination (SEE) pathway are outside this 2026 EA prototype.</p>
@@ -49,11 +62,12 @@ footer{display:flex;justify-content:space-between;gap:20px;margin-top:32px;paddi
 <fieldset id="session-picker"><legend>What are you studying?</legend><p>Choose 1–3 subjects for this study session. Tasks and practice exams will use only these subjects.</p><div id="session-subjects"></div><p id="session-status" role="status"></p></fieldset>
 <div id="ready"><p class="ready-note">Your next task is ready to pick.</p><button id="generate" class="primary">Give me a study task</button><p id="completion" role="status"></p></div>
 <article id="task" hidden aria-labelledby="task-title">
-<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p></div>
+<div class="task-heading"><p class="eyebrow">Your study task</p><p id="task-subject"></p><p id="task-meta"></p><h2 id="task-title"></h2><p id="task-method"></p></div>
 <p class="materials"><strong>Have ready</strong><span id="task-materials"></span></p>
 <section class="task-work" aria-labelledby="do-heading"><h3 id="do-heading"><span class="section-number" aria-hidden="true">01</span> Do this</h3><ol id="task-steps"></ol><p id="practice-text" hidden></p></section>
 <section class="task-check-panel" aria-labelledby="check-heading"><h3 id="check-heading"><span class="section-number" aria-hidden="true">02</span> Check your work</h3><p id="task-check"></p><p id="task-finish"></p></section>
 <details id="help"><summary>I'm stuck</summary><p id="task-help"></p><p>If the resource is unavailable, use the first relevant page in your notes: read for one minute, close it, and recall the key points. Mark any uncertainty to ask your teacher.</p></details>
+<section class="task-resources" aria-labelledby="resources-title"><h3 id="resources-title">Helpful websites</h3><ul id="resource-links"></ul><p class="small">Look up the concept named in your task. Supplementary websites may use a different syllabus; use your class notes and QCAA materials to check exam requirements. Links open in a new tab and need internet access.</p></section>
 <div class="actions"><button id="done" class="primary">Done — I've checked it</button><button id="timer-toggle">Start timer</button><output id="timer" aria-label="Time remaining"></output></div>
 <details class="extras"><summary>Other options</summary><div class="actions"><button id="shorten">Make this 5 minutes</button><button id="skip">Give me another task</button><button id="print">Print this task</button></div><p><a id="task-source" target="_blank" rel="noopener">QCAA syllabus: exam coverage</a></p></details>
 </article>
@@ -6228,12 +6242,14 @@ catch{by('storage-note').hidden=false;}
 function validSetup(){return state.selected.length&&state.selected.every(id=>{const s=bank.subjects.find(s=>s.id===id);if(!s.option)return true;if(s.option.text)return Boolean(String(state.options[id]||'').trim());return s.option.values.includes(state.options[id]);});}
 state.active=Array.isArray(state.active)?E.activeSubjects(state):[...new Set([state.current?.subject,...state.selected].filter(id=>state.selected.includes(id)))].slice(0,3);
 if(state.current){const s=bank.subjects.find(s=>s.id===state.current.subject&&state.active.includes(s.id)),t=s&&E.eligible(s,state.options).find(t=>t.id===state.current.topic);state.current=t&&E.METHODS[t.kind].includes(state.current.method)?E.makeTask(s,t,state.current.method,state.options,state.current.minutes===5):null;}
+const groupOf=s=>s.area==='English'?'English':s.area==='Mathematics'?'Maths':'Electives';
+const groups=['English','Maths','Electives'];
 function setup(){
 by('setup').hidden=false;by('study').hidden=true;by('cancel-setup').hidden=!validSetup();by('subject-search').value='';by('setup-error').textContent='';
 by('subject-list').replaceChildren();
-const areas=[...new Set(bank.subjects.map(s=>s.area))].sort();
-areas.forEach(area=>{const field=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent=area;field.append(legend);
- bank.subjects.filter(s=>s.area===area).forEach(s=>{const wrap=document.createElement('div');wrap.dataset.subject=s.name.toLowerCase();const label=document.createElement('label');label.className='subject-label';const box=document.createElement('input');box.type='checkbox';box.name='subject';box.value=s.id;box.checked=state.selected.includes(s.id);label.append(box,document.createTextNode(s.name));wrap.append(label);
+const areas=groups;
+areas.forEach(area=>{const field=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent=(groups.indexOf(area)+1)+'. Select your '+(area==='Electives'?'electives':area);field.append(legend);const hint=document.createElement('p');hint.className='selection-hint';hint.textContent=area==='English'?'Choose your English course and any extension you study.':area==='Maths'?'Choose your maths course. You can select Specialist as well as Methods.':'Choose your remaining subjects. You can skip any section that does not apply.';field.append(hint);
+ bank.subjects.filter(s=>groupOf(s)===area).forEach(s=>{const wrap=document.createElement('div');wrap.dataset.subject=s.name.toLowerCase();const label=document.createElement('label');label.className='subject-label';const box=document.createElement('input');box.type='checkbox';box.name='subject';box.value=s.id;box.checked=state.selected.includes(s.id);const title=document.createElement('span');title.textContent=s.name;label.append(box,title);wrap.append(label);if(area==='Electives'){const category=document.createElement('small');category.className='subject-area';category.textContent=s.area;title.append(category);}
  if(s.option){const opt=document.createElement('div');opt.className='subject-options';opt.hidden=!box.checked;const l=document.createElement('label');l.htmlFor='option-'+s.id;l.textContent=s.option.label;const input=document.createElement(s.option.text?'input':'select');input.id=l.htmlFor;input.dataset.option=s.id;
   if(s.option.text){input.type='text';input.maxLength=150;input.placeholder='e.g. renewable energy in Germany';input.value=state.options[s.id]||'';}
   else{input.append(new Option('Select the option your school chose',''));s.option.values.forEach(v=>input.append(new Option(v,v)));input.value=state.options[s.id]||'';}
@@ -6247,13 +6263,23 @@ for(const id of ids){const s=bank.subjects.find(s=>s.id===id);if(s.option){const
 const changed=JSON.stringify(ids)!==JSON.stringify(state.selected)||JSON.stringify(options)!==JSON.stringify(state.options);state.selected=ids;state.options=options;state.active=state.active.filter(id=>ids.includes(id));if(changed){state.queue=[];state.current=null;if(!state.active.length)state.active=ids.slice(0,3);}save();showStudy();if(!state.current&&state.active.length)generate();});
 function sessionPicker(){
 by('session-subjects').replaceChildren(...state.selected.map(id=>{const s=bank.subjects.find(s=>s.id===id),label=document.createElement('label'),box=document.createElement('input');label.className='subject-label session-choice';box.type='checkbox';box.name='session-subject';box.value=id;box.checked=state.active.includes(id);const name=document.createElement('span');name.textContent=s.name;label.append(box,name);box.addEventListener('change',()=>{const chosen=[...by('session-subjects').querySelectorAll('input:checked')].map(x=>x.value);if(chosen.length>3){box.checked=false;return;}state.active=chosen;state.queue=[];if(state.current&&!chosen.includes(state.current.subject)){stopTimer();state.current=null;}save();sessionPicker();if(!state.current){by('task').hidden=true;by('ready').hidden=false;}by('exam').hidden=true;[...by('session-subjects').querySelectorAll('input')].find(input=>input.value===id).focus();});return label;}));
+groups.forEach(group=>{const choices=[...by('session-subjects').children].filter(label=>groupOf(bank.subjects.find(s=>s.id===label.querySelector('input').value))===group);if(!choices.length)return;const section=document.createElement('div');section.className='session-group';const heading=document.createElement('h3');heading.textContent=group;section.append(heading,...choices);by('session-subjects').append(section);});
 const count=state.active.length;by('session-subjects').querySelectorAll('input').forEach(box=>box.disabled=count===3&&!box.checked);
 by('session-status').textContent=count?count+' of 3 selected'+(count===3?' — untick a subject to choose another.':'.'):'Choose at least one subject to get a task.';
 by('generate').disabled=!count;by('practice-exam').disabled=!count;
 }
 function showStudy(){by('setup').hidden=true;by('study').hidden=false;by('selected-summary').textContent='Your saved subjects: '+state.selected.map(id=>bank.subjects.find(s=>s.id===id).name).join(', ');sessionPicker();by('completion').textContent=state.completed?state.completed+' checked task'+(state.completed===1?'':'s')+' completed.':'';if(state.current&&state.active.includes(state.current.subject))renderTask();else{state.current=null;by('task').hidden=true;by('ready').hidden=false;}}
 function generate(quick=false){stopTimer();state.current=E.next(bank,state,{quick});save();renderTask();}
-function renderTask(){const t=state.current,s=bank.subjects.find(s=>s.id===t.subject);by('ready').hidden=true;by('task').hidden=false;by('task-meta').textContent=s.name+' · '+t.minutes+' minutes';by('task-title').textContent=t.title;by('task-method').textContent=t.label;by('task-materials').textContent=t.materials;by('task-steps').replaceChildren(...t.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));by('task-check').textContent=t.check;by('task-finish').textContent=t.finish;by('task-help').textContent=t.help;by('practice-text').hidden=!t.practiceText;by('practice-text').textContent=t.practiceText||'';by('task-source').href=t.source;by('help').open=false;by('shorten').disabled=t.minutes===5;by('timer').textContent='';by('timer-toggle').textContent='Start timer';by('exam').hidden=true;}
+function renderTask(){const t=state.current,s=bank.subjects.find(s=>s.id===t.subject);by('ready').hidden=true;by('task').hidden=false;by('task-subject').textContent=s.name;by('task-meta').textContent=t.minutes+' minutes';renderResources(s);by('task-title').textContent=t.title;by('task-method').textContent=t.label;by('task-materials').textContent=t.materials;by('task-steps').replaceChildren(...t.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));by('task-check').textContent=t.check;by('task-finish').textContent=t.finish;by('task-help').textContent=t.help;by('practice-text').hidden=!t.practiceText;by('practice-text').textContent=t.practiceText||'';by('task-source').href=t.source;by('help').open=false;by('shorten').disabled=t.minutes===5;by('timer').textContent='';by('timer-toggle').textContent='Start timer';by('exam').hidden=true;}
+function renderResources(s){
+const links=[{name:'QCAA '+s.name+' resources',url:s.page,note:'Official syllabus, past papers and marking guides.'}];
+if(s.area==='English')links.push({name:'LitCharts literature guides',url:'https://www.litcharts.com/lit',note:'Search for your selected text. Some content and downloads require a paid subscription.'});
+if(s.area==='Mathematics')links.push({name:'Khan Academy maths',url:'https://www.khanacademy.org/math',note:'Search for the concept in this task to find explanations and practice.'});
+if(['biology','chemistry','physics','economics','digital_solutions'].includes(s.id))links.push({name:'Khan Academy',url:'https://www.khanacademy.org/',note:'Browse the relevant science, economics or computing course for this concept.'});
+if(s.id==='legal')links.push({name:'Legal Aid Queensland',url:'https://www.legalaid.qld.gov.au/Find-legal-information',note:'Queensland legal information and examples. Check the jurisdiction and date when using a legal example.'});
+by('resources-title').textContent='Help with '+s.name;
+by('resource-links').replaceChildren(...links.map(link=>{const li=document.createElement('li'),a=document.createElement('a'),note=document.createElement('span');a.href=link.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=link.name+' ↗';note.textContent=link.note;li.append(a,note);return li;}));
+}
 function stopTimer(){if(tick)clearInterval(tick);tick=null;endAt=null;remaining=0;by('timer').textContent='';by('timer-toggle').textContent='Start timer';}
 function updateTimer(){const seconds=Math.max(0,Math.ceil((endAt-Date.now())/1000));by('timer').textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');if(seconds===0){clearInterval(tick);tick=null;endAt=null;remaining=0;by('timer').textContent='Time finished — check your work.';by('timer-toggle').textContent='Restart timer';}}
 by('timer-toggle').addEventListener('click',()=>{if(tick){remaining=Math.max(0,endAt-Date.now());clearInterval(tick);tick=null;endAt=null;by('timer-toggle').textContent='Resume timer';}else{endAt=Date.now()+(remaining||state.current.minutes*60000);remaining=0;updateTimer();tick=setInterval(updateTimer,1000);by('timer-toggle').textContent='Pause timer';}});
