@@ -34,7 +34,7 @@ function setup(){
  showSetupStep();
 }
 function filterSetup(){const q=by('subject-search').value.toLowerCase();by('subject-list').querySelectorAll('[data-subject]').forEach(el=>el.hidden=!el.dataset.subject.includes(q));}
-function showSetupStep(){by('subject-list').querySelectorAll('fieldset').forEach((el,i)=>el.hidden=i!==setupStep);by('setup-progress').textContent='Step '+(setupStep+1)+' of 3 · '+groups[setupStep];by('setup-back').hidden=setupStep===0;by('setup-next').hidden=setupStep===2;by('setup-save').hidden=setupStep!==2;by('subject-search').value='';filterSetup();by('setup-error').textContent='';}
+function showSetupStep(){by('subject-search-controls').hidden=setupStep!==2;by('subject-list').querySelectorAll('fieldset').forEach((el,i)=>el.hidden=i!==setupStep);by('setup-progress').textContent='Step '+(setupStep+1)+' of 3 · '+groups[setupStep];by('setup-back').hidden=setupStep===0;by('setup-next').hidden=setupStep===2;by('setup-save').hidden=setupStep!==2;by('subject-search').value='';filterSetup();by('setup-error').textContent='';}
 function validateStep(index){const field=by('subject-list').querySelector('[data-step="'+index+'"]');for(const box of field.querySelectorAll('input[name=subject]:checked')){const s=bank.subjects.find(s=>s.id===box.value);if(s.option){const input=by('option-'+s.id),v=input.value.trim();if(!v||(!s.option.text&&!s.option.values.includes(v))){setupStep=index;showSetupStep();by('setup-error').textContent='Add '+s.option.label.toLowerCase()+' for '+s.name+'.';input.focus();return false;}}}return true;}
 by('subject-search').addEventListener('input',filterSetup);
 by('setup-next').addEventListener('click',()=>{if(validateStep(setupStep)){setupStep++;showSetupStep();by('setup-progress').focus();}});

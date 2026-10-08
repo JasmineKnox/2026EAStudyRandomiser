@@ -5,7 +5,7 @@
 <title>EA Study Randomiser · Mrs Knox Teaches</title>
 <meta name="description" content="Choose your QCAA subjects once. Get a specific external exam study task with instructions and a checking step.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4841'/%3E%3Ctext x='5' y='23' fill='white' font-size='20' font-family='Arial'%3EEA%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261008-sessions">
+<link rel="stylesheet" href="style.css?v=20261008-electives-search">
 </head>
 <body>
 <main>
@@ -14,7 +14,7 @@
 <section id="setup" aria-labelledby="setup-title" hidden>
 <h2 id="setup-title">Save your courses</h2><p id="setup-progress" role="status" tabindex="-1"></p>
 <p>Move through English, maths and electives one page at a time. You can leave a page unticked if it does not apply. Add the text or topic your school selected where requested.</p>
-<label for="subject-search">Find a subject</label><input id="subject-search" type="search" placeholder="e.g. Legal Studies" autocomplete="off">
+<div id="subject-search-controls" hidden><label for="subject-search">Find a subject</label><input id="subject-search" type="search" placeholder="e.g. Legal Studies" autocomplete="off"></div>
 <form id="setup-form"><div id="subject-list"></div><p id="setup-error" role="alert"></p><div class="actions"><button id="setup-back" type="button">Back</button><button id="setup-next" class="primary" type="button">Next</button><button id="setup-save" class="primary" type="submit" hidden>Save courses and set up a session</button><button id="cancel-setup" type="button" hidden>Cancel</button></div></form>
 <p class="small">Applied subjects and the separate Senior External Examination (SEE) pathway are outside this 2026 EA prototype.</p>
 </section>
@@ -46,5 +46,5 @@
 </details>
 <footer><span>Created by Mrs Knox</span><span>EA Study Randomiser</span></footer>
 </main>
-<script src="bank.js?v=20261008-sessions"></script><script src="engine.js?v=20261008-sessions"></script><script src="app.js?v=20261008-sessions"></script>
+<script src="bank.js?v=20261008-electives-search"></script><script src="engine.js?v=20261008-electives-search"></script><script src="app.js?v=20261008-electives-search"></script>
 </body></html>
