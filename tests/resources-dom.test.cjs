@@ -4,7 +4,7 @@ const root=path.join(__dirname,'..');const bank=require('../content-bank.json');
 const key='mrs-knox-ea-study-2026-v1';const errors=[];
 function load(saved,standalone=false){
  const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
- const dom=new JSDOM(fs.readFileSync(path.join(root,standalone?'EA_Study_Randomiser.html':'index.html'),'utf8'),{url:'https://study.example/',runScripts:'outside-only',virtualConsole:vc});
+ const dom=new JSDOM(fs.readFileSync(path.join(root,standalone?'EA_Study_Randomiser.html':'ea.html'),'utf8'),{url:'https://study.example/',runScripts:'outside-only',virtualConsole:vc});
  const w=dom.window;w.HTMLElement.prototype.scrollIntoView=function(){};
  if(saved)w.localStorage.setItem(key,saved);
  if(standalone){for(const script of w.document.querySelectorAll('script'))w.eval(script.textContent);}

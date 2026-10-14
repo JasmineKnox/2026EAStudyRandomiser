@@ -1,3 +1,14 @@
+# Choose a study mode
+
+The main page now offers both games:
+
+- [Unit 3 exams](unit3/): internal-exam study tasks.
+- [EA study and session planner](ea.html): the original EA game, with its content, scripts and saved progress retained.
+
+`index.html` is the shared chooser. `ea.html` is the source page for the EA game; `rebuild.py` uses it to regenerate `EA_Study_Randomiser.html`. Unit 3 source lives in `unit3/` and uses a separate browser storage key.
+
+---
+
 # EA Study Randomiser
 
 Created by Mrs Knox.

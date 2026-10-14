@@ -48,3 +48,7 @@ Automated checks cover 1,713 task combinations, 42 task methods, timing totals, 
 The content describes syllabus boundaries, not the contents of an individual school’s unseen paper. Teachers must confirm local coverage, conditions and permitted resources. CIA themes depend on the cohort and phase; no 2026 theme is hard-coded as a future-cohort requirement.
 
 Syllabus information summarised from QCAA sources, © State of Queensland (QCAA) 2026, https://www.qcaa.qld.edu.au/copyright. This independent resource is not a QCAA publication. AI assisted the drafting and coding; assessment mapping was checked against the cited public sources.
+
+## Study-mode navigation
+
+The repository root offers a choice between Unit 3 and EA preparation. The original EA page and session planner are preserved at `../ea.html`; their scripts, content bank and browser storage key are unchanged. Each game links back to the shared chooser.

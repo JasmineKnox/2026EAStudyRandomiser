@@ -1,7 +1,7 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path');
 (async()=>{
  const browser=await chromium.launch({headless:true});const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('file://'+path.resolve(__dirname,'../index.html'));
+ await page.goto('file://'+path.resolve(__dirname,'../ea.html'));
  assert.equal(await page.locator('#subject-list fieldset:visible').count(),1);
  await page.locator('input[value=english]').check();await page.locator('#option-english').selectOption('The Dry');await page.locator('#setup-next').click();
  assert.equal(await page.locator('#subject-list fieldset:visible legend').textContent(),'Select your Maths');await page.locator('input[value=maths_methods]').check();await page.locator('#setup-next').click();

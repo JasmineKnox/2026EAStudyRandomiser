@@ -4,7 +4,7 @@ import json,csv,re
 root=Path(__file__).resolve().parent
 bank=json.loads((root/'content-bank.json').read_text())
 (root/'bank.js').write_text('window.STUDY_BANK = '+json.dumps(bank,ensure_ascii=False,indent=2)+';\n')
-html=(root/'index.html').read_text()
+html=(root/'ea.html' if (root/'ea.html').exists() else root/'index.html').read_text()
 html=re.sub(r'<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">',lambda _: '<style>\n'+(root/'style.css').read_text()+'\n</style>',html)
 for name in ['bank.js','engine.js','app.js']:
     html=re.sub(r'<script src="'+re.escape(name)+r'(?:\?[^"]*)?"></script>',lambda _: '<script>\n'+(root/name).read_text().replace('</script','<\\/script')+'\n</script>',html)

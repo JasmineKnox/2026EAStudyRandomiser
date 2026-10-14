@@ -1,6 +1,6 @@
 const {JSDOM,VirtualConsole}=require('jsdom'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.join(__dirname,'..'),key='mrs-knox-ea-study-2026-v1',errors=[];
-function load(saved){const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));const d=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://session.example/',runScripts:'outside-only',virtualConsole:vc});const w=d.window;w.HTMLElement.prototype.scrollIntoView=function(){};if(saved)w.localStorage.setItem(key,saved);for(const f of ['bank.js','engine.js','app.js'])w.eval(fs.readFileSync(path.join(root,f),'utf8'));return w;}
+function load(saved){const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));const d=new JSDOM(fs.readFileSync(path.join(root,'ea.html'),'utf8'),{url:'https://session.example/',runScripts:'outside-only',virtualConsole:vc});const w=d.window;w.HTMLElement.prototype.scrollIntoView=function(){};if(saved)w.localStorage.setItem(key,saved);for(const f of ['bank.js','engine.js','app.js'])w.eval(fs.readFileSync(path.join(root,f),'utf8'));return w;}
 let w=load();const $=q=>w.document.querySelector(q),$$=q=>[...w.document.querySelectorAll(q)],saved=()=>JSON.parse(w.localStorage.getItem(key));
 function check(q,value=true){const e=$(q);e.checked=value;e.dispatchEvent(new w.Event('change'));}
 function visibleSteps(){return $$('#subject-list fieldset').filter(x=>!x.hidden).map(x=>x.dataset.step);}
