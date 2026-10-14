@@ -50,6 +50,16 @@ add('essential_maths','IA2 / CIA','Short response','Unit 3: Measurement, scales 
 add('essential_english','IA2 / CIA','Short response to stimulus','Unit 3: Media representations','Representations of issues, identities, places, events and concepts|How written, visual and language choices shape meaning|Supporting explanations with evidence from a media text','media','Practise seen- and unseen-media-text skills. CIA topics vary by cohort and phase: enter the topic your teacher confirms. No secure CIA materials are supplied.', 'Your cohort and teacher-confirmed CIA topic')
 excluded=['Dance','Design','Digital Solutions','Drama','English','English & Literature Extension','Film, Television & New Media','Music','Music Extension (Composition)','Music Extension (Musicology)','Music Extension (Performance)','Physical Education','Visual Art']
 bank=dict(checked='15 October 2026',scope='Standard QCAA General and General (Extension) sequences represented in the EA game, plus the two Applied (Essential) CIAs. Other Applied subjects and alternative sequences are not mapped here.',subjects=subjects,excluded=excluded)
+bank['literatureTexts']=json.loads((ROOT/'literature-texts.json').read_text())
+bank['ciaTopics']={'source':'https://www.qcaa.qld.edu.au/senior/assessment/internal-assessment/common-internal-assessment/essential-english','checked':'15 October 2026','options':[{'id':'2026-internet','label':'2026 — The internet','context':'2026 Essential English CIA: representations of the internet'},{'id':'2026-print','label':'2026 — Print media','context':'2026 Essential English CIA: representations of print media'}]}
+for s in subjects:
+ if s['subject']=='literature':
+  s['context']='Choose the Literature text your school assigned to IA1'
+  s['note']='Select your completion year and the prescribed text assigned to IA1. The same text cannot be used for more than one assessment for an individual student. Use your teacher’s IA1 focus.'
+ if s['subject']=='essential_english':
+  s['context']='Choose the CIA topic your teacher has given you'
+  s['note']='For 2026, the topics are the internet and print media. Ask your teacher which topic your school is doing. If you sit the CIA in another year, use the topic confirmed for that year.'
+  s['topics']=['How a text shows people, places, events, ideas or issues','How words, pictures and layout create a message','Using details from the text to explain your answer']
 resource_replacements={
  'legal':[('Parliamentary Education Office: government and parliament','https://peo.gov.au/')],
  'economics':[('RBA Education: exchange rates','https://www.rba.gov.au/education/resources/explainers/exchange-rates-and-their-measurement.html')],

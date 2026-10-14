@@ -74,3 +74,15 @@ input[type=number]{width:100%;font:inherit;min-height:48px;background:white;colo
  .session-choice input:focus-visible{outline:none}
 }
 
+
+/* Shared subject-area colours: matches the Unit 3 companion. */
+[data-study-area]{--subject-shade:#963F2C;--subject-accent:#EB967E;--subject-tint:#FBE9E3}
+[data-study-area="Mathematics"],[data-study-area="Technologies"]{--subject-shade:#315F83;--subject-accent:#87B5D6;--subject-tint:#E8F2F9}
+[data-study-area="Sciences"],[data-study-area="Health and Physical Education"]{--subject-shade:#775600;--subject-accent:#E8BC55;--subject-tint:#FBF2D8}
+[data-study-area="English"],[data-study-area="Languages"]{--subject-shade:#634A88;--subject-accent:#B6A0D5;--subject-tint:#F0EAF8}
+.subject-label[data-study-area]{background:var(--subject-tint);border-left:6px solid var(--subject-shade)}
+.subject-label[data-study-area]:has(input:checked){background:var(--subject-accent);color:#202322;border-color:var(--subject-shade)}
+#task[data-study-area] .task-heading{border-top:8px solid var(--subject-shade)}
+#task[data-study-area] #task-subject{display:block;font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.15;font-weight:800;color:#202322;background:var(--subject-accent);border-left:8px solid var(--subject-shade);border-radius:8px;padding:1rem;margin:0 0 1rem}
+#task[data-study-area] .task-intro{background:var(--subject-tint);border-color:var(--subject-shade);color:#202322}
+

@@ -37,7 +37,7 @@ node --check unit3/app.js
 node --check unit3/tasks.js
 ```
 
-Subject accents use the approved coral, golden yellow, blue and lilac families. Each course has a default accent that can be changed in setup. The same accent appears in its setup card, session choice and active-task banner.
+Subject accents use the approved coral, golden yellow, blue and lilac families. Accents are fixed by subject area: Mathematics and Technologies blue; Sciences and Health/Physical Education golden yellow; Humanities coral; English and Languages lilac. The same accent appears in the setup card, session choice and active-task banner, and the EA companion uses the same grouping.
 
 The generated `index.html` remains self-contained. `bank.json` is the readable source mapping exported by the build.
 
@@ -52,3 +52,11 @@ Syllabus information summarised from QCAA sources, © State of Queensland (QCAA)
 ## Study-mode navigation
 
 The repository root offers a choice between Unit 3 and EA preparation. The original EA page and session planner are preserved at `../ea.html`; their scripts, content bank and browser storage key are unchanged. Each game links back to the shared chooser.
+
+## Text and topic selectors
+
+Literature IA1 offers a searchable title/writer list drawn from QCAA’s prescribed Literature list for 2026–2029. The completion-year selector filters date-limited entries. Options include the relevant year’s EA-category texts because QCAA permits those texts elsewhere in the course, provided an individual student does not use the same text for more than one assessment. Short-story and poetry selections are listed by writer, with an optional field for the class’s actual stories, poems or focus. See `literature-texts.json` for source attribution and availability.
+
+Essential English offers the two publicly verified 2026 CIA topics, the internet and print media. A teacher-confirmed year/topic field supports other cohorts without presenting those 2026 topics as their requirements. As at 15 October 2026, a public 2027 topic announcement could not be verified. Essential English directions use shorter, plainer language.
+
+The English setup step blocks Continue until each selected English course has its required text or topic. Missing selections show an error and receive focus. The final setup save repeats validation.

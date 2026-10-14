@@ -3,6 +3,11 @@
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 const LIMITS={English:2,Maths:3,Electives:6};
 const group=s=>s.area==='English'?'English':s.area==='Mathematics'?'Maths':'Electives';
+const subjectColour=s=>({'Mathematics':'blue','Sciences':'gold','Humanities and Social Sciences':'coral','English':'lilac','Languages':'lilac','Technologies':'blue','Health and Physical Education':'gold'}[s.area]||'coral');
+const normalise=x=>String(x).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function literatureOptions(data,year,query=''){const q=normalise(query).trim();return data.texts.filter(t=>((t.from!==null&&t.from<=year)||t.eaYears.includes(year))&&normalise(t.title+' '+t.author+' '+t.type).includes(q)).sort((a,b)=>(a.title+' '+a.author).localeCompare(b.title+' '+b.author));}
+const literatureContext=(t,focus='')=>t.title+' — '+t.author+(focus.trim()?'. Class focus: '+focus.trim():'');
+function courseProblem(s,c){if(!c.topics?.length)return 'Select at least one topic for '+s.name+'.';if(s.subject==='literature'&&!c.litText)return 'Choose your Literature IA1 text before continuing.';if(s.subject==='essential_english'&&!c.context?.trim())return 'Choose your Essential English CIA topic before continuing.';if(s.context&&!c.context?.trim())return 'Add your school’s chosen focus for '+s.name+' before continuing.';return '';}
 function limitSelections(bank,ids){const counts={English:0,Maths:0,Electives:0};return [...new Set(ids)].filter(id=>{const s=bank.subjects.find(s=>s.subject===id);if(!s)return false;const g=group(s);if(counts[g]>=LIMITS[g])return false;counts[g]++;return true;});}
 function activeSubjects(selected,active){return [...new Set(Array.isArray(active)?active:[])].filter(id=>selected.includes(id)).slice(0,3);}
 function plan(minutes,ids){
@@ -60,7 +65,8 @@ function task(s,topic,context,minutes,difficulty,rng=Math.random,avoid){
  case 'evidence':set(`Retrieve evidence for “${title}”, then verify every detail.`,`Without copying, record ${n+1} precise textual moment${n>0?'s':''}.${ctx}`,`For each, explain the interpretation it supports and the relevant writer’s choice. Verify quotations in the text; label paraphrases honestly.`);break;
  case 'literary-paragraph':set(`Write one analytical paragraph about “${title}”.`,`Use a general authorised practice focus from your class materials.${ctx}`,`Make an analytical claim, embed precise evidence and explain how textual choices shape meaning. Connect cultural assumptions, attitudes, values or beliefs where relevant.`,`Check that each sentence advances the interpretation rather than retelling the plot.`);break;
  case 'literary-plan':set(`Plan a defensible interpretation about “${title}”.`,`Use your class text and an authorised practice focus.${ctx}`,`Draft a contention and ${n+1} connected claims. Select evidence and analyse textual choices for each claim.`,`Test whether the plan sustains an argument that answers the focus.`);break;
- case 'media-read':case 'media-explain':set(`Explain how a media text represents “${title}”.`,`Open a teacher-approved practice media text.${ctx} Identify its purpose, audience and representation.`,`Select ${n} written or visual feature${n>1?'s':''}. Explain how each communicates ideas, using precise details from the text.`,`Connect the choices to the representation; avoid merely listing features.`);break;
+ case 'media-read':set(`Look closely at a text about “${title}”. What idea does it give you?`,`Choose a practice article, advert, post or video approved by your teacher.${ctx}`,`Who made it? Who is it for? What does it want people to think, feel or do?`,`Find ${n} word${n>1?'s':''}, picture${n>1?'s':''} or layout choice${n>1?'s':''}. Explain how each helps get the message across.`);break;
+ case 'media-explain':set(`Write a short answer about “${title}”. Use details from the text.`,`Choose a practice article, advert, post or video approved by your teacher.${ctx}`,`Answer: What idea does the text give you about its topic? Name a word, picture or other detail that helps create that idea.`,`Explain how that detail works. You could begin: “The text shows … For example, … This makes the audience think or feel … because …”`);break;
  case 'vocab':set(`Recall useful ${lang} language for “${title}”, then put it to work.`,`Write ${difficulty==='easy'?5:difficulty==='hard'?12:8} relevant words or phrases from memory.${ctx}`,`Use them in ${n+1} connected sentences appropriate to the topic and audience. Check spelling, grammar and meaning in your class resources.`);break;
  case 'language-reading':set(`Read a ${lang} text about “${title}” and justify an inference.`,`Open the first authorised class reading related to ${title}.${ctx}`,`Identify gist, purpose, audience and tone. Use precise textual details to explain ${n} inference${n>1?'s':''} about attitudes or perspectives.`,`Use the response language required by the practice question and check against class explanations.`);break;
  case 'language-listening':set(`Listen for meaning in a ${lang} text about “${title}”.`,`Play the first authorised class audio related to ${title} without reading its transcript.${ctx}`,`Record gist and key details. Listen again and justify one inference about tone, purpose or perspective.`,`Check against the transcript or matching class answers. If no audio is available, use the reading task instead.`);break;
@@ -73,7 +79,14 @@ function task(s,topic,context,minutes,difficulty,rng=Math.random,avoid){
  if(difficulty==='hard')t.steps.push('Extend your response: test an alternative explanation, objection or changed condition, and justify whether your conclusion still holds.');
  t.pacing=`Use about ${Math.max(2,minutes-2)} minutes to attempt the task and the final 2 minutes to check and retry.`;
  t.checks.push('If no reliable checking resource is available, mark the uncertainty for your teacher. Do not guess a score.');
+ if(s.subject==='essential_english'){
+  t.materials='You need: paper, a pen and a practice media text about your topic.';
+  t.checks=['Read your answer again. Did you answer the question and use a detail from the text?','Check your class notes, example answer or teacher’s checklist. Fix one thing, then try that sentence again without looking.','Not sure whether your answer is right? Put a question mark beside it and ask your teacher.'];
+  t.help='Start with one thing you notice: a word, a picture or a headline. Write: “I notice … This makes me think …” Then explain why.';
+  if(difficulty==='easy')t.steps[t.steps.length-1]='Start small: choose one detail and explain what it makes you think.';
+  if(difficulty==='hard')t.steps[t.steps.length-1]='Go further: could another person see the text differently? Explain why, using a detail from the text.';
+ }
  return t;
 }
-root.Unit3Engine={plan,task,methods,LIMITS,group,limitSelections,activeSubjects};
+root.Unit3Engine={plan,task,methods,LIMITS,group,limitSelections,activeSubjects,subjectColour,literatureOptions,literatureContext,courseProblem};
 })(typeof module==='object'?module.exports:window);

@@ -1,0 +1,876 @@
+{
+  "source": "https://www.qcaa.qld.edu.au/downloads/senior-qce/english/snr_literature_prescribed_texts_lists_2026-29.pdf",
+  "checked": "15 October 2026",
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029
+  ],
+  "note": "EA-category texts may be used for an internal assessment, but the same text cannot be used for more than one assessment for an individual student. Choose the text your school has assigned to IA1.",
+  "texts": [
+    {
+      "id": "lit-1",
+      "title": "Always will be (collection of short stories)",
+      "author": "Mykaela Saunders",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-2",
+      "title": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-3",
+      "title": "Beloved",
+      "author": "Toni Morrison",
+      "type": "Novels and prose",
+      "from": 2028,
+      "eaYears": [
+        2026,
+        2027
+      ]
+    },
+    {
+      "id": "lit-4",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-5",
+      "title": "Chai Time at Cinnamon Gardens",
+      "author": "Shankari Chandran",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-6",
+      "title": "Catch 22",
+      "author": "Joseph Heller",
+      "type": "Novels and prose",
+      "from": 2027,
+      "eaYears": [
+        2026
+      ]
+    },
+    {
+      "id": "lit-7",
+      "title": "Do Not Say We Have Nothing",
+      "author": "Madeline Thien",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-8",
+      "title": "Foreign Soil",
+      "author": "Maxine Beneba Clarke",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-9",
+      "title": "Heart of Darkness",
+      "author": "Joseph Conrad",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-10",
+      "title": "In Cold Blood",
+      "author": "Truman Capote",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-11",
+      "title": "Life After Life",
+      "author": "Kate Atkinson",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-12",
+      "title": "Mrs Dalloway",
+      "author": "Virginia Woolf",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-13",
+      "title": "Only the Animals (linked collection of short stories)",
+      "author": "Ceridwen Dovey",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-14",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "type": "Novels and prose",
+      "from": 2027,
+      "eaYears": []
+    },
+    {
+      "id": "lit-15",
+      "title": "Selected short stories",
+      "author": "Amy Witting",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-16",
+      "title": "Selected short stories",
+      "author": "Annie Proulx",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-17",
+      "title": "Selected short stories",
+      "author": "Anton Chekhov",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-18",
+      "title": "Selected short stories",
+      "author": "Cate Kennedy",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-19",
+      "title": "Selected short stories",
+      "author": "Edgar Allan Poe",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-20",
+      "title": "Selected short stories",
+      "author": "George Saunders",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-21",
+      "title": "Selected short stories",
+      "author": "Ray Bradbury",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-22",
+      "title": "Selected short stories",
+      "author": "Ursula K Le Guin",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-23",
+      "title": "Stasiland",
+      "author": "Anna Funder",
+      "type": "Novels and prose",
+      "from": 2028,
+      "eaYears": [
+        2026,
+        2027
+      ]
+    },
+    {
+      "id": "lit-24",
+      "title": "Snow Falling on Cedars",
+      "author": "David Guterson",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-25",
+      "title": "Swallow the Air",
+      "author": "Tara June Winch",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": [
+        2029
+      ]
+    },
+    {
+      "id": "lit-26",
+      "title": "Terra Nullius",
+      "author": "Claire G Coleman",
+      "type": "Novels and prose",
+      "from": 2028,
+      "eaYears": [
+        2026,
+        2027,
+        2028
+      ]
+    },
+    {
+      "id": "lit-27",
+      "title": "That Deadman Dance",
+      "author": "Kim Scott",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-28",
+      "title": "The Complete Maus (graphic novel — two volumes)",
+      "author": "Art Spiegelman",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-29",
+      "title": "The Good People",
+      "author": "Hannah Kent",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-30",
+      "title": "The Labyrinth",
+      "author": "Amanda Lohrey",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-31",
+      "title": "The Man in the High Castle",
+      "author": "Philip K Dick",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-32",
+      "title": "The Poisonwood Bible",
+      "author": "Barbara Kingsolver",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-33",
+      "title": "The Quiet American",
+      "author": "Graham Greene",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-34",
+      "title": "The Remains of the Day",
+      "author": "Kazuo Ishiguro",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-35",
+      "title": "The White Tiger",
+      "author": "Aravind Adiga",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-36",
+      "title": "Things Fall Apart",
+      "author": "Chinua Achebe",
+      "type": "Novels and prose",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-37",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë Prescribed text list",
+      "type": "Novels and prose",
+      "from": 2027,
+      "eaYears": [
+        2026
+      ]
+    },
+    {
+      "id": "lit-38",
+      "title": "A Doll’s House",
+      "author": "Henrik Ibsen",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-39",
+      "title": "A Man for All Seasons",
+      "author": "Robert Bolt",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-40",
+      "title": "Berlin",
+      "author": "Joanna Murray-Smith",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-41",
+      "title": "Black is the New White",
+      "author": "Nakkiah Lui",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-42",
+      "title": "Black Medea",
+      "author": "Wesley Enoch",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-43",
+      "title": "Cat on a Hot Tin Roof",
+      "author": "Tennessee Williams",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-44",
+      "title": "City of Gold",
+      "author": "Meyne Watt",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-45",
+      "title": "Constellations",
+      "author": "Nick Payne",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-46",
+      "title": "Death and the Maiden",
+      "author": "Ariel Dorfman",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-47",
+      "title": "Death of a Salesman",
+      "author": "Arthur Miller",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-48",
+      "title": "Hamlet",
+      "author": "William Shakespeare",
+      "type": "Plays and drama",
+      "from": 2029,
+      "eaYears": [
+        2026,
+        2027,
+        2028
+      ]
+    },
+    {
+      "id": "lit-49",
+      "title": "I’m with Her",
+      "author": "Victoria Midwinter Pitt",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-50",
+      "title": "King Lear",
+      "author": "William Shakespeare",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-51",
+      "title": "Oedipus Rex",
+      "author": "Sophocles",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-52",
+      "title": "Photograph 51",
+      "author": "Anna Ziegler",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-53",
+      "title": "Rainbow’s End",
+      "author": "Jane Harrison",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-54",
+      "title": "Shafana and Aunt Sarrinah",
+      "author": "Alana Valentine",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-55",
+      "title": "Terror",
+      "author": "Ferdinand von Schirach",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-56",
+      "title": "Wit",
+      "author": "Margaret Edson",
+      "type": "Plays and drama",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-57",
+      "title": "Anatomy of a Fall",
+      "author": "Justine Triet",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-58",
+      "title": "Arrival",
+      "author": "Denis Villeneuve",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-59",
+      "title": "Beneath Clouds",
+      "author": "Ivan Sen",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-60",
+      "title": "Everything Everywhere All at Once",
+      "author": "Daniel Kwan and Daniel Scheinert",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-61",
+      "title": "Gattaca",
+      "author": "Andrew Niccol",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-62",
+      "title": "Interstellar",
+      "author": "Christopher Nolan",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-63",
+      "title": "Knives Out",
+      "author": "Rian Johnson",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-64",
+      "title": "Looking for Richard",
+      "author": "Al Pacino",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-65",
+      "title": "The Last of Us (TV series)",
+      "author": "Craig Mazin and Neil Druckmann",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-66",
+      "title": "Mad Max: Fury Road",
+      "author": "George Miller",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-67",
+      "title": "Pan’s Labyrinth",
+      "author": "Guillermo del Toro",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-68",
+      "title": "Parasite",
+      "author": "Bong Joon-ho",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-69",
+      "title": "Picnic at Hanging Rock",
+      "author": "Peter Weir",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-70",
+      "title": "Psycho",
+      "author": "Alfred Hitchcock",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-71",
+      "title": "Radiance",
+      "author": "Rachel Perkins",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-72",
+      "title": "Raise the Red Lantern",
+      "author": "Zhang Yimou",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-73",
+      "title": "Ripley (TV series)",
+      "author": "Steven Zaillian",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-74",
+      "title": "Run Lola Run",
+      "author": "Tom Tykwer",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-75",
+      "title": "Shutter Island",
+      "author": "Martin Scorsese",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-76",
+      "title": "Sweet Country",
+      "author": "Warwick Thornton",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-77",
+      "title": "The Gods of Wheat Street (TV series)",
+      "author": "Wayne Blair, Catriona McKenzie and Adrian Russell Wills",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-78",
+      "title": "True Grit",
+      "author": "Ethan Coen and Joel Coen",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-79",
+      "title": "Wadjda",
+      "author": "Haifaa al-Mansour",
+      "type": "Film and television",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-80",
+      "title": "Selected poetry",
+      "author": "Alison Whittaker",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-81",
+      "title": "Selected poetry",
+      "author": "Christina Rossetti",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-82",
+      "title": "Selected poetry",
+      "author": "Elizabeth Barrett Browning",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-83",
+      "title": "Selected poetry",
+      "author": "Ellen van Neerven",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-84",
+      "title": "Selected poetry",
+      "author": "Gerard Manley Hopkins",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-85",
+      "title": "Selected poetry",
+      "author": "Gwen Harwood",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-86",
+      "title": "Selected poetry",
+      "author": "Kae Tempest",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-87",
+      "title": "Selected poetry",
+      "author": "Les Murray",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-88",
+      "title": "Selected poetry",
+      "author": "Lionel Fogarty",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-89",
+      "title": "Selected poetry",
+      "author": "Maya Angelou",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-90",
+      "title": "Selected poetry",
+      "author": "Pablo Neruda",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-91",
+      "title": "Selected poetry",
+      "author": "Rosemary Dobson",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-92",
+      "title": "Selected poetry",
+      "author": "Sarah Holland-Batt",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-93",
+      "title": "Selected poetry",
+      "author": "Seamus Heaney",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-94",
+      "title": "Selected poetry",
+      "author": "TS Eliot",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-95",
+      "title": "Selected poetry",
+      "author": "WH Auden",
+      "type": "Poetry",
+      "from": 2026,
+      "eaYears": []
+    },
+    {
+      "id": "lit-96",
+      "title": "Antony and Cleopatra",
+      "author": "William Shakespeare",
+      "type": "Plays and drama",
+      "from": null,
+      "eaYears": [
+        2026,
+        2027,
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-97",
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "type": "Novels and prose",
+      "from": null,
+      "eaYears": [
+        2026,
+        2027,
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-98",
+      "title": "Alias Grace",
+      "author": "Margaret Atwood",
+      "type": "Novels and prose",
+      "from": null,
+      "eaYears": [
+        2027,
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-99",
+      "title": "Cloudstreet",
+      "author": "Tim Winton",
+      "type": "Novels and prose",
+      "from": null,
+      "eaYears": [
+        2027,
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-100",
+      "title": "The Narrow Road to the Deep North",
+      "author": "Richard Flanagan",
+      "type": "Novels and prose",
+      "from": null,
+      "eaYears": [
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-101",
+      "title": "The Winter Road",
+      "author": "Kate Holden",
+      "type": "Novels and prose",
+      "from": null,
+      "eaYears": [
+        2028,
+        2029
+      ]
+    },
+    {
+      "id": "lit-102",
+      "title": "Rosencrantz and Guildenstern are Dead",
+      "author": "Tom Stoppard",
+      "type": "Plays and drama",
+      "from": null,
+      "eaYears": [
+        2029
+      ]
+    }
+  ],
+  "attribution": "Prescribed text list: Literature 2026–2029, © State of Queensland (QCAA) 2024. https://www.qcaa.qld.edu.au/copyright"
+}
