@@ -47,7 +47,7 @@ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
 const template=fs.readFileSync(__dirname+'/template.html','utf8').split('<script>')[0];
 const templateIds=[...template.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(templateIds).size,templateIds.length);
 for(const [,id] of app.matchAll(/\$\('([a-z][a-z-]*)'\)/g))assert(templateIds.includes(id),'Missing UI element: '+id);
-let scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x=>x[1]);assert.equal(scripts.length,3);scripts.forEach((s,i)=>new vm.Script(s,{filename:'inline-'+i+'.js'}));
+let scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x=>x[1]);assert.equal(scripts.length,5);scripts.forEach((s,i)=>new vm.Script(s,{filename:'inline-'+i+'.js'}));
 const contrastPairs=[['#2F4841','#FFFFFF'],['#202322','#EB967E'],['#202322','#E8BC55'],['#202322','#87B5D6'],['#202322','#B6A0D5'],['#963F2C','#FBE9E3'],['#775600','#FBF2D8'],['#634A88','#F0EAF8'],['#315F83','#E8F2F9'],['#202322','#FAFAF7']];
 const lum=h=>h.match(/[a-f0-9]{2}/gi).map(v=>parseInt(v,16)/255).map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4).reduce((n,c,i)=>n+c*[.2126,.7152,.0722][i],0);
 for(const [a,b] of contrastPairs){const l=[lum(a),lum(b)].sort((a,b)=>b-a);assert((l[0]+.05)/(l[1]+.05)>=4.5);}

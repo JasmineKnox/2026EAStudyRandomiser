@@ -9,6 +9,18 @@ The main page now offers both games:
 
 ---
 
+
+## Original questions and revealed answers
+
+Both planners now include **Practise questions + check answers**. The initial release contains 118 original items (108 templates, with numerical variants counted separately): 74 available in Unit 3 and 81 in EA, with some questions shared where content overlaps. Each mode has questions for 30 exam routes. Coverage is sampled, not exhaustive or a full paper.
+
+Questions include indicative marks, worked answers or one supported model response, self-check points and a common-error reminder. Selection respects saved exam routes and topic choices. Supplied scenarios, tables and media texts are original/synthetic. Language practice is currently written, not audio. History and some religion items are generic source-skills exercises explicitly labelled as such. Essential English practice does not predict or announce future CIA topics. Self-check scores are not official grades; student responses are written in a notebook and are not collected.
+
+Source data is in `question-bank.json`; `question-data.js` and `question-practice.js` power both games. To rebuild: `python questions/build.py`, `python rebuild.py`, then `python unit3/build.py`. Run `node questions/check.cjs`, `python questions/check_answers.py` and `node unit3/check.cjs`. Both standalone exports embed the complete question feature for offline use.
+
+Automated tests validate question scope, empty selections, reveal/hide, indicative self-check totals, numerical answer fixtures, both standalone scripts, and the existing study engines. Browser visual QA was unavailable in this environment.
+
+
 # EA Study Randomiser
 
 Created by Mrs Knox.

@@ -99,5 +99,6 @@ by('review-content').innerHTML='<h3>'+esc(s.name)+'</h3><p>'+esc(s.coverage)+'</
 by('review-content').querySelectorAll('[data-preview]').forEach(button=>button.addEventListener('click',()=>{const t=s.topics.find(t=>t.id===button.dataset.preview),options={...state.options,[s.id]:t.option||option},task=E.sessionTask(s,t,E.METHODS[t.kind][0],options,20,'medium'),el=by('preview-'+t.id);el.hidden=!el.hidden;el.innerHTML='<p><strong>'+esc(task.label)+' · '+task.minutes+' minutes</strong></p><ol>'+task.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><p><strong>Check:</strong> '+esc(task.check)+'</p>'+(task.practiceText?'<p>'+esc(task.practiceText)+'</p>':'');}));}
 by('review-subject').addEventListener('change',review);review();
 if(validSetup())showStudy();else setup();
+window.QuestionHost={mode:'ea',anchors:['session-config','task'],courses:()=>state.selected.map(id=>{const s=bank.subjects.find(s=>s.id===id);return {route:id,name:s.name,area:s.area,topics:E.eligible(s,state.options).map(t=>t.title),context:state.options[id]||''};}),current:()=>state.current?.subject};
 })();
 

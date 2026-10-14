@@ -22,7 +22,7 @@ General English, English & Literature Extension, Physical Education, Design, Dig
 
 Save up to two English courses, three maths courses and six electives. Then choose one to three of those subjects for each session. Choose the relevant exam route and enter the school-selected text, historical context, Health elective or other focus when prompted. Untick topics not in the school’s revision scope. Choose a session length and difficulty. Tasks rotate through the selected subjects and give an explicit action, checking instructions and a retry step.
 
-Students need class notes, textbooks and authorised practice materials. This is a study-task generator, not a question bank or automatic marker. It does not contain secure assessment questions, answer scripts or student data. Selections and the count of self-checked tasks are stored in the local browser when supported. Switching exam routes resets that subject’s topic/context configuration.
+Students need class notes, textbooks and authorised practice materials. The study-task generator now includes an original starter question bank with revealed worked answers and self-check marking points. It does not automatically grade answers or include secure assessment material or student data. Selections and the count of self-checked tasks are stored in the local browser when supported. Switching exam routes resets that subject’s topic/context configuration.
 
 ## Maintain
 
@@ -60,3 +60,9 @@ Literature IA1 offers a searchable title/writer list drawn from QCAA’s prescri
 Essential English offers the two publicly verified 2026 CIA topics, the internet and print media. A teacher-confirmed year/topic field supports other cohorts without presenting those 2026 topics as their requirements. As at 15 October 2026, a public 2027 topic announcement could not be verified. Essential English directions use shorter, plainer language.
 
 The English setup step blocks Continue until each selected English course has its required text or topic. Missing selections show an error and receive focus. The final setup save repeats validation.
+
+## Original question practice
+
+The shared `../question-bank.json` contains original questions for eligible short/combination-response and data-test routes, with supplied stimuli where needed. `../question-data.js` is the browser data build and `../question-practice.js` is the shared accessible dialog. Run `python questions/build.py` from the repository root to rebuild data before rebuilding both games. The starter bank samples topics and is not a complete paper or exhaustive coverage. Language items currently provide written comprehension/analysis, not audio. History and some religion items are clearly labelled generic source skills; use authentic class-selected sources for contextual practice. Essential English texts are generic skills practice, not predictions of an unreleased CIA topic.
+
+Marks are indicative and self-assessed. Saved topic filters and exam routes constrain question selection. No written student answers are collected or stored, and question practice does not change the existing completed-task counts. Both single-file game exports embed the question data and interface for offline use.

@@ -77,5 +77,6 @@ for s in subjects:
 (ROOT/'bank.json').write_text(json.dumps(bank,ensure_ascii=False,indent=2))
 template=(ROOT/'template.html').read_text()
 result=template.replace('__BANK__',json.dumps(bank,ensure_ascii=False).replace('</','<\\/')).replace('__ENGINE__',(ROOT/'tasks.js').read_text()).replace('__APP__',(ROOT/'app.js').read_text())
+result=result.replace('__QUESTION_DATA__',(ROOT.parent/'question-data.js').read_text()).replace('__QUESTION_UI__',(ROOT.parent/'question-practice.js').read_text())
 (ROOT/'index.html').write_text(result)
 print(len({s['subject'] for s in subjects}),'subjects;',len(subjects),'exam routes;',sum(len(s['topics']) for s in subjects),'topic entries')

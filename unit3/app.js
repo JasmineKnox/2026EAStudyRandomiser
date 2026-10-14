@@ -73,4 +73,5 @@ function practise(){const s=selectedRoute(saved.active[Math.floor(Math.random()*
  $('change').addEventListener('click',newSession);$('again').addEventListener('click',newSession);$('print').addEventListener('click',()=>window.print());$('download').addEventListener('click',downloadPlan);$('practice-button').addEventListener('click',practise);
  $('reset').addEventListener('click',()=>{saved.completed=0;store();updateCount();$('reset-status').textContent='Completed-task count cleared. Your selections are saved.';});
  audit();if(saved.selected.length&&!valid())showStudy();else showSetup();
+window.QuestionHost={mode:'unit3',anchors:['session-config','task-card'],courses:()=>saved.selected.map(id=>{const s=selectedRoute(id),c=config(id);return {route:s.id,name:s.name+' · '+s.ia,area:s.area,topics:c.topics,context:c.context};}),current:()=>session?selectedRoute(session.blocks[session.index]?.subject)?.id:undefined};
 })();

@@ -6,7 +6,7 @@ bank=json.loads((root/'content-bank.json').read_text())
 (root/'bank.js').write_text('window.STUDY_BANK = '+json.dumps(bank,ensure_ascii=False,indent=2)+';\n')
 html=(root/'ea.html' if (root/'ea.html').exists() else root/'index.html').read_text()
 html=re.sub(r'<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">',lambda _: '<style>\n'+(root/'style.css').read_text()+'\n</style>',html)
-for name in ['bank.js','engine.js','app.js']:
+for name in ['bank.js','engine.js','app.js','question-data.js','question-practice.js']:
     html=re.sub(r'<script src="'+re.escape(name)+r'(?:\?[^"]*)?"></script>',lambda _: '<script>\n'+(root/name).read_text().replace('</script','<\\/script')+'\n</script>',html)
 (root/'EA_Study_Randomiser.html').write_text(html)
 with (root/'Content_Audit.csv').open('w',newline='',encoding='utf-8-sig') as f:
@@ -16,3 +16,4 @@ with (root/'Content_Audit.csv').open('w',newline='',encoding='utf-8-sig') as f:
         for t in s['topics']:
             writer.writerow([s['name'],s['coverage'],s['version'],t['unit'],t['title'],'; '.join(t['focus']),t['kind'],t['option'] or (s['option']['label'] if s['option'] else ''),bank['checked'],s['syllabus'],s['page']])
 print('Standalone HTML and content audit rebuilt.')
+
