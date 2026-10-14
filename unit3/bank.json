@@ -1,0 +1,1470 @@
+{
+  "checked": "15 October 2026",
+  "scope": "Standard QCAA General and General (Extension) sequences represented in the EA game, plus the two Applied (Essential) CIAs. Other Applied subjects and alternative sequences are not mapped here.",
+  "subjects": [
+    {
+      "id": "legal",
+      "subject": "legal",
+      "name": "Legal Studies",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3 Topic 1: Governance in Australia",
+      "topics": [
+        "Democracy, the rule of law and government accountability",
+        "Representative and responsible government",
+        "Separation of powers and judicial independence",
+        "Division of powers and constitutional inconsistency",
+        "Referendums and constitutional change",
+        "Parliament: structure, roles and the legislative process",
+        "Queensland’s unicameral parliament",
+        "The High Court and constitutional interpretation",
+        "Precedent, statutory interpretation and landmark decisions",
+        "Specialist courts and tribunals",
+        "Governance issues: viewpoints, consequences and legal alternatives"
+      ],
+      "kind": "legal",
+      "note": "Short responses assess comprehension; the extended response uses unseen stimulus for analysis and evaluation. Use cases taught in your course; syllabus examples are not a universal compulsory case list.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_legal_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/legal-studies",
+      "resources": [
+        {
+          "name": "Parliamentary Education Office: government and parliament",
+          "url": "https://peo.gov.au/"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "subject": "economics",
+      "name": "Economics",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3 Topic 1: International trade",
+      "topics": [
+        "Australia’s trade patterns and trade theories",
+        "Exchange-rate demand and supply",
+        "Appreciation and depreciation: economic effects",
+        "Balance of payments: accounts and relationships",
+        "Trade data: patterns, trends and economic relationships",
+        "Evaluating international-trade outcomes using economic criteria"
+      ],
+      "kind": "economics",
+      "note": "Includes multiple choice, short responses and one extended response to unseen stimulus. Global economic issues in Topic 2 are the IA2 investigation focus. Use fresh practice materials; the syllabus prohibits rehearsing the exam questions in class.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_economics_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/economics",
+      "resources": [
+        {
+          "name": "RBA Education: exchange rates",
+          "url": "https://www.rba.gov.au/education/resources/explainers/exchange-rates-and-their-measurement.html"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "subject": "business",
+      "name": "Business",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3 Topic 1: Competitive markets",
+      "topics": [
+        "Mature businesses and competitive markets",
+        "Domestic and global expansion strategies and modes of entry",
+        "Financing options for expansion",
+        "Leadership, risk management and human resource strategies",
+        "SWOT and power interest grid analysis",
+        "Asian expansion case study and strategy evaluation"
+      ],
+      "kind": "business",
+      "note": "Restrict revision to Topic 1; Topic 2 Strategic development is assessed through the business report.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_business_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/business",
+      "resources": [
+        {
+          "name": "business.gov.au: managing change",
+          "url": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business",
+          "note": "Use a practical Australian change-management example to connect planning, stakeholder involvement and communication with business transformation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://business.gov.au/planning/business-structures-and-types/restructuring/manage-change-in-your-business"
+        }
+      ]
+    },
+    {
+      "id": "accounting",
+      "subject": "accounting",
+      "name": "Accounting",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA2",
+      "technique": "Combination response",
+      "coverage": "Unit 3 Topic 2: Managing non-current assets",
+      "topics": [
+        "Acquiring non-current assets and classifying expenditure",
+        "Straight-line and diminishing-balance depreciation",
+        "Part-year depreciation and general-ledger entries",
+        "Disposal of non-current assets and gain or loss",
+        "Financial statement extracts",
+        "Evaluating management of non-current assets"
+      ],
+      "kind": "accounting",
+      "note": "Includes short, practical and extended responses. Cash management in Topic 1 is the IA1 project focus.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_accounting_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/accounting",
+      "resources": [
+        {
+          "name": "AccountingCoach: explanations",
+          "url": "https://www.accountingcoach.com/explanations",
+          "note": "Revise double-entry accounting, adjustments, statements and financial ratios. US examples use some different terms and formats; follow the conventions in your class materials.",
+          "access": "Free explanations; some additional tools are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.accountingcoach.com/explanations"
+        }
+      ]
+    },
+    {
+      "id": "atsi_studies",
+      "subject": "atsi_studies",
+      "name": "Aboriginal & Torres Strait Islander Studies",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Rights and freedoms",
+      "topics": [
+        "Rights and freedoms: historical context",
+        "Responses to government policies and restrictions",
+        "Advocacy, resistance and self-determination",
+        "Interpreting sources and perspectives on rights and freedoms"
+      ],
+      "kind": "sources",
+      "note": "Use the communities, events and source contexts studied in your course. Avoid generalising one community’s experience to all First Nations peoples.",
+      "context": "Community, event or case study taught in class",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_atsi_studies_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/aboriginal-torres-strait-islander-studies",
+      "resources": [
+        {
+          "name": "AIATSIS: explore",
+          "url": "https://aiatsis.gov.au/explore",
+          "note": "Explore First Nations histories and recognition, including the 1967 Referendum and Freedom Ride. Use evidence from the relevant community and historical context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://aiatsis.gov.au/explore"
+        }
+      ]
+    },
+    {
+      "id": "ancient_history",
+      "subject": "ancient_history",
+      "name": "Ancient History",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Reconstructing the Ancient World",
+      "topics": [
+        "Chronology and context of the selected ancient society",
+        "Using archaeological and written evidence",
+        "Perspectives, usefulness and reliability",
+        "Corroboration and contested interpretations",
+        "Developing a historical argument from sources"
+      ],
+      "kind": "history",
+      "note": "An essay responds to an unseen question using seen and unseen sources. The school selects the historical topic. Do not use secure assessment sources for guided practice.",
+      "context": "Your IA1 ancient society and aspect",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_ancient_history_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/ancient-history",
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        },
+        {
+          "name": "World History Encyclopedia: education",
+          "url": "https://www.worldhistory.org/edu/",
+          "note": "Search for your selected ancient personality or civilisation to review context, chronology and historical interpretations.",
+          "access": "Free articles and teaching resources; optional membership is paid",
+          "checked": "2026-10-08",
+          "source": "https://www.worldhistory.org/edu/"
+        }
+      ]
+    },
+    {
+      "id": "modern_history",
+      "subject": "modern_history",
+      "name": "Modern History",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3: National experiences in the Modern World",
+      "topics": [
+        "Chronology and context of the selected national experience",
+        "Causes, consequences and significant change",
+        "Perspectives, usefulness and reliability",
+        "Corroborating and contesting historical evidence",
+        "Developing a historical argument from sources"
+      ],
+      "kind": "history",
+      "note": "An essay responds to an unseen question using seen and unseen sources. The school selects the topic and aspect. Do not use secure assessment sources for guided practice.",
+      "context": "Your IA1 nation, period and aspect",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_modern_history_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/modern-history",
+      "resources": [
+        {
+          "name": "History Skills: source analysis and evaluation",
+          "url": "https://www.historyskills.com/source-criticism/",
+          "note": "Revise how to analyse origin, purpose, perspective and evidence, then judge usefulness and reliability. Practise with sources from your school-selected EA topic.",
+          "access": "Free guides; optional store resources are paid",
+          "checked": "2026-10-08",
+          "source": "https://www.historyskills.com/source-criticism/"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "subject": "geography",
+      "name": "Geography",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3 Topic 1: Land cover transformations and climate change",
+      "topics": [
+        "Land cover transformations: processes, patterns and causes",
+        "Land cover, Earth systems and climate change",
+        "Reading maps, graphs and spatial data",
+        "Analysing geographical relationships and impacts",
+        "Proposing and justifying responses to a geographical challenge"
+      ],
+      "kind": "geography",
+      "note": "Topic 2 concerns the field report; do not automatically include it in IA1 revision.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_geography_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/geography",
+      "resources": [
+        {
+          "name": "NASA: climate change",
+          "url": "https://science.nasa.gov/climate-change/"
+        }
+      ]
+    },
+    {
+      "id": "philosophy_reason",
+      "subject": "philosophy_reason",
+      "name": "Philosophy & Reason",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 1: Moral philosophy",
+      "topics": [
+        "Moral theories and ethical reasoning",
+        "Reconstructing and comparing moral arguments",
+        "Applying theories to a moral problem",
+        "Evaluating arguments and justified conclusions"
+      ],
+      "kind": "philosophy",
+      "note": "Schools select the moral problem and relevant studied theories. Topic 2 schools of thought is the analytical essay focus.",
+      "context": "Moral problem and theories studied in class",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_philosophy_reason_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/philosophy-reason",
+      "resources": [
+        {
+          "name": "Stanford Encyclopedia: deontological ethics",
+          "url": "https://plato.stanford.edu/entries/ethics-deontological/"
+        }
+      ]
+    },
+    {
+      "id": "study_religion",
+      "subject": "study_religion",
+      "name": "Study of Religion",
+      "area": "Humanities and Social Sciences",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 1: Social ethics",
+      "topics": [
+        "Religious ethical teachings and sources",
+        "Approaches to ethical decision-making",
+        "Applying religious perspectives to a social–ethical issue",
+        "Analysing similarities and differences",
+        "Evaluating religious responses using evidence"
+      ],
+      "kind": "religion",
+      "note": "Use the social–ethical issue and religions selected for your school’s IA1.",
+      "context": "Your IA1 social–ethical issue and religions",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_study_religion_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/humanities-social-sciences/study-of-religion",
+      "resources": [
+        {
+          "name": "Harvard Pluralism Project: religions",
+          "url": "https://pluralism.org/religions",
+          "note": "Review the beliefs and practices of the traditions studied in class, then connect a relevant belief with human dignity or rights. Examples often use a US context.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://pluralism.org/religions"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "subject": "food",
+      "name": "Food & Nutrition",
+      "area": "Technologies",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Food science of carbohydrate and fat",
+      "topics": [
+        "Carbohydrate: nutritional, chemical and functional properties",
+        "Carbohydrate processing, preservation and spoilage",
+        "Fat: nutritional, chemical and functional properties",
+        "Fat processing, preservation and spoilage",
+        "Food problem constraints and success criteria",
+        "Synthesising, evaluating and refining food solutions"
+      ],
+      "kind": "food",
+      "note": "The assessment can concern carbohydrate- or fat-based food. Switch off content outside the scope advised by your teacher.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_food_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/technologies/food-nutrition",
+      "resources": [
+        {
+          "name": "FSANZ: Australian Food Composition Database",
+          "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd",
+          "note": "Compare nutrient information for foods used in a proposed product or solution. Explain how your choices address the specified consumer’s nutrition needs.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "subject": "health",
+      "name": "Health",
+      "area": "Health and Physical Education",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Community as a resource for healthy living",
+      "topics": [
+        "Health inquiry model in an alternate community context",
+        "Community resources, barriers and enablers",
+        "Interpreting health data and contextual information",
+        "Evaluating and transferring a health strategy"
+      ],
+      "kind": "health",
+      "note": "Uses the same elective as IA1: Homelessness, Transport safety or Anxiety, in an alternate community context. Two pages of approved notes are permitted under the syllabus; follow your task sheet.",
+      "context": "Your elective: Homelessness, Transport safety or Anxiety",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_health_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/health-physical-education/health",
+      "resources": [
+        {
+          "name": "Australian Institute of Health and Welfare",
+          "url": "https://www.aihw.gov.au/"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "subject": "engineering",
+      "name": "Engineering",
+      "area": "Technologies",
+      "ia": "IA2",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Civil structures",
+      "topics": [
+        "Civil structures in society",
+        "Forces, loading and structural analysis",
+        "Civil engineering materials",
+        "Engineering solutions: synthesis, evaluation and refinement"
+      ],
+      "kind": "engineering",
+      "note": "Use the formula/data book and equipment permitted by your school’s exam conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_engineering_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/technologies/engineering",
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Find relevant force, work, energy, torque and motion explanations to support calculations about machines and mechanisms.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        },
+        {
+          "name": "OpenLearn: Introducing engineering",
+          "url": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering",
+          "note": "Review engineering design, materials and manufacturing decisions. Use relevant sections as background for explaining an engineering solution.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.open.edu/openlearn/science-maths-technology/introducing-engineering"
+        }
+      ]
+    },
+    {
+      "id": "aerospace_sys",
+      "subject": "aerospace_sys",
+      "name": "Aerospace Systems",
+      "area": "Technologies",
+      "ia": "IA2",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Aerospace ecosystems",
+      "topics": [
+        "Aerospace regulatory systems",
+        "Aerospace safety and operational systems",
+        "Operational accident and incident investigation",
+        "Airport and airline operation systems",
+        "Operational calculations and recommendations"
+      ],
+      "kind": "engineering",
+      "note": "The revised syllabus frames IA2 around aerospace operational systems and specifically identifies Topic 5 for calculation questions. Select only material included by your teacher.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_aerospace_sys_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/technologies/aerospace-systems",
+      "resources": [
+        {
+          "name": "NASA: Beginner’s Guide to Aeronautics",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+          "note": "Use explanations and simulations of lift, drag, thrust and aircraft motion to revisit flight-performance concepts.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/"
+        }
+      ]
+    },
+    {
+      "id": "agricultural_science",
+      "subject": "agricultural_science",
+      "name": "Agricultural Science",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Agricultural production",
+      "topics": [
+        "Animal production B",
+        "Plant production B",
+        "Agricultural enterprises B"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_agricultural_science_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/agricultural-science",
+      "resources": [
+        {
+          "name": "Queensland DPI: agriculture",
+          "url": "https://www.dpi.qld.gov.au/business-priorities/agriculture",
+          "note": "Browse plant production, livestock and agricultural business resources. Use a relevant Queensland example when revising production and sustainability.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.dpi.qld.gov.au/business-priorities/agriculture"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "subject": "biology",
+      "name": "Biology",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Biodiversity and the interconnectedness of life",
+      "topics": [
+        "Biodiversity and populations",
+        "Functioning ecosystems and succession"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_biology_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/biology",
+      "resources": [
+        {
+          "name": "Khan Academy: AP Biology",
+          "url": "https://www.khanacademy.org/science/ap-biology",
+          "note": "Use heredity, gene expression, evolution and ecology lessons to revisit the concept in your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-biology"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "subject": "chemistry",
+      "name": "Chemistry",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Equilibrium, acids and redox reactions",
+      "topics": [
+        "Chemical equilibrium systems",
+        "Oxidation and reduction"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_chemistry_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/chemistry",
+      "resources": [
+        {
+          "name": "Khan Academy: AP Chemistry",
+          "url": "https://www.khanacademy.org/science/ap-chemistry-beta",
+          "note": "Revisit equilibrium, acids and bases, chemical reactions and thermodynamics. Choose the lesson that matches your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/ap-chemistry-beta"
+        }
+      ]
+    },
+    {
+      "id": "earth_science",
+      "subject": "earth_science",
+      "name": "Earth & Environmental Science",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Living on Earth — extracting, using and managing Earth resources",
+      "topics": [
+        "Use of non-renewable Earth resources",
+        "Use of renewable Earth resources"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_earth_science_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/earth-environmental-science",
+      "resources": [
+        {
+          "name": "Geoscience Australia: classroom resources",
+          "url": "https://www.ga.gov.au/education/classroom-resources",
+          "note": "Use Australian resources on natural hazards, minerals and energy to revisit Earth resources and hazards. Select material at the right level for your task.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.ga.gov.au/education/classroom-resources"
+        }
+      ]
+    },
+    {
+      "id": "marine_science",
+      "subject": "marine_science",
+      "name": "Marine Science",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Marine systems — connections and change",
+      "topics": [
+        "The reef and beyond",
+        "Changes on the reef"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_marine_science_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/marine-science",
+      "resources": [
+        {
+          "name": "AIMS: corals",
+          "url": "https://www.aims.gov.au/research-topics/marine-life/corals",
+          "note": "Revisit coral biology and reef relationships, then explain how a change in conditions could affect a reef system.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.aims.gov.au/research-topics/marine-life/corals"
+        },
+        {
+          "name": "AIMS: reef-monitoring dashboard",
+          "url": "https://apps.aims.gov.au/reef-monitoring/",
+          "note": "Explore reef survey data to practise identifying trends, interpreting evidence and explaining the limits of a monitoring result.",
+          "access": "Free dashboard; JavaScript required",
+          "checked": "2026-10-08",
+          "source": "https://apps.aims.gov.au/reef-monitoring/"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "subject": "physics",
+      "name": "Physics",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Gravity and electromagnetism",
+      "topics": [
+        "Gravity and motion",
+        "Electromagnetism"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_physics_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/physics",
+      "resources": [
+        {
+          "name": "Khan Academy: physics archive",
+          "url": "https://www.khanacademy.org/science/physics",
+          "note": "Revisit gravity, electromagnetism and other relevant physics concepts through explanations and examples. Use class materials for the full modern-physics requirements.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/science/physics"
+        }
+      ]
+    },
+    {
+      "id": "psychology",
+      "subject": "psychology",
+      "name": "Psychology",
+      "area": "Sciences",
+      "ia": "IA1",
+      "technique": "Data test",
+      "coverage": "Unit 3: Individual thinking",
+      "topics": [
+        "Brain function",
+        "Sensation and perception",
+        "Memory",
+        "Learning"
+      ],
+      "kind": "science",
+      "note": "Supervised data test. The school selects Unit 3 contexts. Practise applying understanding, analysing data and interpreting evidence; this is not an EA-style content-recall paper. Use teacher-approved practice datasets and their matching solutions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_psychology_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/sciences/psychology",
+      "resources": [
+        {
+          "name": "OpenStax: Psychology 2e",
+          "url": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+          "note": "Use the chapter contents to revisit learning, memory, cognition and social psychology. Read the relevant section and test recall with its review questions.",
+          "access": "Free online textbook",
+          "checked": "2026-10-08",
+          "source": "https://openstax.org/books/psychology-2e/pages/1-introduction"
+        }
+      ]
+    },
+    {
+      "id": "maths_general",
+      "subject": "maths_general",
+      "name": "General Mathematics",
+      "area": "Mathematics",
+      "ia": "IA2",
+      "technique": "Short response",
+      "coverage": "Unit 3: Bivariate data and time series analysis, sequences and Earth geometry",
+      "topics": [
+        "Bivariate data analysis 1",
+        "Bivariate data analysis 2",
+        "Time series analysis",
+        "Growth and decay in sequences",
+        "Earth geometry and time zones"
+      ],
+      "kind": "maths",
+      "note": "The current syllabus samples any three of the five Unit 3 topics. Select your school’s three assessed topics. All five are available for broader study; the game does not choose your school’s exam coverage.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_maths_general_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/mathematics/general-mathematics",
+      "resources": [
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revise data displays, bivariate data and regression. Choose relevant sections; this site does not cover every General Mathematics topic.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        },
+        {
+          "name": "Khan Academy: maths courses",
+          "url": "https://www.khanacademy.org/math",
+          "note": "Search for the specific skill in your task to revisit supporting algebra, sequences, finance or matrices. Check your class method and calculator conventions.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math"
+        }
+      ]
+    },
+    {
+      "id": "maths_methods",
+      "subject": "maths_methods",
+      "name": "Mathematical Methods",
+      "area": "Mathematics",
+      "ia": "IA2",
+      "technique": "Short response",
+      "coverage": "Unit 3: Further calculus and introduction to statistics",
+      "topics": [
+        "Differentiation of exponential and logarithmic functions",
+        "Differentiation of trigonometric functions and differentiation rules",
+        "Further applications of differentiation",
+        "Further integration",
+        "Discrete random variables"
+      ],
+      "kind": "maths",
+      "note": "The current syllabus samples any three of the five Unit 3 topics. Select your school’s three assessed topics. All five are available for broader study; the game does not choose your school’s exam coverage.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_maths_methods_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/mathematics/mathematical-methods",
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: statistics and probability",
+          "url": "https://www.khanacademy.org/math/statistics-probability",
+          "note": "Revisit probability distributions, sampling and inference where relevant to your course. Use your class definitions and required notation.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/statistics-probability"
+        }
+      ]
+    },
+    {
+      "id": "maths_specialist",
+      "subject": "maths_specialist",
+      "name": "Specialist Mathematics",
+      "area": "Mathematics",
+      "ia": "IA2",
+      "technique": "Short response",
+      "coverage": "Unit 3: Further complex numbers, proof, vectors and matrices",
+      "topics": [
+        "Further complex numbers",
+        "Mathematical induction and trigonometric proofs",
+        "Vectors in two and three dimensions",
+        "Vector calculus",
+        "Further matrices"
+      ],
+      "kind": "maths",
+      "note": "The current syllabus samples any three of the five Unit 3 topics. Select your school’s three assessed topics. All five are available for broader study; the game does not choose your school’s exam coverage.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_maths_specialist_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/mathematics/specialist-mathematics",
+      "resources": [
+        {
+          "name": "Khan Academy: Calculus 1",
+          "url": "https://www.khanacademy.org/math/calculus-1",
+          "note": "Practise derivatives, integrals and their applications. Choose the section relevant to your task; some content extends beyond the QCAA course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/calculus-1"
+        },
+        {
+          "name": "Khan Academy: linear algebra",
+          "url": "https://www.khanacademy.org/math/linear-algebra",
+          "note": "Revisit vectors and matrix transformations. Use the sections matching your task; this course also contains material beyond senior secondary study.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.khanacademy.org/math/linear-algebra"
+        }
+      ]
+    },
+    {
+      "id": "english_add_lang",
+      "subject": "english_add_lang",
+      "name": "English as an Additional Language",
+      "area": "English",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Issues, ideas and attitudes",
+      "topics": [
+        "Representations and interpretations in the studied text",
+        "Cultural assumptions, attitudes, values and beliefs",
+        "Stylistic choices and their effects",
+        "Selecting and verifying textual evidence",
+        "Developing and sustaining an analytical argument"
+      ],
+      "kind": "literary",
+      "note": "A school-selected literary text and seen question/task shape this exam. Use general practice prompts or authorised revision materials; follow your task sheet for permitted quotations and preparation.",
+      "context": "Your IA1 text, author and relevant focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_english_add_lang_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/english/english-as-an-additional-language",
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
+      ]
+    },
+    {
+      "id": "literature",
+      "subject": "literature",
+      "name": "Literature",
+      "area": "English",
+      "ia": "IA1",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Literature and identity",
+      "topics": [
+        "Representations and interpretations in the studied text",
+        "Cultural assumptions, attitudes, values and beliefs",
+        "Stylistic choices and their effects",
+        "Selecting and verifying textual evidence",
+        "Developing and sustaining an analytical argument"
+      ],
+      "kind": "literary",
+      "note": "A school-selected literary text and seen question/task shape this exam. Use general practice prompts or authorised revision materials; follow your task sheet for permitted quotations and preparation.",
+      "context": "Your IA1 text, author and relevant focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_literature_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/english/literature",
+      "resources": [
+        {
+          "name": "LitCharts: literature guides",
+          "url": "https://www.litcharts.com/lit",
+          "note": "Search for your school-selected EA text. Compare a guide’s interpretation with specific evidence from your own copy of the text.",
+          "access": "Some content is free; detailed features and downloads may require payment",
+          "checked": "2026-10-08",
+          "source": "https://www.litcharts.com/lit"
+        }
+      ]
+    },
+    {
+      "id": "chinese-ia1",
+      "subject": "chinese",
+      "name": "Chinese",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_chinese_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/chinese",
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
+      ]
+    },
+    {
+      "id": "chinese-ia2",
+      "subject": "chinese",
+      "name": "Chinese",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_chinese_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/chinese",
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
+      ]
+    },
+    {
+      "id": "french-ia1",
+      "subject": "french",
+      "name": "French",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_french_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/french",
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        }
+      ]
+    },
+    {
+      "id": "french-ia2",
+      "subject": "french",
+      "name": "French",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_french_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/french",
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        }
+      ]
+    },
+    {
+      "id": "german-ia1",
+      "subject": "german",
+      "name": "German",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_german_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/german",
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
+        }
+      ]
+    },
+    {
+      "id": "german-ia2",
+      "subject": "german",
+      "name": "German",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_german_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/german",
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
+        }
+      ]
+    },
+    {
+      "id": "italian-ia1",
+      "subject": "italian",
+      "name": "Italian",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_italian_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/italian",
+      "resources": [
+        {
+          "name": "Rai Scuola: Italian B1",
+          "url": "https://www.raiscuola.rai.it/percorsi/livellob1",
+          "note": "Use video units to practise comprehension and vocabulary, including everyday life, education and work. Choose the unit that supports your current task.",
+          "access": "Public video resources; availability can vary by location",
+          "checked": "2026-10-08",
+          "source": "https://www.raiscuola.rai.it/percorsi/livellob1"
+        }
+      ]
+    },
+    {
+      "id": "italian-ia2",
+      "subject": "italian",
+      "name": "Italian",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_italian_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/italian",
+      "resources": [
+        {
+          "name": "Rai Scuola: Italian B1",
+          "url": "https://www.raiscuola.rai.it/percorsi/livellob1",
+          "note": "Use video units to practise comprehension and vocabulary, including everyday life, education and work. Choose the unit that supports your current task.",
+          "access": "Public video resources; availability can vary by location",
+          "checked": "2026-10-08",
+          "source": "https://www.raiscuola.rai.it/percorsi/livellob1"
+        }
+      ]
+    },
+    {
+      "id": "japanese-ia1",
+      "subject": "japanese",
+      "name": "Japanese",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_japanese_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/japanese",
+      "resources": [
+        {
+          "name": "Japan Foundation: Irodori",
+          "url": "https://www.irodori.jpf.go.jp/en/",
+          "note": "Use downloadable lessons and audio for everyday life, work and future choices. Select the level and topic that match your course.",
+          "access": "Free learning materials and audio",
+          "checked": "2026-10-08",
+          "source": "https://www.irodori.jpf.go.jp/en/"
+        }
+      ]
+    },
+    {
+      "id": "japanese-ia2",
+      "subject": "japanese",
+      "name": "Japanese",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_japanese_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/japanese",
+      "resources": [
+        {
+          "name": "Japan Foundation: Irodori",
+          "url": "https://www.irodori.jpf.go.jp/en/",
+          "note": "Use downloadable lessons and audio for everyday life, work and future choices. Select the level and topic that match your course.",
+          "access": "Free learning materials and audio",
+          "checked": "2026-10-08",
+          "source": "https://www.irodori.jpf.go.jp/en/"
+        }
+      ]
+    },
+    {
+      "id": "spanish-ia1",
+      "subject": "spanish",
+      "name": "Spanish",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Short response",
+      "coverage": "Unit 3 Topic 1: Lifestyles and leisure",
+      "topics": [
+        "Lifestyles, leisure and cultural perspectives",
+        "Science and technology in everyday life",
+        "Reading and listening: purpose, audience, tone and evidence"
+      ],
+      "kind": "language-read",
+      "note": "Practise comprehension and justified inferences using class reading and audio. Check your language-specific conditions for dictionaries and permitted resources.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_spanish_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/spanish",
+      "resources": [
+        {
+          "name": "VideoEle: Spanish video course",
+          "url": "https://videoele.com/Curso.html",
+          "note": "Choose an appropriate A1–B2 video to practise listening and vocabulary, then use its activities to check comprehension.",
+          "access": "Free video course; videos use YouTube",
+          "checked": "2026-10-08",
+          "source": "https://videoele.com/Curso.html"
+        }
+      ]
+    },
+    {
+      "id": "spanish-ia2",
+      "subject": "spanish",
+      "name": "Spanish",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3 Topic 2 and/or Topic 3",
+      "topics": [
+        "The arts, entertainment and sports",
+        "Groups in society",
+        "Writing for context, purpose and audience",
+        "Speaking and justifying a viewpoint"
+      ],
+      "kind": "language-produce",
+      "note": "Includes written and spoken extended responses. Switch off a theme your school has not included; use your task sheet for language-specific conditions.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_spanish_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/spanish",
+      "resources": [
+        {
+          "name": "VideoEle: Spanish video course",
+          "url": "https://videoele.com/Curso.html",
+          "note": "Choose an appropriate A1–B2 video to practise listening and vocabulary, then use its activities to check comprehension.",
+          "access": "Free video course; videos use YouTube",
+          "checked": "2026-10-08",
+          "source": "https://videoele.com/Curso.html"
+        }
+      ]
+    },
+    {
+      "id": "chinese_ext-ia1",
+      "subject": "chinese_ext",
+      "name": "Chinese Extension",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-read",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA1 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_chinese_ext_26_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/chinese-extension",
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
+      ]
+    },
+    {
+      "id": "chinese_ext-ia2",
+      "subject": "chinese_ext",
+      "name": "Chinese Extension",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-produce",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA2 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_chinese_ext_26_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/chinese-extension",
+      "resources": [
+        {
+          "name": "Chinese Grammar Wiki",
+          "url": "https://resources.allsetlearning.com/chinese/grammar/Main_Page",
+          "note": "Find a grammar pattern you need, study its examples, then write your own sentence using vocabulary from your course.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://resources.allsetlearning.com/chinese/grammar/Main_Page"
+        },
+        {
+          "name": "SBS Mandarin: news",
+          "url": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news",
+          "note": "Practise reading or listening to authentic Mandarin reporting. For Extension, choose material related to your investigation and identify viewpoint, evidence and tone.",
+          "access": "Free resources",
+          "checked": "2026-10-08",
+          "source": "https://www.sbs.com.au/language/chinese/zh-hans/collection/mandarin-news"
+        }
+      ]
+    },
+    {
+      "id": "french_ext-ia1",
+      "subject": "french_ext",
+      "name": "French Extension",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-read",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA1 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_french_ext_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/french-extension",
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        },
+        {
+          "name": "TV5MONDE: B2 reports and exercises",
+          "url": "https://apprendre.tv5monde.com/fr/exercices/b2-avance",
+          "note": "Use an advanced report to analyse viewpoint, language and evidence, then connect it to your investigation. B2 is a language level, not a QCAA equivalence.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/fr/exercices/b2-avance"
+        }
+      ]
+    },
+    {
+      "id": "french_ext-ia2",
+      "subject": "french_ext",
+      "name": "French Extension",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-produce",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA2 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_french_ext_25_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/french-extension",
+      "resources": [
+        {
+          "name": "TV5MONDE: learn French",
+          "url": "https://apprendre.tv5monde.com/",
+          "note": "Choose a suitable level and practise listening to reports with comprehension exercises. For Extension, select a report related to your investigation.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/"
+        },
+        {
+          "name": "TV5MONDE: B2 reports and exercises",
+          "url": "https://apprendre.tv5monde.com/fr/exercices/b2-avance",
+          "note": "Use an advanced report to analyse viewpoint, language and evidence, then connect it to your investigation. B2 is a language level, not a QCAA equivalence.",
+          "access": "Free online exercises",
+          "checked": "2026-10-08",
+          "source": "https://apprendre.tv5monde.com/fr/exercices/b2-avance"
+        }
+      ]
+    },
+    {
+      "id": "german_ext-ia1",
+      "subject": "german_ext",
+      "name": "German Extension",
+      "area": "Languages",
+      "ia": "IA1",
+      "technique": "Combination response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-read",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA1 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_german_ext_26_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/german-extension",
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
+        }
+      ]
+    },
+    {
+      "id": "german_ext-ia2",
+      "subject": "german_ext",
+      "name": "German Extension",
+      "area": "Languages",
+      "ia": "IA2",
+      "technique": "Extended response",
+      "coverage": "Unit 3: Guided investigation",
+      "topics": [
+        "Interpreting attitudes, perspectives and values",
+        "Analysing how language and textual conventions shape meaning",
+        "Synthesising evidence and constructing arguments"
+      ],
+      "kind": "language-ext-produce",
+      "note": "School-selected area of study. IA2 uses an area of study not chosen for IA1; save the appropriate focus for each exam.",
+      "context": "Your IA2 guided-investigation area and focus",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_german_ext_26_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/senior-subjects/syllabuses/languages/german-extension",
+      "resources": [
+        {
+          "name": "Goethe-Institut: Deutsch für dich",
+          "url": "https://www.goethe.de/prj/dfd/en/home.cfm",
+          "note": "Choose relevant reading, listening, grammar and vocabulary exercises. For Extension, practise explaining viewpoints using the language structures you have studied.",
+          "access": "Free online practice",
+          "checked": "2026-10-08",
+          "source": "https://www.goethe.de/prj/dfd/en/home.cfm"
+        }
+      ]
+    },
+    {
+      "id": "essential_maths",
+      "subject": "essential_maths",
+      "name": "Essential Mathematics",
+      "area": "Mathematics",
+      "ia": "IA2 / CIA",
+      "technique": "Short response",
+      "coverage": "Unit 3: Measurement, scales and chance",
+      "topics": [
+        "Calculations and reasonable estimates",
+        "Measurement and unit conversions",
+        "Scales, plans and models",
+        "Probability and relative frequencies"
+      ],
+      "kind": "maths",
+      "note": "The CIA representatively samples all Unit 3 topics. Keep all topics selected for full CIA preparation.",
+      "context": "",
+      "syllabus": "https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_ess_maths_25_app_syll.pdf",
+      "page": "https://www.qcaa.qld.edu.au/senior/assessment/internal-assessment/common-internal-assessment/essential-mathematics",
+      "resources": [
+        {
+          "name": "Khan Academy: maths practice",
+          "url": "https://www.khanacademy.org/math"
+        }
+      ]
+    },
+    {
+      "id": "essential_english",
+      "subject": "essential_english",
+      "name": "Essential English",
+      "area": "English",
+      "ia": "IA2 / CIA",
+      "technique": "Short response to stimulus",
+      "coverage": "Unit 3: Media representations",
+      "topics": [
+        "Representations of issues, identities, places, events and concepts",
+        "How written, visual and language choices shape meaning",
+        "Supporting explanations with evidence from a media text"
+      ],
+      "kind": "media",
+      "note": "Practise seen- and unseen-media-text skills. CIA topics vary by cohort and phase: enter the topic your teacher confirms. No secure CIA materials are supplied.",
+      "context": "Your cohort and teacher-confirmed CIA topic",
+      "syllabus": "https://www.qcaa.qld.edu.au/senior/assessment/internal-assessment/common-internal-assessment/essential-english",
+      "page": "https://www.qcaa.qld.edu.au/senior/assessment/internal-assessment/common-internal-assessment/essential-english",
+      "resources": [
+        {
+          "name": "ABC Education: media literacy",
+          "url": "https://www.abc.net.au/education/media-literacy"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "Dance",
+    "Design",
+    "Digital Solutions",
+    "Drama",
+    "English",
+    "English & Literature Extension",
+    "Film, Television & New Media",
+    "Music",
+    "Music Extension (Composition)",
+    "Music Extension (Musicology)",
+    "Music Extension (Performance)",
+    "Physical Education",
+    "Visual Art"
+  ]
+}
