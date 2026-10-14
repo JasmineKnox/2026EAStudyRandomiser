@@ -1,6 +1,10 @@
 (function(root){
 'use strict';
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
+const LIMITS={English:2,Maths:3,Electives:6};
+const group=s=>s.area==='English'?'English':s.area==='Mathematics'?'Maths':'Electives';
+function limitSelections(bank,ids){const counts={English:0,Maths:0,Electives:0};return [...new Set(ids)].filter(id=>{const s=bank.subjects.find(s=>s.subject===id);if(!s)return false;const g=group(s);if(counts[g]>=LIMITS[g])return false;counts[g]++;return true;});}
+function activeSubjects(selected,active){return [...new Set(Array.isArray(active)?active:[])].filter(id=>selected.includes(id)).slice(0,3);}
 function plan(minutes,ids){
  if(!Number.isInteger(minutes)||minutes<5||minutes>180)throw Error('Choose a whole number of minutes from 5 to 180.');
  if(!ids.length||ids.length>3||new Set(ids).size!==ids.length)throw Error('Choose one to three different subjects.');
@@ -71,5 +75,5 @@ function task(s,topic,context,minutes,difficulty,rng=Math.random,avoid){
  t.checks.push('If no reliable checking resource is available, mark the uncertainty for your teacher. Do not guess a score.');
  return t;
 }
-root.Unit3Engine={plan,task,methods};
+root.Unit3Engine={plan,task,methods,LIMITS,group,limitSelections,activeSubjects};
 })(typeof module==='object'?module.exports:window);

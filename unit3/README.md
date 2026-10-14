@@ -20,7 +20,7 @@ General English, English & Literature Extension, Physical Education, Design, Dig
 
 ## Use
 
-Select one to three subjects. Choose the relevant exam route and enter the school-selected text, historical context, Health elective or other focus when prompted. Untick topics not in the school’s revision scope. Choose a session length and difficulty. Tasks rotate through the selected subjects and give an explicit action, checking instructions and a retry step.
+Save up to two English courses, three maths courses and six electives. Then choose one to three of those subjects for each session. Choose the relevant exam route and enter the school-selected text, historical context, Health elective or other focus when prompted. Untick topics not in the school’s revision scope. Choose a session length and difficulty. Tasks rotate through the selected subjects and give an explicit action, checking instructions and a retry step.
 
 Students need class notes, textbooks and authorised practice materials. This is a study-task generator, not a question bank or automatic marker. It does not contain secure assessment questions, answer scripts or student data. Selections and the count of self-checked tasks are stored in the local browser when supported. Switching exam routes resets that subject’s topic/context configuration.
 
@@ -36,6 +36,8 @@ node unit3/check.cjs
 node --check unit3/app.js
 node --check unit3/tasks.js
 ```
+
+Subject accents use the approved coral, golden yellow, blue and lilac families. Each course has a default accent that can be changed in setup. The same accent appears in its setup card, session choice and active-task banner.
 
 The generated `index.html` remains self-contained. `bank.json` is the readable source mapping exported by the build.
 
