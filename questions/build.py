@@ -152,12 +152,15 @@ for sid,text,contrast in [
  ('german_ext','Das Handy bringt uns weit entfernten Freunden näher, kann uns aber zugleich von der Person neben uns entfernen. Die Technik entscheidet nicht für uns, wie wir leben; entscheidend ist, wie wir sie nutzen.','“näher” / “entfernen”')]:
  add(sid,'perspective-reading','Analyse a qualified viewpoint','Analyse how the original written text presents technology. In your course language, explain the viewpoint and the effect of one contrast. The model below explains the ideas in English so you can check meaning; it is not a model of target-language expression.', ['The viewpoint is qualified: technology enables contact across distance but may reduce interaction with people nearby. The contrast between bringing distant friends closer and distancing the person beside us highlights this tension. The final sentence places responsibility on how people use technology rather than treating technology as inherently good or bad. In the course language, support the analysis with a relevant phrase, such as '+contrast+'.'],[('Recognises qualified rather than wholly positive/negative viewpoint',1),('Analyses the contrast using a textual detail',2),('Explains responsibility/use in the final sentence',1)],ut=[0,1,2],route=sid+'-ia1',stimulus='Original written analysis practice; no audio component supplied:\n'+text,kind='model',level='hard')
 
+from presentation import apply
+apply(qs)
+
 # Build a portable, auditable release; versions count numerical variants separately.
 for q in qs:
  assert q['marks']>0 and q['answer'] and q['sources']
  assert q['difficulty'] in ['easy','medium','hard']
 assert len({q['id'] for q in qs})==len(qs)
-bank={'version':'2026-10-14.1','attribution':'Created by Mrs Knox','notice':'Original practice questions. Marks and marking points are indicative, not official QCAA marking schemes. This starter bank samples topics; it is not a complete paper or complete syllabus coverage. Model responses show one supported approach.','questions':qs}
+bank={'version':'2026-10-15.2','attribution':'Created by Mrs Knox','notice':'Original practice questions. Marks and marking points are indicative, not official QCAA marking schemes. This starter bank samples topics; it is not a complete paper or complete syllabus coverage. Model responses show one supported approach.','questions':qs}
 (ROOT/'question-bank.json').write_text(json.dumps(bank,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'question-data.js').write_text('window.PRACTICE_QUESTIONS = '+json.dumps(bank,ensure_ascii=False).replace('</','<\\/')+';\n')
 print(f'{len(qs)} questions; {len(set((q["subject"],q["template"]) for q in qs))} templates')

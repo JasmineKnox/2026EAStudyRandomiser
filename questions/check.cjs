@@ -7,7 +7,7 @@ const ea=JSON.parse(fs.readFileSync(root+(fs.existsSync(root+'/ea-maintenance')?
 const pure={};vm.runInNewContext(ui,pure);const eligible=pure.QuestionPractice.eligible;
 assert.equal(data.questions.length,new Set(data.questions.map(q=>q.id)).size);
 for(const q of data.questions){
- assert.equal(q.marks,q.points.reduce((n,p)=>n+p.marks,0));assert(q.answer.length);assert(q.sources.every(s=>s.url.startsWith('https://')));
+ assert.equal(q.marks,q.points.reduce((n,p)=>n+p.marks,0));assert(q.answer.length);if(q.partMarks)assert.equal(q.marks,q.partMarks.reduce((a,b)=>a+b,0));if(q.answerLayout==='steps')assert(q.working?.length>=2,q.id+' missing steps');assert(q.sources.every(s=>s.url.startsWith('https://')));
  for(const [mode,s] of Object.entries(q.scopes)){
   const course=(mode==='unit3'?u:ea).subjects.find(x=>x.id===s.route);assert(course,q.id+' missing route');
   const topics=course.topics.map(t=>typeof t==='string'?t:t.title);assert(s.topics.every(t=>topics.includes(t)),q.id+' missing topic');
@@ -38,7 +38,7 @@ for(const q of data.questions)for(const [mode,scope] of Object.entries(q.scopes)
  vm.runInNewContext(ui,ctx);anchor.children[0].fire('click');const dialog=doc.body.children[0];assert(dialog.open);
  let nodes=walk(dialog),answer=nodes.find(n=>n.id==='qp-answer'),reveal=nodes.find(n=>n.attrs['aria-controls']==='qp-answer');assert(answer.hidden);assert.equal(reveal.attrs['aria-expanded'],'false');
  assert(dialog.textContent.includes(q.question));assert(!dialog.textContent.includes('{option}'));assert.equal(nodes.filter(n=>n.tag==='td').length,q.table?q.table.rows.flat().length:0);
- reveal.fire('click');assert(!answer.hidden);assert.equal(reveal.attrs['aria-expanded'],'true');assert(q.answer.every(a=>answer.textContent.includes(a)));
+ reveal.fire('click');assert(!answer.hidden);assert.equal(reveal.attrs['aria-expanded'],'true');const expected=q.working?q.working.flatMap(step=>[step.heading,...step.lines]):q.answer;assert(expected.every(a=>answer.textContent.includes(a)));if(q.working)assert.equal(walk(answer).filter(n=>n.className==='qp-working-line').length,q.working.reduce((n,step)=>n+step.lines.length,0));
  const checks=walk(answer).filter(n=>n.tag==='input');assert.equal(checks.length,q.points.length);for(const check of checks){check.checked=true;check.fire('change');}
  assert(answer.textContent.includes(`Self-check: ${q.marks} / ${q.marks}`));checks[0].checked=false;checks[0].fire('change');assert(answer.textContent.includes(`Self-check: ${q.marks-q.points[0].marks} / ${q.marks}`));
  reveal.fire('click');assert(answer.hidden);dialog.close();assert.equal(doc.activeElement,focus);

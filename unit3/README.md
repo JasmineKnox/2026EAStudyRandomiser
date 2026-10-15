@@ -68,3 +68,5 @@ The shared `../question-bank.json` contains original questions for eligible shor
 Marks are indicative and self-assessed. Saved topic filters and exam routes constrain question selection. No written student answers are collected or stored, and question practice does not change the existing completed-task counts. Both single-file game exports embed the question data and interface for offline use.
 
 The session setup presents **Give me a task** and **Give me a practice question** together. Both use only the active session subjects. Question practice opens directly without creating a timed task plan; closing it returns to the session choices. Session length and task difficulty apply to the task plan, while the question panel has its own difficulty filter.
+
+Maths and science practice now displays labelled working steps with separate lines for substitutions, calculations and final results. Humanities questions use direct commands and labelled parts where appropriate. See `../questions/design-notes.md` for the public QCAA IA1 examples and 2026 endorsement guidance reviewed.

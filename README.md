@@ -106,3 +106,5 @@ Run `node tests/resources.test.cjs` to check that every subject has supplementar
 The multi-file HTML now uses versioned asset URLs so this update fetches fresh JavaScript and CSS after deployment. Run `python rebuild.py` after future changes to keep the standalone file in sync.
 
 The session setup presents **Give me a task** and **Give me a practice question** together. Both use only the active session subjects. Question practice opens directly without creating a timed task plan; closing it returns to the session choices. Session length and task difficulty apply to the task plan, while the question panel has its own difficulty filter.
+
+Maths and science practice now displays labelled working steps with separate lines for substitutions, calculations and final results. Humanities questions use direct commands and labelled parts where appropriate. See `questions/design-notes.md` for the public QCAA IA1 examples and 2026 endorsement guidance reviewed.
