@@ -1,61 +1,612 @@
-Mode,Subject / exam route,Questions,Templates,Topics with questions,Available planner topics
-unit3,Legal Studies IA1,3,3,4,11
-unit3,Economics IA1,5,3,3,6
-unit3,Business IA1,2,2,3,6
-unit3,Accounting IA2,4,2,2,6
-unit3,Aboriginal & Torres Strait Islander Studies IA1,2,2,4,4
-unit3,Geography IA1,2,2,5,5
-unit3,Food & Nutrition IA1,2,2,5,6
-unit3,Engineering IA2,2,2,3,4
-unit3,Aerospace Systems IA2,2,2,4,5
-unit3,Agricultural Science IA1,3,3,3,3
-unit3,Biology IA1,2,2,2,2
-unit3,Chemistry IA1,2,2,2,2
-unit3,Earth & Environmental Science IA1,2,2,2,2
-unit3,Marine Science IA1,1,1,2,2
-unit3,Physics IA1,2,2,2,2
-unit3,Psychology IA1,2,2,2,4
-unit3,General Mathematics IA2,9,5,5,5
-unit3,Mathematical Methods IA2,7,5,5,5
-unit3,Specialist Mathematics IA2,5,5,5,5
-unit3,Chinese IA1,1,1,2,3
-unit3,French IA1,1,1,2,3
-unit3,German IA1,1,1,2,3
-unit3,Italian IA1,1,1,2,3
-unit3,Japanese IA1,1,1,2,3
-unit3,Spanish IA1,1,1,2,3
-unit3,Chinese Extension IA1,1,1,3,3
-unit3,French Extension IA1,1,1,3,3
-unit3,German Extension IA1,1,1,3,3
-unit3,Essential Mathematics IA2 / CIA,4,4,4,4
-unit3,Essential English IA2 / CIA,2,2,3,3
-ea,Aboriginal & Torres Strait Islander Studies,2,2,3,8
-ea,Accounting,2,2,4,9
-ea,Aerospace Systems,2,2,2,9
-ea,Agricultural Science,3,3,3,10
-ea,Ancient History,2,2,4,7
-ea,Biology,4,4,4,15
-ea,Business,1,1,4,10
-ea,Chemistry,3,3,5,16
-ea,Chinese,1,1,3,6
-ea,Digital Solutions,3,3,5,12
-ea,Earth & Environmental Science,3,3,4,12
-ea,Economics,3,3,5,12
-ea,Engineering,2,2,2,8
-ea,Food & Nutrition,1,1,2,9
-ea,French,1,1,3,6
-ea,General Mathematics,11,7,7,13
-ea,Geography,2,2,4,8
-ea,German,1,1,3,6
-ea,Italian,1,1,3,6
-ea,Japanese,1,1,3,6
-ea,Legal Studies,3,3,6,23
-ea,Marine Science,2,2,3,11
-ea,Mathematical Methods,9,7,7,12
-ea,Modern History,2,2,4,12
-ea,Physical Education,1,1,4,8
-ea,Physics,3,3,3,13
-ea,Psychology,3,3,3,13
-ea,Spanish,1,1,3,6
-ea,Specialist Mathematics,6,6,6,12
-ea,Study of Religion,2,2,3,10
+Mode,Subject,Route,Topic,Question count
+unit3,Legal Studies,legal,"Democracy, the rule of law and government accountability",3
+unit3,Legal Studies,legal,Representative and responsible government,3
+unit3,Legal Studies,legal,Separation of powers and judicial independence,3
+unit3,Legal Studies,legal,Division of powers and constitutional inconsistency,5
+unit3,Legal Studies,legal,Referendums and constitutional change,4
+unit3,Legal Studies,legal,"Parliament: structure, roles and the legislative process",3
+unit3,Legal Studies,legal,Queensland’s unicameral parliament,5
+unit3,Legal Studies,legal,The High Court and constitutional interpretation,5
+unit3,Legal Studies,legal,"Precedent, statutory interpretation and landmark decisions",3
+unit3,Legal Studies,legal,Specialist courts and tribunals,4
+unit3,Legal Studies,legal,"Governance issues: viewpoints, consequences and legal alternatives",3
+unit3,Economics,economics,Australia’s trade patterns and trade theories,10
+unit3,Economics,economics,Exchange-rate demand and supply,3
+unit3,Economics,economics,Appreciation and depreciation: economic effects,14
+unit3,Economics,economics,Balance of payments: accounts and relationships,6
+unit3,Economics,economics,"Trade data: patterns, trends and economic relationships",4
+unit3,Economics,economics,Evaluating international-trade outcomes using economic criteria,3
+unit3,Business,business,Mature businesses and competitive markets,5
+unit3,Business,business,Domestic and global expansion strategies and modes of entry,6
+unit3,Business,business,Financing options for expansion,11
+unit3,Business,business,"Leadership, risk management and human resource strategies",10
+unit3,Business,business,SWOT and power interest grid analysis,11
+unit3,Business,business,Asian expansion case study and strategy evaluation,5
+unit3,Accounting,accounting,Acquiring non-current assets and classifying expenditure,3
+unit3,Accounting,accounting,Straight-line and diminishing-balance depreciation,13
+unit3,Accounting,accounting,Part-year depreciation and general-ledger entries,10
+unit3,Accounting,accounting,Disposal of non-current assets and gain or loss,6
+unit3,Accounting,accounting,Financial statement extracts,3
+unit3,Accounting,accounting,Evaluating management of non-current assets,3
+unit3,Aboriginal & Torres Strait Islander Studies,atsi_studies,Rights and freedoms: historical context,4
+unit3,Aboriginal & Torres Strait Islander Studies,atsi_studies,Responses to government policies and restrictions,4
+unit3,Aboriginal & Torres Strait Islander Studies,atsi_studies,"Advocacy, resistance and self-determination",26
+unit3,Aboriginal & Torres Strait Islander Studies,atsi_studies,Interpreting sources and perspectives on rights and freedoms,26
+unit3,Ancient History,ancient_history,Chronology and context of the selected ancient society,4
+unit3,Ancient History,ancient_history,Using archaeological and written evidence,9
+unit3,Ancient History,ancient_history,"Perspectives, usefulness and reliability",19
+unit3,Ancient History,ancient_history,Corroboration and contested interpretations,9
+unit3,Ancient History,ancient_history,Developing a historical argument from sources,9
+unit3,Modern History,modern_history,Chronology and context of the selected national experience,4
+unit3,Modern History,modern_history,"Causes, consequences and significant change",9
+unit3,Modern History,modern_history,"Perspectives, usefulness and reliability",19
+unit3,Modern History,modern_history,Corroborating and contesting historical evidence,9
+unit3,Modern History,modern_history,Developing a historical argument from sources,9
+unit3,Geography,geography,"Land cover transformations: processes, patterns and causes",16
+unit3,Geography,geography,"Land cover, Earth systems and climate change",11
+unit3,Geography,geography,"Reading maps, graphs and spatial data",6
+unit3,Geography,geography,Analysing geographical relationships and impacts,17
+unit3,Geography,geography,Proposing and justifying responses to a geographical challenge,6
+unit3,Philosophy & Reason,philosophy_reason,Moral theories and ethical reasoning,6
+unit3,Philosophy & Reason,philosophy_reason,Reconstructing and comparing moral arguments,7
+unit3,Philosophy & Reason,philosophy_reason,Applying theories to a moral problem,6
+unit3,Philosophy & Reason,philosophy_reason,Evaluating arguments and justified conclusions,6
+unit3,Study of Religion,study_religion,Religious ethical teachings and sources,25
+unit3,Study of Religion,study_religion,Approaches to ethical decision-making,25
+unit3,Study of Religion,study_religion,Applying religious perspectives to a social–ethical issue,25
+unit3,Study of Religion,study_religion,Analysing similarities and differences,25
+unit3,Study of Religion,study_religion,Evaluating religious responses using evidence,25
+unit3,Food & Nutrition,food,"Carbohydrate: nutritional, chemical and functional properties",11
+unit3,Food & Nutrition,food,"Carbohydrate processing, preservation and spoilage",5
+unit3,Food & Nutrition,food,"Fat: nutritional, chemical and functional properties",11
+unit3,Food & Nutrition,food,"Fat processing, preservation and spoilage",6
+unit3,Food & Nutrition,food,Food problem constraints and success criteria,4
+unit3,Food & Nutrition,food,"Synthesising, evaluating and refining food solutions",26
+unit3,Health,health,Health inquiry model in an alternate community context,10
+unit3,Health,health,"Community resources, barriers and enablers",15
+unit3,Health,health,Interpreting health data and contextual information,15
+unit3,Health,health,Evaluating and transferring a health strategy,10
+unit3,Engineering,engineering,Civil structures in society,3
+unit3,Engineering,engineering,"Forces, loading and structural analysis",16
+unit3,Engineering,engineering,Civil engineering materials,16
+unit3,Engineering,engineering,"Engineering solutions: synthesis, evaluation and refinement",6
+unit3,Aerospace Systems,aerospace_sys,Aerospace regulatory systems,5
+unit3,Aerospace Systems,aerospace_sys,Aerospace safety and operational systems,11
+unit3,Aerospace Systems,aerospace_sys,Operational accident and incident investigation,6
+unit3,Aerospace Systems,aerospace_sys,Airport and airline operation systems,16
+unit3,Aerospace Systems,aerospace_sys,Operational calculations and recommendations,16
+unit3,Agricultural Science,agricultural_science,Animal production B,6
+unit3,Agricultural Science,agricultural_science,Plant production B,16
+unit3,Agricultural Science,agricultural_science,Agricultural enterprises B,6
+unit3,Biology,biology,Biodiversity and populations,11
+unit3,Biology,biology,Functioning ecosystems and succession,16
+unit3,Chemistry,chemistry,Chemical equilibrium systems,16
+unit3,Chemistry,chemistry,Oxidation and reduction,11
+unit3,Earth & Environmental Science,earth_science,Use of non-renewable Earth resources,11
+unit3,Earth & Environmental Science,earth_science,Use of renewable Earth resources,16
+unit3,Marine Science,marine_science,The reef and beyond,11
+unit3,Marine Science,marine_science,Changes on the reef,16
+unit3,Physics,physics,Gravity and motion,11
+unit3,Physics,physics,Electromagnetism,16
+unit3,Psychology,psychology,Brain function,5
+unit3,Psychology,psychology,Sensation and perception,5
+unit3,Psychology,psychology,Memory,11
+unit3,Psychology,psychology,Learning,6
+unit3,General Mathematics,maths_general,Bivariate data analysis 1,4
+unit3,General Mathematics,maths_general,Bivariate data analysis 2,8
+unit3,General Mathematics,maths_general,Time series analysis,6
+unit3,General Mathematics,maths_general,Growth and decay in sequences,13
+unit3,General Mathematics,maths_general,Earth geometry and time zones,6
+unit3,Mathematical Methods,maths_methods,Differentiation of exponential and logarithmic functions,8
+unit3,Mathematical Methods,maths_methods,Differentiation of trigonometric functions and differentiation rules,6
+unit3,Mathematical Methods,maths_methods,Further applications of differentiation,6
+unit3,Mathematical Methods,maths_methods,Further integration,6
+unit3,Mathematical Methods,maths_methods,Discrete random variables,6
+unit3,Specialist Mathematics,maths_specialist,Further complex numbers,11
+unit3,Specialist Mathematics,maths_specialist,Mathematical induction and trigonometric proofs,4
+unit3,Specialist Mathematics,maths_specialist,Vectors in two and three dimensions,6
+unit3,Specialist Mathematics,maths_specialist,Vector calculus,6
+unit3,Specialist Mathematics,maths_specialist,Further matrices,6
+unit3,English as an Additional Language,english_add_lang,Representations and interpretations in the studied text,29
+unit3,English as an Additional Language,english_add_lang,"Cultural assumptions, attitudes, values and beliefs",29
+unit3,English as an Additional Language,english_add_lang,Stylistic choices and their effects,29
+unit3,English as an Additional Language,english_add_lang,Selecting and verifying textual evidence,4
+unit3,English as an Additional Language,english_add_lang,Developing and sustaining an analytical argument,4
+unit3,Literature,literature,Representations and interpretations in the studied text,29
+unit3,Literature,literature,"Cultural assumptions, attitudes, values and beliefs",29
+unit3,Literature,literature,Stylistic choices and their effects,29
+unit3,Literature,literature,Selecting and verifying textual evidence,4
+unit3,Literature,literature,Developing and sustaining an analytical argument,4
+unit3,Chinese,chinese-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,Chinese,chinese-ia1,Science and technology in everyday life,20
+unit3,Chinese,chinese-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,Chinese,chinese-ia2,"The arts, entertainment and sports",25
+unit3,Chinese,chinese-ia2,Groups in society,25
+unit3,Chinese,chinese-ia2,"Writing for context, purpose and audience",25
+unit3,Chinese,chinese-ia2,Speaking and justifying a viewpoint,25
+unit3,French,french-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,French,french-ia1,Science and technology in everyday life,20
+unit3,French,french-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,French,french-ia2,"The arts, entertainment and sports",25
+unit3,French,french-ia2,Groups in society,25
+unit3,French,french-ia2,"Writing for context, purpose and audience",25
+unit3,French,french-ia2,Speaking and justifying a viewpoint,25
+unit3,German,german-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,German,german-ia1,Science and technology in everyday life,20
+unit3,German,german-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,German,german-ia2,"The arts, entertainment and sports",25
+unit3,German,german-ia2,Groups in society,25
+unit3,German,german-ia2,"Writing for context, purpose and audience",25
+unit3,German,german-ia2,Speaking and justifying a viewpoint,25
+unit3,Italian,italian-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,Italian,italian-ia1,Science and technology in everyday life,20
+unit3,Italian,italian-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,Italian,italian-ia2,"The arts, entertainment and sports",25
+unit3,Italian,italian-ia2,Groups in society,25
+unit3,Italian,italian-ia2,"Writing for context, purpose and audience",25
+unit3,Italian,italian-ia2,Speaking and justifying a viewpoint,25
+unit3,Japanese,japanese-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,Japanese,japanese-ia1,Science and technology in everyday life,20
+unit3,Japanese,japanese-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,Japanese,japanese-ia2,"The arts, entertainment and sports",25
+unit3,Japanese,japanese-ia2,Groups in society,25
+unit3,Japanese,japanese-ia2,"Writing for context, purpose and audience",25
+unit3,Japanese,japanese-ia2,Speaking and justifying a viewpoint,25
+unit3,Spanish,spanish-ia1,"Lifestyles, leisure and cultural perspectives",16
+unit3,Spanish,spanish-ia1,Science and technology in everyday life,20
+unit3,Spanish,spanish-ia1,"Reading and listening: purpose, audience, tone and evidence",21
+unit3,Spanish,spanish-ia2,"The arts, entertainment and sports",25
+unit3,Spanish,spanish-ia2,Groups in society,25
+unit3,Spanish,spanish-ia2,"Writing for context, purpose and audience",25
+unit3,Spanish,spanish-ia2,Speaking and justifying a viewpoint,25
+unit3,Chinese Extension,chinese_ext-ia1,"Interpreting attitudes, perspectives and values",26
+unit3,Chinese Extension,chinese_ext-ia1,Analysing how language and textual conventions shape meaning,26
+unit3,Chinese Extension,chinese_ext-ia1,Synthesising evidence and constructing arguments,26
+unit3,Chinese Extension,chinese_ext-ia2,"Interpreting attitudes, perspectives and values",25
+unit3,Chinese Extension,chinese_ext-ia2,Analysing how language and textual conventions shape meaning,25
+unit3,Chinese Extension,chinese_ext-ia2,Synthesising evidence and constructing arguments,25
+unit3,French Extension,french_ext-ia1,"Interpreting attitudes, perspectives and values",26
+unit3,French Extension,french_ext-ia1,Analysing how language and textual conventions shape meaning,26
+unit3,French Extension,french_ext-ia1,Synthesising evidence and constructing arguments,26
+unit3,French Extension,french_ext-ia2,"Interpreting attitudes, perspectives and values",25
+unit3,French Extension,french_ext-ia2,Analysing how language and textual conventions shape meaning,25
+unit3,French Extension,french_ext-ia2,Synthesising evidence and constructing arguments,25
+unit3,German Extension,german_ext-ia1,"Interpreting attitudes, perspectives and values",26
+unit3,German Extension,german_ext-ia1,Analysing how language and textual conventions shape meaning,26
+unit3,German Extension,german_ext-ia1,Synthesising evidence and constructing arguments,26
+unit3,German Extension,german_ext-ia2,"Interpreting attitudes, perspectives and values",25
+unit3,German Extension,german_ext-ia2,Analysing how language and textual conventions shape meaning,25
+unit3,German Extension,german_ext-ia2,Synthesising evidence and constructing arguments,25
+unit3,Essential Mathematics,essential_maths,Calculations and reasonable estimates,6
+unit3,Essential Mathematics,essential_maths,Measurement and unit conversions,11
+unit3,Essential Mathematics,essential_maths,"Scales, plans and models",6
+unit3,Essential Mathematics,essential_maths,Probability and relative frequencies,6
+unit3,Essential English,essential_english,"How a text shows people, places, events, ideas or issues",27
+unit3,Essential English,essential_english,"How words, pictures and layout create a message",27
+unit3,Essential English,essential_english,Using details from the text to explain your answer,27
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Recognition and reconciliation,4
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Connection to Country and identity,3
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Historical policies and reconciliation,4
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Bringing them Home and the 2008 Apology,3
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Reconciliation Australia and Action Plans,3
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Close the Gap and reconciliation,3
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Uluru Statement and constitutional recognition,3
+ea,Aboriginal & Torres Strait Islander Studies,atsi_studies,Evaluating reconciliation responses,26
+ea,Accounting,accounting,Balance day adjustments,11
+ea,Accounting,accounting,General journal and ledger,4
+ea,Accounting,accounting,Trial balance and closing entries,3
+ea,Accounting,accounting,Fully classified financial statements,3
+ea,Accounting,accounting,Statement of cash flows with GST,5
+ea,Accounting,accounting,Profitability ratios,6
+ea,Accounting,accounting,Liquidity and stability ratios,6
+ea,Accounting,accounting,Cash-flow and company ratios,3
+ea,Accounting,accounting,Public-company performance recommendations,3
+ea,Aerospace Systems,aerospace_sys,Airspace management,3
+ea,Aerospace Systems,aerospace_sys,Flight instruments,3
+ea,Aerospace Systems,aerospace_sys,Aircraft performance,5
+ea,Aerospace Systems,aerospace_sys,Aircraft maintenance,5
+ea,Aerospace Systems,aerospace_sys,Aeronautical charts and navigation,11
+ea,Aerospace Systems,aerospace_sys,Fuel planning and reserves,11
+ea,Aerospace Systems,aerospace_sys,Radio communication technologies,3
+ea,Aerospace Systems,aerospace_sys,"Hypoxia, hyperventilation and human limitations",3
+ea,Aerospace Systems,aerospace_sys,Human decision-making in aviation,3
+ea,Agricultural Science,agricultural_science,Animal nutrition and digestion,6
+ea,Agricultural Science,agricultural_science,Animal growth and reproduction,3
+ea,Agricultural Science,agricultural_science,Animal welfare and production management,3
+ea,Agricultural Science,agricultural_science,Plant agronomy and nutrient management,6
+ea,Agricultural Science,agricultural_science,Plant pests and integrated management,5
+ea,Agricultural Science,agricultural_science,Plant propagation and breeding,3
+ea,Agricultural Science,agricultural_science,Post-harvest technologies,5
+ea,Agricultural Science,agricultural_science,Agricultural markets and quality assurance,3
+ea,Agricultural Science,agricultural_science,Enterprise records and financial management,6
+ea,Agricultural Science,agricultural_science,Evaluating enterprise sustainability,3
+ea,Ancient History,ancient_history,Chronology of {option},4
+ea,Ancient History,ancient_history,Causes and consequences in {option},4
+ea,Ancient History,ancient_history,Historical perspectives on {option},10
+ea,Ancient History,ancient_history,Source usefulness and reliability for {option},21
+ea,Ancient History,ancient_history,Corroborating evidence about {option},11
+ea,Ancient History,ancient_history,Continuity and change in {option},4
+ea,Ancient History,ancient_history,Historical arguments about {option},10
+ea,Biology,biology,Biodiversity and classification,3
+ea,Biology,biology,Population sampling,6
+ea,Biology,biology,Population growth and carrying capacity,5
+ea,Biology,biology,Energy flow and nutrient cycles,6
+ea,Biology,biology,Species interactions and ecological niches,3
+ea,Biology,biology,Keystone species and ecosystem change,5
+ea,Biology,biology,Ecological succession,5
+ea,Biology,biology,DNA structure and replication,3
+ea,Biology,biology,Meiosis and genetic variation,3
+ea,Biology,biology,Transcription and translation,3
+ea,Biology,biology,Mutations and gene expression,3
+ea,Biology,biology,Inheritance patterns,4
+ea,Biology,biology,"Recombinant DNA, PCR and electrophoresis",3
+ea,Biology,biology,Natural selection and genetic drift,4
+ea,Biology,biology,Speciation and evolutionary evidence,3
+ea,Business,business,Business renewal and transformation,6
+ea,Business,business,Drivers of organisational change,5
+ea,Business,business,Lewin and Kotter change models,5
+ea,Business,business,Management styles,5
+ea,Business,business,Resistance to change,6
+ea,Business,business,Force field analysis,5
+ea,Business,business,SWOT analysis for transformation,5
+ea,Business,business,Performance management in renewal,6
+ea,Business,business,Transformation strategies across business functions,5
+ea,Business,business,Evaluating transformation strategies,11
+ea,Chemistry,chemistry,Dynamic equilibrium,5
+ea,Chemistry,chemistry,Equilibrium shifts,5
+ea,Chemistry,chemistry,Equilibrium constants and reaction quotients,6
+ea,Chemistry,chemistry,Brønsted–Lowry acids and bases,3
+ea,Chemistry,chemistry,Acid–base indicators and titrations,3
+ea,Chemistry,chemistry,Buffers and weak-acid equilibrium,3
+ea,Chemistry,chemistry,Redox and oxidation numbers,3
+ea,Chemistry,chemistry,Galvanic and electrolytic cells,6
+ea,Chemistry,chemistry,Electrode potentials and electrolysis,6
+ea,Chemistry,chemistry,Organic families and nomenclature,4
+ea,Chemistry,chemistry,Structural and stereoisomers,4
+ea,Chemistry,chemistry,Organic properties and intermolecular forces,3
+ea,Chemistry,chemistry,Organic reaction pathways,3
+ea,Chemistry,chemistry,Polymers and organic materials,3
+ea,Chemistry,chemistry,Organic synthesis and design,3
+ea,Chemistry,chemistry,Analytical techniques for organic compounds,3
+ea,Chinese,chinese,School-leaving celebrations,5
+ea,Chinese,chinese,Reflecting on school life,5
+ea,Chinese,chinese,Post-school plans and aspirations,16
+ea,Chinese,chinese,Employment and further study,11
+ea,Chinese,chinese,Benefits of a second language,5
+ea,Chinese,chinese,"Tone, purpose and audience in future-choice texts",26
+ea,Chinese Extension,chinese_ext,Ideas and perspectives about {option},25
+ea,Chinese Extension,chinese_ext,Language and textual conventions about {option},25
+ea,Chinese Extension,chinese_ext,Linking stimulus to {option},25
+ea,Chinese Extension,chinese_ext,Constructing an argument about {option},25
+ea,Chinese Extension,chinese_ext,Evaluating competing views about {option},25
+ea,Chinese Extension,chinese_ext,Analytical essay conventions for {option},25
+ea,Dance,dance,"Space, time and dynamics",5
+ea,Dance,dance,Dance structure and choreographic devices,5
+ea,Dance,dance,Production elements in dance,5
+ea,Dance,dance,Dance skills and expressive qualities,5
+ea,Dance,dance,Evaluating choreographic meaning,5
+ea,Design,design,Sustainable design requirements,5
+ea,Design,design,Divergent ideation for sustainability,5
+ea,Design,design,Schematic and ideation sketches,5
+ea,Design,design,Evaluating ideas against design criteria,5
+ea,Design,design,Refining and proposing a design concept,5
+ea,Digital Solutions,digital_solutions,Encryption and authentication,4
+ea,Digital Solutions,digital_solutions,"Caesar, polyalphabetic and one-time-pad ciphers",3
+ea,Digital Solutions,digital_solutions,"Hashing, checksums and compression",4
+ea,Digital Solutions,digital_solutions,Network protocols and performance,3
+ea,Digital Solutions,digital_solutions,"APIs, REST, JSON and XML",3
+ea,Digital Solutions,digital_solutions,Australian Privacy Principles and data ethics,3
+ea,Digital Solutions,digital_solutions,Data-flow diagrams and system components,3
+ea,Digital Solutions,digital_solutions,Pseudocode and data-exchange algorithms,4
+ea,Digital Solutions,digital_solutions,"Variables, validation and data integrity",4
+ea,Digital Solutions,digital_solutions,SQL and programmed data exchanges,4
+ea,Digital Solutions,digital_solutions,Emerging technologies in data exchange,3
+ea,Digital Solutions,digital_solutions,Evaluating secure solutions,3
+ea,Drama,drama,Dramatic elements and meaning,5
+ea,Drama,drama,Dramatic conventions and form,5
+ea,Drama,drama,Performance and expressive choices,5
+ea,Drama,drama,Design and production choices,5
+ea,Drama,drama,Synthesising and evaluating dramatic meaning,5
+ea,Earth & Environmental Science,earth_science,Non-renewable resource formation and extraction,6
+ea,Earth & Environmental Science,earth_science,Resource use and sustainability,6
+ea,Earth & Environmental Science,earth_science,Renewable Earth resources,5
+ea,Earth & Environmental Science,earth_science,Soil and water resource management,11
+ea,Earth & Environmental Science,earth_science,Plate boundaries and geological hazards,3
+ea,Earth & Environmental Science,earth_science,"Earthquakes, volcanoes and tsunamis",3
+ea,Earth & Environmental Science,earth_science,"Cyclones, floods and drought",3
+ea,Earth & Environmental Science,earth_science,Human activity and hazard vulnerability,3
+ea,Earth & Environmental Science,earth_science,Radiative forcing and greenhouse gases,3
+ea,Earth & Environmental Science,earth_science,Natural and human drivers of climate change,3
+ea,Earth & Environmental Science,earth_science,Palaeoclimate evidence,3
+ea,Earth & Environmental Science,earth_science,Climate models and Australian climate patterns,4
+ea,Economics,economics,Macroeconomic objectives and trade-offs,3
+ea,Economics,economics,Aggregate demand and aggregate supply,3
+ea,Economics,economics,Circular flow and the multiplier,5
+ea,Economics,economics,Economic cycle,3
+ea,Economics,economics,Inflation and unemployment,10
+ea,Economics,economics,Real and nominal measures,6
+ea,Economics,economics,Automatic stabilisers and discretionary spending,5
+ea,Economics,economics,Fiscal policy,3
+ea,Economics,economics,Monetary policy and transmission channels,4
+ea,Economics,economics,Supply-side policies and microeconomic reform,4
+ea,Economics,economics,Policy limitations and trade-offs,4
+ea,Economics,economics,Evaluating economic policy,4
+ea,Engineering,engineering,Machines and engineering impacts,3
+ea,Engineering,engineering,Simple machines and motion,5
+ea,Engineering,engineering,Belts and gears,6
+ea,Engineering,engineering,Mechanical power and efficiency,11
+ea,Engineering,engineering,Friction and mechanical systems,5
+ea,Engineering,engineering,Control systems in machines,3
+ea,Engineering,engineering,Materials phase diagrams,3
+ea,Engineering,engineering,Steel microstructures and processing,3
+ea,English,english,Representations of people in {option},29
+ea,English,english,Representations of places in {option},4
+ea,English,english,Representations of concepts in {option},29
+ea,English,english,Cultural assumptions and values in {option},4
+ea,English,english,Language choices in {option},29
+ea,English,english,Structure and development in {option},4
+ea,English,english,Evidence supporting an argument about {option},29
+ea,English,english,Responding to an unseen question on {option},4
+ea,English & Literature Extension,english_lit_ext,Text-centred approaches,29
+ea,English & Literature Extension,english_lit_ext,World-context-centred approaches,4
+ea,English & Literature Extension,english_lit_ext,Theoretical assumptions and terminology,4
+ea,English & Literature Extension,english_lit_ext,Close reading of a short literary text,29
+ea,English & Literature Extension,english_lit_ext,Synthesising theory and textual evidence,29
+ea,English & Literature Extension,english_lit_ext,Alternative theorised interpretations,29
+ea,English & Literature Extension,english_lit_ext,Planning a theorised close reading,4
+ea,English as an Additional Language,english_add_lang,Representations of people in {option},29
+ea,English as an Additional Language,english_add_lang,Representations of places in {option},4
+ea,English as an Additional Language,english_add_lang,Representations of concepts in {option},29
+ea,English as an Additional Language,english_add_lang,Cultural assumptions and values in {option},4
+ea,English as an Additional Language,english_add_lang,Language choices in {option},29
+ea,English as an Additional Language,english_add_lang,Structure and development in {option},4
+ea,English as an Additional Language,english_add_lang,Evidence supporting an argument about {option},29
+ea,English as an Additional Language,english_add_lang,Responding to an unseen question on {option},4
+ea,"Film, Television & New Media",film_tv,Camera and framing choices,5
+ea,"Film, Television & New Media",film_tv,Editing and time,5
+ea,"Film, Television & New Media",film_tv,Sound and meaning,5
+ea,"Film, Television & New Media",film_tv,Mise-en-scène and representation,5
+ea,"Film, Television & New Media",film_tv,Moving-image narrative and identity,5
+ea,"Film, Television & New Media",film_tv,Evaluating technical and symbolic codes,5
+ea,Food & Nutrition,food,Infant and toddler consumer needs,3
+ea,Food & Nutrition,food,Adolescent and adult consumer needs,3
+ea,Food & Nutrition,food,Pregnant and elderly consumer needs,3
+ea,Food & Nutrition,food,Vegetarian and vegan consumer needs,3
+ea,Food & Nutrition,food,Food allergy and intolerance markets,4
+ea,Food & Nutrition,food,Diet-related disease consumer markets,3
+ea,Food & Nutrition,food,Food formulation for consumer needs,26
+ea,Food & Nutrition,food,Food solution success criteria,25
+ea,Food & Nutrition,food,Evaluating and refining food solutions,25
+ea,French,french,School-leaving celebrations,5
+ea,French,french,Reflecting on school life,5
+ea,French,french,Post-school plans and aspirations,16
+ea,French,french,Employment and further study,11
+ea,French,french,Benefits of a second language,5
+ea,French,french,"Tone, purpose and audience in future-choice texts",26
+ea,French Extension,french_ext,Ideas and perspectives about {option},25
+ea,French Extension,french_ext,Language and textual conventions about {option},25
+ea,French Extension,french_ext,Linking stimulus to {option},25
+ea,French Extension,french_ext,Constructing an argument about {option},25
+ea,French Extension,french_ext,Evaluating competing views about {option},25
+ea,French Extension,french_ext,Analytical essay conventions for {option},25
+ea,General Mathematics,maths_general,Bivariate associations,4
+ea,General Mathematics,maths_general,Least-squares regression and residuals,8
+ea,General Mathematics,maths_general,Time series and seasonal indices,6
+ea,General Mathematics,maths_general,Arithmetic and geometric sequences,13
+ea,General Mathematics,maths_general,Earth geometry and time zones,6
+ea,General Mathematics,maths_general,Compound-interest loans and investments,4
+ea,General Mathematics,maths_general,Annuities and perpetuities,3
+ea,General Mathematics,maths_general,Graphs and adjacency matrices,3
+ea,General Mathematics,maths_general,Eulerian and Hamiltonian paths,3
+ea,General Mathematics,maths_general,Minimum spanning trees,3
+ea,General Mathematics,maths_general,Critical path analysis,4
+ea,General Mathematics,maths_general,Maximum flow and minimum cut,3
+ea,General Mathematics,maths_general,Assignment problems,3
+ea,Geography,geography,Global population growth and distribution,6
+ea,Geography,geography,Demographic transition model,3
+ea,Geography,geography,Population pyramids,6
+ea,Geography,geography,Internal and international migration,6
+ea,Geography,geography,Impacts on migration origin places,10
+ea,Geography,geography,Impacts on migration destinations,5
+ea,Geography,geography,Population-change responses,11
+ea,Geography,geography,Population maps and graphs,10
+ea,German,german,School-leaving celebrations,5
+ea,German,german,Reflecting on school life,5
+ea,German,german,Post-school plans and aspirations,16
+ea,German,german,Employment and further study,11
+ea,German,german,Benefits of a second language,5
+ea,German,german,"Tone, purpose and audience in future-choice texts",26
+ea,German Extension,german_ext,Ideas and perspectives about {option},25
+ea,German Extension,german_ext,Language and textual conventions about {option},25
+ea,German Extension,german_ext,Linking stimulus to {option},25
+ea,German Extension,german_ext,Constructing an argument about {option},25
+ea,German Extension,german_ext,Evaluating competing views about {option},25
+ea,German Extension,german_ext,Analytical essay conventions for {option},25
+ea,Health,health,Respectful relationships and health,5
+ea,Health,health,"Barriers, enablers and health determinants",10
+ea,Health,health,Life course perspective,5
+ea,Health,health,Emerging adulthood and post-school transition,15
+ea,Health,health,Diffusion of innovations concepts,5
+ea,Health,health,Diffusion stages and uptake factors,5
+ea,Health,health,Needs assessment and action strategy,10
+ea,Health,health,RE-AIM evaluation,5
+ea,Health,health,Health inquiry and justified recommendations,10
+ea,Italian,italian,School-leaving celebrations,5
+ea,Italian,italian,Reflecting on school life,5
+ea,Italian,italian,Post-school plans and aspirations,16
+ea,Italian,italian,Employment and further study,11
+ea,Italian,italian,Benefits of a second language,5
+ea,Italian,italian,"Tone, purpose and audience in future-choice texts",26
+ea,Japanese,japanese,School-leaving celebrations,5
+ea,Japanese,japanese,Reflecting on school life,5
+ea,Japanese,japanese,Post-school plans and aspirations,16
+ea,Japanese,japanese,Employment and further study,11
+ea,Japanese,japanese,Benefits of a second language,5
+ea,Japanese,japanese,"Tone, purpose and audience in future-choice texts",26
+ea,Legal Studies,legal,International treaties,4
+ea,Legal Studies,legal,Human rights terminology,3
+ea,Legal Studies,legal,"UDHR, ICCPR and ICESCR",3
+ea,Legal Studies,legal,Refugee Convention and Protocol,4
+ea,Legal Studies,legal,ICERD and racial discrimination,3
+ea,Legal Studies,legal,CEDAW and women's rights,3
+ea,Legal Studies,legal,CRPD and disability rights,3
+ea,Legal Studies,legal,Convention against Torture,3
+ea,Legal Studies,legal,Convention on the Rights of the Child,3
+ea,Legal Studies,legal,"Ratification, accession and reservations",3
+ea,Legal Studies,legal,State sovereignty and the UN Charter,3
+ea,Legal Studies,legal,UN and UNHCR roles,3
+ea,Legal Studies,legal,Magna Carta and the development of rights,3
+ea,Legal Studies,legal,Australian anti-discrimination legislation,3
+ea,Legal Studies,legal,Constitutional protection of rights,3
+ea,Legal Studies,legal,"Speech, protest and assembly in Australia",3
+ea,Legal Studies,legal,Equality and rights in criminal and civil contexts,3
+ea,Legal Studies,legal,Resolving human rights complaints,4
+ea,Legal Studies,legal,Australian Human Rights Commission,3
+ea,Legal Studies,legal,Courts and law reform bodies,3
+ea,Legal Studies,legal,Rights advocacy groups and the media,3
+ea,Legal Studies,legal,Analysing an Australian human rights issue,3
+ea,Legal Studies,legal,Evaluating human rights reform,4
+ea,Literature,literature,Representations of people in {option},29
+ea,Literature,literature,Representations of places in {option},4
+ea,Literature,literature,Representations of concepts in {option},29
+ea,Literature,literature,Cultural assumptions and values in {option},4
+ea,Literature,literature,Language choices in {option},29
+ea,Literature,literature,Structure and development in {option},4
+ea,Literature,literature,Evidence supporting an argument about {option},29
+ea,Literature,literature,Responding to an unseen question on {option},4
+ea,Marine Science,marine_science,Reef connectivity and marine systems,5
+ea,Marine Science,marine_science,Coral reefs and ecosystem relationships,6
+ea,Marine Science,marine_science,Ocean acidification,5
+ea,Marine Science,marine_science,Coral bleaching and resilience,11
+ea,Marine Science,marine_science,Marine protected areas,3
+ea,Marine Science,marine_science,Ocean warming and climate interactions,3
+ea,Marine Science,marine_science,Fish population distribution and decline,3
+ea,Marine Science,marine_science,Bioaccumulation and biomagnification,3
+ea,Marine Science,marine_science,Fishery sampling and population estimates,4
+ea,Marine Science,marine_science,Sustainable and economic fisheries yields,3
+ea,Marine Science,marine_science,Fisheries governance and monitoring,3
+ea,Mathematical Methods,maths_methods,Differentiating exponential and logarithmic functions,8
+ea,Mathematical Methods,maths_methods,Trigonometric derivatives and differentiation rules,6
+ea,Mathematical Methods,maths_methods,Second derivatives and curve sketching,6
+ea,Mathematical Methods,maths_methods,Optimisation and motion,3
+ea,Mathematical Methods,maths_methods,Antiderivatives and initial conditions,6
+ea,Mathematical Methods,maths_methods,Discrete and binomial distributions,6
+ea,Mathematical Methods,maths_methods,Definite integrals and area,3
+ea,Mathematical Methods,maths_methods,Sine and cosine rules,3
+ea,Mathematical Methods,maths_methods,Continuous random variables,3
+ea,Mathematical Methods,maths_methods,Normal distributions,4
+ea,Mathematical Methods,maths_methods,Sampling and sample proportions,3
+ea,Mathematical Methods,maths_methods,Confidence intervals for proportions,4
+ea,Modern History,modern_history,Chronology of {option},4
+ea,Modern History,modern_history,Causes and consequences in {option},4
+ea,Modern History,modern_history,Historical perspectives on {option},10
+ea,Modern History,modern_history,Source usefulness and reliability for {option},21
+ea,Modern History,modern_history,Corroborating evidence about {option},11
+ea,Modern History,modern_history,Continuity and change in {option},4
+ea,Modern History,modern_history,Historical arguments about {option},10
+ea,Modern History,modern_history,Origins of Cold War tensions,4
+ea,Modern History,modern_history,Cold War crises and confrontation,4
+ea,Modern History,modern_history,Cold War cooperation and its aftermath,4
+ea,Modern History,modern_history,Drivers of mass migration,4
+ea,Modern History,modern_history,Experiences and impacts of mass migration,4
+ea,Music,music,Melody and pitch,5
+ea,Music,music,Rhythm and metre,5
+ea,Music,music,Harmony and tonality,5
+ea,Music,music,Texture and timbre,5
+ea,Music,music,Structure and compositional devices,5
+ea,Music,music,Evaluating musical meaning,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Melody and pitch,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Rhythm and metre,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Harmony and tonality,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Texture and timbre,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Structure and compositional devices,5
+ea,Music Extension (Composition),music_ext_26_comp_syll.pdf,Evaluating musical meaning,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Melody and pitch,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Rhythm and metre,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Harmony and tonality,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Texture and timbre,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Structure and compositional devices,5
+ea,Music Extension (Musicology),music_ext_26_music_syll.pdf,Evaluating musical meaning,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Melody and pitch,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Rhythm and metre,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Harmony and tonality,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Texture and timbre,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Structure and compositional devices,5
+ea,Music Extension (Performance),music_ext_26_perf_syll.pdf,Evaluating musical meaning,5
+ea,Philosophy & Reason,philosophy_reason,Anarchism,3
+ea,Philosophy & Reason,philosophy_reason,Libertarianism,3
+ea,Philosophy & Reason,philosophy_reason,Social liberalism,3
+ea,Philosophy & Reason,philosophy_reason,Socialism,3
+ea,Philosophy & Reason,philosophy_reason,Positive and negative freedom,5
+ea,Philosophy & Reason,philosophy_reason,"Equality, equity and distributive justice",3
+ea,Philosophy & Reason,philosophy_reason,Political arguments and assumptions,5
+ea,Philosophy & Reason,philosophy_reason,Evaluating political arguments,3
+ea,Philosophy & Reason,philosophy_reason,Individual needs and collective needs,3
+ea,Physical Education,pe,ATP resynthesis and energy-system interplay,4
+ea,Physical Education,pe,"ATP–PC, lactic acid and aerobic systems",3
+ea,Physical Education,pe,Fitness components and activity demands,4
+ea,Physical Education,pe,Physiological adaptations to training,3
+ea,Physical Education,pe,Training principles,4
+ea,Physical Education,pe,Training methods,4
+ea,Physical Education,pe,Periodisation and training phases,3
+ea,Physical Education,pe,Training-program evaluation,3
+ea,Physics,physics,Projectile motion,5
+ea,Physics,physics,Circular motion and gravitation,6
+ea,Physics,physics,Electric fields and Coulomb's law,5
+ea,Physics,physics,Magnetic fields and forces,6
+ea,Physics,physics,Electromagnetic induction,5
+ea,Physics,physics,Transformers and electromagnetic waves,3
+ea,Physics,physics,Reference frames and simultaneity,3
+ea,Physics,physics,Time dilation and length contraction,3
+ea,Physics,physics,Relativistic momentum and energy,3
+ea,Physics,physics,Photoelectric effect,4
+ea,Physics,physics,Wave–particle duality,3
+ea,Physics,physics,Rutherford and Bohr atomic models,3
+ea,Physics,physics,Standard Model particles,3
+ea,Psychology,psychology,Nervous system and brain function,5
+ea,Psychology,psychology,Sensation and perception,5
+ea,Psychology,psychology,Models of memory,6
+ea,Psychology,psychology,Long-term memory and forgetting,5
+ea,Psychology,psychology,Classical and operant conditioning,6
+ea,Psychology,psychology,Social learning,3
+ea,Psychology,psychology,Social influence and conformity,4
+ea,Psychology,psychology,Bystander behaviour and prosocial behaviour,3
+ea,Psychology,psychology,Aggression and attraction,3
+ea,Psychology,psychology,Attitudes and cognitive dissonance,3
+ea,Psychology,psychology,"Social identity, attribution and biases",3
+ea,Psychology,psychology,Prejudice and stereotypes,3
+ea,Psychology,psychology,Culture and acculturation,3
+ea,Spanish,spanish,School-leaving celebrations,5
+ea,Spanish,spanish,Reflecting on school life,5
+ea,Spanish,spanish,Post-school plans and aspirations,16
+ea,Spanish,spanish,Employment and further study,11
+ea,Spanish,spanish,Benefits of a second language,5
+ea,Spanish,spanish,"Tone, purpose and audience in future-choice texts",26
+ea,Specialist Mathematics,maths_specialist,Complex numbers and De Moivre's theorem,6
+ea,Specialist Mathematics,maths_specialist,Complex roots and polynomial factorisation,5
+ea,Specialist Mathematics,maths_specialist,Mathematical induction,7
+ea,Specialist Mathematics,maths_specialist,Vectors and projections in three dimensions,6
+ea,Specialist Mathematics,maths_specialist,Vector and Cartesian equations,3
+ea,Specialist Mathematics,maths_specialist,Vector calculus,6
+ea,Specialist Mathematics,maths_specialist,Matrices and systems of equations,6
+ea,Specialist Mathematics,maths_specialist,Integration techniques,3
+ea,Specialist Mathematics,maths_specialist,Integral applications and volumes,3
+ea,Specialist Mathematics,maths_specialist,Differential equations and rates of change,4
+ea,Specialist Mathematics,maths_specialist,Modelling motion,3
+ea,Specialist Mathematics,maths_specialist,Sample means and confidence intervals,3
+ea,Study of Religion,study_religion,Ultimate questions and religious responses,3
+ea,Study of Religion,study_religion,Jewish beliefs about humanity and rights,3
+ea,Study of Religion,study_religion,Christian beliefs about humanity and rights,3
+ea,Study of Religion,study_religion,Islamic beliefs about humanity and rights,3
+ea,Study of Religion,study_religion,Hindu beliefs about humanity and rights,3
+ea,Study of Religion,study_religion,Buddhist beliefs about humanity and rights,3
+ea,Study of Religion,study_religion,Linear and cyclical world views,3
+ea,Study of Religion,study_religion,Religious organisations and social justice,27
+ea,Study of Religion,study_religion,Religious perspectives and human rights,26
+ea,Study of Religion,study_religion,Evaluating religious influence,27
+ea,Visual Art,visual_art,Visual language and composition,5
+ea,Visual Art,visual_art,Artistic processes and materials,5
+ea,Visual Art,visual_art,Artist intentions and expression,5
+ea,Visual Art,visual_art,Artwork interpretation through contexts,5
+ea,Visual Art,visual_art,Comparing artworks and practices,5
+ea,Visual Art,visual_art,Justifying an art interpretation,3

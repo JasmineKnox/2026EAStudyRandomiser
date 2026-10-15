@@ -20,8 +20,8 @@ for(const q of data.questions){
  }
 }
 assert(eligible(data.questions,'unit3',{route:'legal',topics:u.subjects.find(s=>s.id==='legal').topics}).every(q=>!q.id.includes('treaty')));
-assert.equal(eligible(data.questions,'unit3',{route:'french-ia2',topics:u.subjects.find(s=>s.id==='french-ia2').topics}).length,0);
-assert.equal(eligible(data.questions,'ea',{route:'literature',topics:ea.subjects.find(s=>s.id==='literature').topics.map(t=>t.title)}).length,0);
+assert(eligible(data.questions,'unit3',{route:'french-ia2',topics:u.subjects.find(s=>s.id==='french-ia2').topics}).length>=25);
+assert(eligible(data.questions,'ea',{route:'literature',topics:ea.subjects.find(s=>s.id==='literature').topics.map(t=>t.title)}).length>=25);
 let doc;
 class Node{
  constructor(tag,text=''){this.tag=tag;this.children=[];this.events={};this.attrs={};this._text=text;this._value='';this.hidden=false;this.style={setProperty(){}};}

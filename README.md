@@ -12,11 +12,11 @@ The main page now offers both games:
 
 ## Original questions and revealed answers
 
-Both planners now include **Give me a practice question**. The initial release contains 118 original items (108 templates, with numerical variants counted separately): 74 available in Unit 3 and 81 in EA, with some questions shared where content overlaps. Each mode has questions for 30 exam routes. Coverage is sampled, not exhaustive or a full paper.
+Both planners include **Give me a practice question**. The expanded bank contains **2,748 records**, including numerical variants and labelled essay answer guides. All **94 selectable exam routes** have at least **25 questions**, and all **611 mapped topic entries** have at least **three**. There are 1,352 route-specific question placements in Unit 3 and 1,939 in EA; eligible questions can serve more than one mode. Coverage means the planner’s topic map, not exhaustive testing of every syllabus detail.
 
 Questions include indicative marks, worked answers or one supported model response, self-check points and a common-error reminder. Selection respects saved exam routes and topic choices. Supplied scenarios, tables and media texts are original/synthetic. Language practice is currently written, not audio. History and some religion items are generic source-skills exercises explicitly labelled as such. Essential English practice does not predict or announce future CIA topics. Self-check scores are not official grades; student responses are written in a notebook and are not collected.
 
-Source data is in `question-bank.json`; `question-data.js` and `question-practice.js` power both games. To rebuild: `python questions/build.py`, `python rebuild.py`, then `python unit3/build.py`. Run `node questions/check.cjs`, `python questions/check_answers.py` and `node unit3/check.cjs`. Both standalone exports embed the complete question feature for offline use.
+Source data is in `question-bank.json`; `question-data.js` and `question-practice.js` power both games. To rebuild: `python questions/build.py`, `python rebuild.py`, then `python unit3/build.py`. Run `node questions/check.cjs`, `node questions/coverage.test.cjs`, `python questions/check_answers.py` and `node unit3/check.cjs`. Both standalone exports embed the complete question feature for offline use.
 
 Automated tests validate question scope, empty selections, reveal/hide, indicative self-check totals, numerical answer fixtures, both standalone scripts, and the existing study engines. Browser visual QA was unavailable in this environment.
 
@@ -108,3 +108,8 @@ The multi-file HTML now uses versioned asset URLs so this update fetches fresh J
 The session setup presents **Give me a task** and **Give me a practice question** together. Both use only the active session subjects. Question practice opens directly without creating a timed task plan; closing it returns to the session choices. Session length and task difficulty apply to the task plan, while the question panel has its own difficulty filter.
 
 Maths and science practice now displays labelled working steps with separate lines for substitutions, calculations and final results. Humanities questions use direct commands and labelled parts where appropriate. See `questions/design-notes.md` for the public QCAA IA1 examples and 2026 endorsement guidance reviewed.
+
+
+The expansion is reproducible with `python questions/build.py`. `questions/baseline-bank.json` preserves the previously reviewed 118-question release; `questions/build.py` adds scenarios and extracts, and `questions/coverage.py` adds topic-specific questions. `questions/coverage.csv` lists every topic and count. Regenerate the CSV when changing topic mappings.
+
+Practice types are labelled: supplied data/extracts have worked or sample answers; selected-text/history prompts have answer guides that require class evidence. Language material supplies written stimuli and productive-response guides, without listening audio or automated speech marking. Arts descriptions/notation practise analytical skills and do not replace examination audio, images or video. No unreleased CIA topic is asserted.

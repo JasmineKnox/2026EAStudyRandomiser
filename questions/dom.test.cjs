@@ -16,8 +16,8 @@ for(const mode of ['unit3','ea']){
  const points=answer.querySelectorAll('input[type=checkbox]');assert(points.length);points[0].click();assert(/Self-check: [1-9]/.test(answer.querySelector('.qp-score').textContent));
  assert.equal(w.localStorage.getItem(key),before,'Question work must not change planner progress');
  const original=dialog.querySelector('h3').textContent;dialog.querySelector('.qp-actions button').click();assert.notEqual(dialog.querySelector('h3').textContent,original);assert(d.getElementById('qp-answer').hidden);
- selects[2].value=mode==='unit3'?'hard':'easy';selects[2].dispatchEvent(new w.Event('change'));assert(dialog.querySelector('.qp-actions button').disabled);assert(dialog.textContent.includes('No question is available'));
- selects[2].value='';selects[2].dispatchEvent(new w.Event('change'));assert(!dialog.querySelector('.qp-actions button').disabled);
+ selects[1].add(new w.Option('Unmatched topic','unmatched-topic'));selects[1].value='unmatched-topic';selects[1].dispatchEvent(new w.Event('change'));assert(dialog.querySelector('.qp-actions button').disabled);assert(dialog.textContent.includes('No question is available'));
+ selects[1].value='';selects[1].dispatchEvent(new w.Event('change'));assert(!dialog.querySelector('.qp-actions button').disabled);
  dialog.querySelector('.qp-top button').click();assert(!dialog.open);assert.equal(d.activeElement,open);assert.deepEqual(errors,[]);w.close();
 }
 console.log('PASS: both full game exports initialise, use saved courses, open/reveal/self-check/swap/filter/close and preserve planner progress in jsdom.');
