@@ -12,7 +12,7 @@ The main page now offers both games:
 
 ## Original questions and revealed answers
 
-Both planners now include **Practise questions + check answers**. The initial release contains 118 original items (108 templates, with numerical variants counted separately): 74 available in Unit 3 and 81 in EA, with some questions shared where content overlaps. Each mode has questions for 30 exam routes. Coverage is sampled, not exhaustive or a full paper.
+Both planners now include **Give me a practice question**. The initial release contains 118 original items (108 templates, with numerical variants counted separately): 74 available in Unit 3 and 81 in EA, with some questions shared where content overlaps. Each mode has questions for 30 exam routes. Coverage is sampled, not exhaustive or a full paper.
 
 Questions include indicative marks, worked answers or one supported model response, self-check points and a common-error reminder. Selection respects saved exam routes and topic choices. Supplied scenarios, tables and media texts are original/synthetic. Language practice is currently written, not audio. History and some religion items are generic source-skills exercises explicitly labelled as such. Essential English practice does not predict or announce future CIA topics. Self-check scores are not official grades; student responses are written in a notebook and are not collected.
 
@@ -104,3 +104,5 @@ Examples include Khan Academy, LitCharts, NASA, AIATSIS, History Skills, Geoscie
 Run `node tests/resources.test.cjs` to check that every subject has supplementary resources, safe links and access notes. To run the DOM integration checks, install `jsdom` in a temporary test environment, then run `tests/resources-dom.test.cjs` with that environment in `NODE_PATH`. Browser layout checks remain in `tests/ui.test.cjs` for an environment with Chromium installed.
 
 The multi-file HTML now uses versioned asset URLs so this update fetches fresh JavaScript and CSS after deployment. Run `python rebuild.py` after future changes to keep the standalone file in sync.
+
+The session setup presents **Give me a task** and **Give me a practice question** together. Both use only the active session subjects. Question practice opens directly without creating a timed task plan; closing it returns to the session choices. Session length and task difficulty apply to the task plan, while the question panel has its own difficulty filter.
